@@ -28,15 +28,32 @@ def describe(js):
     return f"top keys {keys}, records {n}, sample {json.dumps(sample, ensure_ascii=False)[:400]}"
 
 
+import re
+
+
+def text_of(js):
+    if isinstance(js, str) or not isinstance(js, dict):
+        t = re.sub(r"<[^>]+>", " ", str(js))
+        return re.sub(r"\s+", " ", t)[:300]
+    return describe(js)
+
+
 for path in [
-    "balances/2026/08/instituciones",
-    "balances/2026/08/instituciones/001",
-    "balances/2008/01/instituciones/001",
-    "balances/2005/01/instituciones/001",
-    "balances/2000/01/instituciones/001",
+    "dolar",
+    "uf",
+    "balances/2024/01/instituciones/001",
+    "balances/2024/01/instituciones",
+    "balance/2024/01/instituciones/001",
+    "resultados/2024/01/instituciones/001",
+    "perfil/instituciones/2024/01",
+    "instituciones",
 ]:
-    code, js = call(path)
-    out.append(f"- `{path}`: {code} {describe(js)}")
+    r = requests.get(f"{BASE}/{path}", params={"apikey": KEY, "formato": "json"}, timeout=60)
+    try:
+        body = describe(r.json())
+    except ValueError:
+        body = "HTML/TEXT: " + text_of(r.text)
+    out.append(f"- `{path}` -> {r.status_code} {r.url.split('?')[0]} :: {body}")
 
 code, js = call("balances/2026/08/instituciones/001")
 if code == 200 and isinstance(js, dict):
