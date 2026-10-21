@@ -35,7 +35,12 @@ class CmfApi:
 
     def institutions(self, year: int, month: int) -> dict[str, str]:
         rows = self._get(f"balances/{year}/{month:02d}/instituciones")
-        return {r["CodigoInstitucion"]: r["NombreInstitucion"].strip() for r in rows}
+        out = {}
+        for r in rows:  # field names vary across years (NombreInstitucion, NombreBanco...)
+            code = next(v for k, v in r.items() if k.startswith("Codigo"))
+            name = next((v for k, v in r.items() if k.startswith("Nombre")), code)
+            out[str(code).strip()] = str(name).strip()
+        return out
 
     def balance(self, year: int, month: int, code: str) -> list[dict]:
         return self._get(f"balances/{year}/{month:02d}/instituciones/{code}")

@@ -50,3 +50,11 @@ def test_download_skips_months_already_there(tmp_path):
     assert data.download(path, FakeApi(), (2008, 1), (2008, 3), log=lambda *_: None) == []
     assert FakeApi.calls == 2
     assert data.read(path).query("item == 'demand_deposits'")["clp_bn"].tolist() == [1.0, 1.0]
+
+
+def test_institution_fields_vary_by_year():
+    from liquidity.cmf import CmfApi
+
+    api = CmfApi(key="k")
+    api._get = lambda path: [{"CodigoInstitucion": "001", "NombreBanco": "BANCO DE CHILE "}]
+    assert api.institutions(2008, 1) == {"001": "BANCO DE CHILE"}
