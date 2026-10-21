@@ -5,9 +5,10 @@ import os
 
 import requests
 
-KEY = os.getenv("CMF_API_KEY")
+RAW = os.getenv("CMF_API_KEY") or ""
+KEY = RAW.strip()
 BASE = "https://api.cmfchile.cl/api-sbifv3/recursos_api"
-out = ["# CMF API probe\n", f"- key present: {bool(KEY)}"]
+out = ["# CMF API probe\n", f"- key present: {bool(KEY)}, length {len(KEY)}, had surrounding whitespace: {RAW != KEY}, alnum: {KEY.isalnum()}"]
 
 
 def call(path):
