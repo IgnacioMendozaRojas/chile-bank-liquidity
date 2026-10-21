@@ -1,53 +1,71 @@
 # CMF API probe
 
 - key present: True, length 40, had surrounding whitespace: True, alnum: True
-- `dolar` -> 200 https://api.cmfchile.cl/api-sbifv3/recursos_api/dolar :: top keys ['Dolares'], records 1, sample [{"Valor": "978,56", "Fecha": "2026-10-21"}]
-- `uf` -> 200 https://api.cmfchile.cl/api-sbifv3/recursos_api/uf :: top keys ['UFs'], records 1, sample [{"Valor": "41.194,55", "Fecha": "2026-10-21"}]
-- `balances/2024/01/instituciones/001` -> 200 https://api.cmfchile.cl/api-sbifv3/recursos_api/balances/2024/01/instituciones/001 :: top keys ['CodigosBalances'], records 709, sample [{"CodigoCuenta": "145400501", "DescripcionCuenta": "Factoring con responsabilidad", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2024, "Mes": 1, "MonedaChilenaNoReajustable": "262636883521,00", "MonedaReajustablePorIPC": "164452796,00", "MonedaReajustablePorTipoDeCambio": "0,00", "MonedaExtranjera": "10211386491,00", "MonedaTotal": "273012722808,00"}, {"CodigoCuenta"
-- `balances/2024/01/instituciones` -> 200 https://api.cmfchile.cl/api-sbifv3/recursos_api/balances/2024/01/instituciones :: top keys ['DescripcionesCodigosDeInstituciones'], records 18, sample [{"CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE"}, {"CodigoInstitucion": "009", "NombreInstitucion": "BANCO INTERNACIONAL"}]
-- `balance/2024/01/instituciones/001` -> 200 https://api.sbif.cl/url_error.html :: HTML/TEXT: ï»¿ API - CMF Bancos - CÃ³digos de Error de la API CÃ³digos de Error de la API CMF Bancos Toggle navigation API SBIF.v3 Error La URL ingresada no concuerda con los recursos disponibles. Verifique que la URL estÃ© correctamente estructurada. ComisiÃ³n para el Mercado Financiero - Bancos e Institucion
-- `resultados/2024/01/instituciones/001` -> 200 https://api.cmfchile.cl/api-sbifv3/recursos_api/resultados/2024/01/instituciones/001 :: top keys ['CodigosEstadosDeResultado'], records 1229, sample [{"CodigoCuenta": "416180390", "DescripcionCuenta": "Otros", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2024, "Mes": 1, "MonedaChilenaNoReajustable": "0,00", "MonedaTotal": "0,00"}, {"CodigoCuenta": "416250000", "DescripcionCuenta": "Obligaciones por pactos de retrocompra y prestamos de valores", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "An
-- `perfil/instituciones/2024/01` -> 200 https://api.sbif.cl/url_error.html :: HTML/TEXT: ï»¿ API - CMF Bancos - CÃ³digos de Error de la API CÃ³digos de Error de la API CMF Bancos Toggle navigation API SBIF.v3 Error La URL ingresada no concuerda con los recursos disponibles. Verifique que la URL estÃ© correctamente estructurada. ComisiÃ³n para el Mercado Financiero - Bancos e Institucion
-- `instituciones` -> 200 https://api.sbif.cl/url_error.html :: HTML/TEXT: ï»¿ API - CMF Bancos - CÃ³digos de Error de la API CÃ³digos de Error de la API CMF Bancos Toggle navigation API SBIF.v3 Error La URL ingresada no concuerda con los recursos disponibles. Verifique que la URL estÃ© correctamente estructurada. ComisiÃ³n para el Mercado Financiero - Bancos e Institucion
+- banks listed 2026/08: 200 18
+- banks listed 2015/01: 200 25
+- banks listed 2010/01: 200 29
+- banks listed 2008/01: 200 29
+- banks listed 2005/01: 200 31
+- banks listed 2000/01: 200 31
 
-## Banco 001, 2026-08: 709 accounts; deposit/cash/securities related (156):
-- {"CodigoCuenta": "105000000", "DescripcionCuenta": "EFECTIVO Y DEPÓSITOS EN BANCOS", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "1348441572434
-- {"CodigoCuenta": "105000100", "DescripcionCuenta": "Efectivo", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "728011477132,00", "MonedaReajustabl
-- {"CodigoCuenta": "105000101", "DescripcionCuenta": "Efectivo en oficinas", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "175034486280,00", "Mone
-- {"CodigoCuenta": "105000102", "DescripcionCuenta": "Efectivo en empresas transportadoras de valores", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable
-- {"CodigoCuenta": "105000103", "DescripcionCuenta": "Efectivo en custodia en otras entidades financieras", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajust
-- {"CodigoCuenta": "105000200", "DescripcionCuenta": "Depósitos en el Banco Central de Chile", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "61837
-- {"CodigoCuenta": "105000201", "DescripcionCuenta": "Depósitos en cuenta corriente", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "618374490410,0
-- {"CodigoCuenta": "105000202", "DescripcionCuenta": "Depósitos overnight", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00", "MonedaReajustabl
-- {"CodigoCuenta": "105000209", "DescripcionCuenta": "Otros depósitos disponibles", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00", "MonedaRe
-- {"CodigoCuenta": "105000300", "DescripcionCuenta": "Depósitos en Bancos Centrales del exterior", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0
-- {"CodigoCuenta": "105000301", "DescripcionCuenta": "Depósitos en cuenta corriente", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00", "Moneda
-- {"CodigoCuenta": "105000302", "DescripcionCuenta": "Depósitos overnight", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00", "MonedaReajustabl
-- {"CodigoCuenta": "105000309", "DescripcionCuenta": "Otros depósitos disponibles", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00", "MonedaRe
-- {"CodigoCuenta": "105000400", "DescripcionCuenta": "Depósitos en bancos del país", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "2055604892,00",
-- {"CodigoCuenta": "105000500", "DescripcionCuenta": "Depósitos en bancos del exterior", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00", "Mon
-- {"CodigoCuenta": "112000000", "DescripcionCuenta": "Instrumentos financieros de deuda", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "1650921182
-- {"CodigoCuenta": "112000101", "DescripcionCuenta": "Instrumentos financieros de deuda del Banco Central de Chile", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilena
-- {"CodigoCuenta": "112000109", "DescripcionCuenta": "Otros instrumentos financieros de deuda fiscales", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustabl
-- {"CodigoCuenta": "112000200", "DescripcionCuenta": "Otros instrumentos financieros de deuda emitidos en el país", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaN
-- {"CodigoCuenta": "112000201", "DescripcionCuenta": "Instrumentos financieros de deuda de otros bancos del país", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNo
-- {"CodigoCuenta": "112000209", "DescripcionCuenta": "Otros instrumentos financieros de deuda emitidos en el país", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaN
-- {"CodigoCuenta": "112000300", "DescripcionCuenta": "Instrumentos financieros de deuda emitidos en el exterior", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoR
-- {"CodigoCuenta": "112000301", "DescripcionCuenta": "Instrumentos financieros de deuda de Bancos Centrales en el exterior", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "Moned
-- {"CodigoCuenta": "112000302", "DescripcionCuenta": "Instrumentos financieros de deuda de Gobiernos extranjeros y entidades fiscales en el exterior", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anh
-- {"CodigoCuenta": "112000303", "DescripcionCuenta": "Instrumentos financieros de deuda de otros bancos en el exterior", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChi
-- {"CodigoCuenta": "213000100", "DescripcionCuenta": "Otros instrumentos financieros", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "1443507450,00
-- {"CodigoCuenta": "213000101", "DescripcionCuenta": "Depósitos y otras obligaciones a la vista", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,
-- {"CodigoCuenta": "213000102", "DescripcionCuenta": "Depósitos y otras captaciones a plazo", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00",
-- {"CodigoCuenta": "255000200", "DescripcionCuenta": "Bonos sin plazo fijo de vencimiento", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00", "
-- {"CodigoCuenta": "260000101", "DescripcionCuenta": "Provisión beneficios a empleados de corto plazo", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable
-- {"CodigoCuenta": "260000103", "DescripcionCuenta": "Provisión beneficios a empleados de largo plazo", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable
-- {"CodigoCuenta": "260000105", "DescripcionCuenta": "Provisión pagos a empleados basados en acciones o instrumentos de patrimonio", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8
-- {"CodigoCuenta": "265000000", "DescripcionCuenta": "PROVISIONES PARA DIVIDENDOS, PAGO DE INTERESES Y REAPRECIACIÓN DE INSTRUMENTOS FINANCIEROS DE CAPITAL REGULATORIO EMITIDOS", "CodigoInstitucion": "001", "NombreInstituc
-- {"CodigoCuenta": "112000309", "DescripcionCuenta": "Otros instrumentos financieros de deuda emitidos en el exterior", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChil
-- {"CodigoCuenta": "113000000", "DescripcionCuenta": "Otros instrumentos financieros", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "413114324254,
-- {"CodigoCuenta": "113000200", "DescripcionCuenta": "Instrumentos de patrimonio", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "2702794695,00", "
-- {"CodigoCuenta": "113000201", "DescripcionCuenta": "Instrumentos de patrimonio en el país", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "270279
-- {"CodigoCuenta": "113000202", "DescripcionCuenta": "Instrumentos de patrimonio en el exterior", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,
-- {"CodigoCuenta": "115250000", "DescripcionCuenta": "Instrumentos financieros de deuda", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilenaNoReajustable": "0,00", "Mo
-- {"CodigoCuenta": "115250101", "DescripcionCuenta": "Instrumentos financieros de deuda del Banco Central de Chile", "CodigoInstitucion": "001", "NombreInstitucion": "BANCO DE CHILE", "Anho": 2026, "Mes": 8, "MonedaChilena
+## Banco 001, 2024-01: 709 accounts; deposit/cash/securities related (159):
+- 160000203 Depósitos estables (¿core deposit¿) = 0,00
+- 190000200 Garantías en efectivo entregadas por operaciones financieras de derivados = 377583475281,00
+- 190000201 Garantías en efectivo entregadas por operaciones financieras de derivados con una entidad de contraparte central en el país = 24514436533,00
+- 190000202 Garantías en efectivo entregadas por operaciones financieras de derivados con una entidad de contraparte central en el exterior = 0,00
+- 190000203 Garantías en efectivo entregadas por operaciones financieras de derivados con otras contrapartes en el país = 46047996950,00
+- 190000204 Garantías en efectivo entregadas por operaciones financieras de derivados con otras contrapartes en el exterior = 307021041798,00
+- 190000300 Deudores por intermediación de instrumentos financieros = 259823364001,00
+- 190000302 Deudores por intermediación de operaciones a plazo (simultaneas) = 114550697477,00
+- 190000303 Otras cuentas por cobrar por intermediación de instrumentos financieros = 0,00
+- 190001400 Otras garantías en efectivo entregadas = 6548719034,00
+- 200000000 TOTAL PASIVOS = 51847187713806,00
+- 213000100 Otros instrumentos financieros = 6092545402,00
+- 213000101 Depósitos y otras obligaciones a la vista = 0,00
+- 213000102 Depósitos y otras captaciones a plazo = 0,00
+- 213000103 Instrumentos de deuda emitidos = 0,00
+- 218000001 Depósitos y otras obligaciones a la vista = 0,00
+- 218000002 Depósitos y otras captaciones a plazo = 0,00
+- 218000003 Instrumentos de deuda emitidos = 0,00
+- 241000000 Depósitos y otras obligaciones a la vista = 13305195359855,00
+- 241000200 Cuentas de depósito a la vista = 614253022691,00
+- 241000201 Cuentas de ahorro a la vista = 0,00
+- 241000202 Cuentas a la vista = 614253022691,00
+- 241000300 Otros depósitos a la vista = 439577584426,00
+- 241000301 Vales a la vista = 439577584426,00
+- 241000500 Otras obligaciones a la vista = 1340376331382,00
+- 241000504 Depósitos por consignaciones judiciales = 18163744508,00
+- 241000505 Boletas de garantías pagaderas a la vista = 141926610896,00
+- 241000508 Retenciones judiciales sobre obligaciones a la vista = 0,00
+- 241000511 Depósitos a plazo vencidos = 76481338335,00
+- 241000590 Otras obligaciones a la vista = 583442333110,00
+- 242000000 Depósitos y otras captaciones a plazo = 15539198361648,00
+- 242000100 Depósitos a plazo = 15155017121182,00
+- 242000200 Cuentas de ahorro a plazo = 349828535385,00
+- 242000201 Cuentas de ahorro a plazo con giro diferido = 166490305923,00
+- 242000202 Cuentas de ahorro a plazo con giro incondicional = 183338229462,00
+- 242000300 Otros saldos acreedores a plazo = 34352705081,00
+- 242000302 Depósitos en cuentas ¿overnight¿ = 0,00
+- 244250204 Depósitos a plazo no transferibles = 0,00
+- 244500204 Depósitos a plazo no transferibles = 0,00
+- 245000000 Instrumentos financieros de deuda emitidos = 9572483549005,00
+- 255000000 INSTRUMENTOS FINANCIEROS DE CAPITAL REGULATORIO EMITIDOS = 1038055993832,00
+- 255000200 Bonos sin plazo fijo de vencimiento = 0,00
+- 260000101 Provisión beneficios a empleados de corto plazo = 90054355617,00
+- 260000103 Provisión beneficios a empleados de largo plazo = 0,00
+- 260000105 Provisión pagos a empleados basados en acciones o instrumentos de patrimonio = 0,00
+- 265000000 "PROVISIONES PARA DIVIDENDOS, PAGO DE INTERESES Y REAPRECIACIÓN DE INSTRUMENTOS FINANCIEROS DE CAPITAL REGULATORIO EMITIDOS" = 674373489137,00
+- 265000200 Provisión para pago de intereses de bonos sin plazo fijo de vencimiento = 0,00
+- 265000300 Provisión para reapreciación de bonos sin plazo fijo de vencimiento = 0,00
+- 290000100 Garantías en efectivo recibidas por operaciones financieras de derivados = 186241256254,00
+- 290000101 Garantías en efectivo recibidas por operaciones financieras de derivados con una entidad de contraparte central en el país = 0,00
+- 290000102 Garantías en efectivo recibidas por operaciones financieras de derivados con una entidad de contraparte central en el exterior = 0,00
+- 290000103 Garantías en efectivo recibidas por operaciones financieras de derivados con otras contrapartes en el país = 9912368338,00
+- 290000104 Garantías en efectivo recibidas por operaciones financieras de derivados con otras contrapartes en el exterior = 176328887916,00
+- 290000200 Acreedores por intermediación de instrumentos financieros = 245857507446,00
+- 290000202 Acreedores por intermediación de operaciones a plazo (simultaneas) = 114594646689,00
+- 290000203 Otras cuentas por pagar por intermediación de instrumentos financieros = 0,00
+- 100000000 TOTAL ACTIVOS = 57091204484520,00
+- 105000000 EFECTIVO Y DEPÓSITOS EN BANCOS = 3166322027038,00
+- 105000100 Efectivo = 1016975440219,00
+- 105000101 Efectivo en oficinas = 386618153836,00
