@@ -17,9 +17,16 @@ def _notice(level: str, title: str, msg: str) -> None:
 
 def cmd_data(out: Path) -> int:
     out.mkdir(parents=True, exist_ok=True)
-    added = data.download(out / "bank_balances.csv", CmfApi())
+    added = data.download(
+        out / "bank_balances.csv",
+        CmfApi(),
+        log=lambda m: _notice("notice", "CMF", m) if "not available" in m else print(m),
+    )
     _notice("notice", "CMF", f"{len(added)} months added" + (f" ({added[0]} to {added[-1]})" if added else ""))
     bal = data.read(out / "bank_balances.csv")
+    if bal.empty:
+        _notice("error", "No data", "nothing downloaded; see the CMF notice above")
+        return 1
     bc = data.system_aggregates(out / "bcch_aggregates.csv")
     cmp_ = checks.system_vs_bcch(bal, bc)
     cmp_.round(4).to_csv(out / "check_system_vs_bcch.csv")

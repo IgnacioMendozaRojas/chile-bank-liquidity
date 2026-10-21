@@ -48,7 +48,7 @@ def download(path: Path, api: CmfApi, start=START, end=None, log=print) -> list[
         try:
             banks = api.institutions(y, m)
         except Exception as exc:  # noqa: BLE001 - a month not yet published ends the run
-            log(f"{label}: not available ({exc.__class__.__name__})")
+            log(f"{label}: not available ({exc!r})"[:400])
             break
         rows = []
         for code, name in banks.items():
