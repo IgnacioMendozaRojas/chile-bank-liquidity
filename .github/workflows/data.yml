@@ -1,0 +1,40 @@
+name: Data
+
+# Adds new months of bank balance sheets from the CMF and refreshes the Banco Central
+# aggregates and the data checks. The first run builds the history from 2008 (a few hours);
+# progress is committed even if a run stops, and the next run resumes.
+on:
+  schedule:
+    - cron: "37 7 20 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install --no-cache-dir .
+      - name: Download and check
+        env:
+          CMF_API_KEY: ${{ secrets.CMF_API_KEY }}
+          BCCH_USER: ${{ secrets.BCCH_USER }}
+          BCCH_PASS: ${{ secrets.BCCH_PASS }}
+        run: timeout 320m liquidity data
+      - name: Commit progress
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed
+          git diff --cached --quiet || (git commit -qm "Data: bank balance sheets" && git push)

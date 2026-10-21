@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chile-bank-liquidity"
+version = "0.1.0"
+description = "Liquidity risk of Chilean banks from public CMF and Banco Central data"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Ignacio Mendoza Rojas" }]
+dependencies = ["pandas>=2.1", "numpy>=1.26", "requests>=2.31", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+liquidity = "liquidity.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/liquidity"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
