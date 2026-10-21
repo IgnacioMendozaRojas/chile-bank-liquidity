@@ -39,29 +39,17 @@ def text_of(js):
     return describe(js)
 
 
-for path in [
-    "dolar",
-    "uf",
-    "balances/2024/01/instituciones/001",
-    "balances/2024/01/instituciones",
-    "balance/2024/01/instituciones/001",
-    "resultados/2024/01/instituciones/001",
-    "perfil/instituciones/2024/01",
-    "instituciones",
-]:
-    r = requests.get(f"{BASE}/{path}", params={"apikey": KEY, "formato": "json"}, timeout=60)
-    try:
-        body = describe(r.json())
-    except ValueError:
-        body = "HTML/TEXT: " + text_of(r.text)
-    out.append(f"- `{path}` -> {r.status_code} {r.url.split('?')[0]} :: {body}")
+for ym in ["2026/08", "2015/01", "2010/01", "2008/01", "2005/01", "2000/01"]:
+    code, js = call(f"balances/{ym}/instituciones")
+    banks = next(iter(js.values())) if isinstance(js, dict) else []
+    out.append(f"- banks listed {ym}: {code} {len(banks) if isinstance(banks, list) else banks}")
 
-code, js = call("balances/2026/08/instituciones/001")
+code, js = call("balances/2024/01/instituciones/001")
 if code == 200 and isinstance(js, dict):
     rows = next(iter(js.values()))
-    dep = [r for r in rows if any(w in json.dumps(r, ensure_ascii=False).upper() for w in ("DEPOSITO", "DEPÓSITO", "VISTA", "PLAZO", "EFECTIVO", "INSTRUMENTOS"))]
-    out.append(f"\n## Banco 001, 2026-08: {len(rows)} accounts; deposit/cash/securities related ({len(dep)}):")
-    out += [f"- {json.dumps(r, ensure_ascii=False)[:220]}" for r in dep[:40]]
+    dep = [r for r in rows if any(w in json.dumps(r, ensure_ascii=False).upper() for w in ("DEPOSITO", "DEPÓSITO", "VISTA", "PLAZO", "EFECTIVO", "INSTRUMENTOS", "TOTAL ACTIVO", "TOTAL PASIVO"))]
+    out.append(f"\n## Banco 001, 2024-01: {len(rows)} accounts; deposit/cash/securities related ({len(dep)}):")
+    out += [f"- {r.get('CodigoCuenta')} {r.get('DescripcionCuenta')} = {r.get('MonedaTotal') or r}" for r in dep[:60]]
 
 open("probe/results.md", "w").write("\n".join(out) + "\n")
 print("\n".join(out[:12]))
