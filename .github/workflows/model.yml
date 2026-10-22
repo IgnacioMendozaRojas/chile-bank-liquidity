@@ -28,6 +28,7 @@ jobs:
       - run: pip install --no-cache-dir .
       - run: liquidity deposits
       - run: liquidity funding
+      - run: liquidity cost
       - run: liquidity forecast
       - name: Commit if changed
         run: |

@@ -36,7 +36,7 @@ def test_download_skips_months_already_there(tmp_path):
     class FakeApi:
         calls = 0
 
-        def institutions(self, y, m):
+        def institutions(self, y, m, kind="balances"):
             if (y, m) > (2008, 2):
                 raise ValueError("not published")
             return {"001": "BANCO DE CHILE"}

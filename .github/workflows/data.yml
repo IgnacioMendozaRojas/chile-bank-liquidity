@@ -1,6 +1,6 @@
 name: Data
 
-# Adds new months of bank balance sheets from the CMF and refreshes the Banco Central
+# Adds new months of bank balance sheets and income statements from the CMF and refreshes the Banco Central
 # aggregates and the data checks. The first run builds the history from 2008 (a few hours);
 # progress is committed even if a run stops, and the next run resumes.
 on:
@@ -37,4 +37,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/processed
-          git diff --cached --quiet || (git commit -qm "Data: bank balance sheets" && git push)
+          git diff --cached --quiet || (git commit -qm "Data: bank balance sheets and income statements" && git push)

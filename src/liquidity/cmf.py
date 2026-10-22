@@ -1,4 +1,4 @@
-"""CMF bank API (api.cmfchile.cl, SBIF v3): monthly balance sheets by bank."""
+"""CMF bank API (api.cmfchile.cl, SBIF v3): monthly balance sheets and income statements by bank."""
 
 from __future__ import annotations
 
@@ -33,8 +33,8 @@ class CmfApi:
                 time.sleep(2**attempt)
         return None
 
-    def institutions(self, year: int, month: int) -> dict[str, str]:
-        rows = self._get(f"balances/{year}/{month:02d}/instituciones")
+    def institutions(self, year: int, month: int, kind: str = "balances") -> dict[str, str]:
+        rows = self._get(f"{kind}/{year}/{month:02d}/instituciones")
         out = {}
         for r in rows:  # field names vary across years (NombreInstitucion, NombreBanco...)
             code = next(v for k, v in r.items() if k.startswith("Codigo"))
@@ -44,3 +44,7 @@ class CmfApi:
 
     def balance(self, year: int, month: int, code: str) -> list[dict]:
         return self._get(f"balances/{year}/{month:02d}/instituciones/{code}")
+
+    def results(self, year: int, month: int, code: str) -> list[dict]:
+        """Income statement, year to date."""
+        return self._get(f"resultados/{year}/{month:02d}/instituciones/{code}")

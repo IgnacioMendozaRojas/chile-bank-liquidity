@@ -18,6 +18,16 @@ ITEMS: dict[str, dict[str, list[str]]] = {
     "trading_debt_securities": {"old": ["1150000"], "new": ["112000000"]},
     "fvoci_debt_securities": {"old": ["1350000"], "new": ["122000000"]},
 }
+# Income statement (amounts are year-to-date and signed: expenses negative). "expense" is
+# interest plus UF readjustment; "readjust" is the UF part, split out in the old chart only
+# in later years (an item whose codes are all missing is NaN, not zero).
+INCOME: dict[str, dict[str, list[str]]] = {
+    "term_expense": {"old": ["4150300"], "new": ["412180000", "416180000"]},
+    "term_readjust": {"old": ["4150351", "4150352", "4150359"], "new": ["416180000"]},
+    "demand_expense": {"old": ["4150100"], "new": ["412150000", "416150000"]},
+    "demand_readjust": {"old": ["4150151"], "new": ["416150000"]},
+    "interest_expense": {"old": ["4150000"], "new": ["412000000", "416000000"]},
+}
 SCALE = {"old": 1e-3, "new": 1e-9}  # to CLP billion: old charts in CLP million, new in CLP
 NEW_CHART_FROM = (2022, 1)
 
@@ -38,3 +48,14 @@ def extract(rows: list[dict], year: int, month: int) -> dict[str, float]:
     c = chart(year, month)
     by_code = {r["CodigoCuenta"].strip(): number(r.get("MonedaTotal")) for r in rows}
     return {item: sum(by_code.get(code, 0.0) for code in codes[c]) * SCALE[c] for item, codes in ITEMS.items()}
+
+
+def extract_income(rows: list[dict], year: int, month: int) -> dict[str, float]:
+    """Income-statement items (CLP billion, year to date, expenses as positive numbers)."""
+    c = chart(year, month)
+    by_code = {r["CodigoCuenta"].strip(): number(r.get("MonedaTotal")) for r in rows}
+    out = {}
+    for item, codes in INCOME.items():
+        present = [by_code[k] for k in codes[c] if k in by_code]
+        out[item] = -sum(present) * SCALE[c] if present else float("nan")
+    return out

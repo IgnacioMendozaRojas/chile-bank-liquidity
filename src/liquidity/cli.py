@@ -1,4 +1,4 @@
-"""liquidity data   download new months, Banco Central aggregates, checks."""
+"""liquidity data | deposits | forecast | funding | cost"""
 
 from __future__ import annotations
 
@@ -23,6 +23,11 @@ def cmd_data(out: Path) -> int:
         log=lambda m: _notice("notice", "CMF", m) if "not available" in m else print(m),
     )
     _notice("notice", "CMF", f"{len(added)} months added" + (f" ({added[0]} to {added[-1]})" if added else ""))
+    try:
+        inc = data.download(out / "bank_income.csv", CmfApi(), kind="resultados", log=print)
+        _notice("notice", "CMF income", f"{len(inc)} months added" + (f" ({inc[0]} to {inc[-1]})" if inc else ""))
+    except Exception as exc:  # noqa: BLE001 - income statements must not stop the balance-sheet update
+        _notice("warning", "CMF income", repr(exc)[:300])
     bal = data.read(out / "bank_balances.csv")
     if bal.empty:
         _notice("error", "No data", "nothing downloaded; see the CMF notice above")
@@ -116,6 +121,38 @@ def cmd_funding(out: Path) -> int:
     return 0
 
 
+def cmd_cost(out: Path) -> int:
+    import pandas as pd
+
+    from . import checks, cost, deposits
+
+    income = data.read(out / "bank_income.csv")
+    raw = data.read(out / "bank_balances.csv")
+    pf = data.read(out / "bank_balances_pro_forma.csv")
+    names = pf.drop_duplicates("code", keep="last").set_index("code")["name"]
+    top = {c: names[c] for c in checks.wide(pf, "total_assets").iloc[-1].nlargest(deposits.TOP_BANKS).index}
+    costs = cost.cost_series(cost.monthly_flows(income), raw, top)
+    costs.round(4).to_csv(out / "cost_series.csv", index=False)
+    tpm = cost.month_end_rate(pd.read_csv(out / "bcch_rates_daily.csv", index_col=0))
+    tpm = tpm[tpm.index >= costs["period"].min()]
+    cyc = cost.cycles(tpm)
+    b = cost.betas(costs, tpm, cyc)
+    shares = pd.read_csv(out / "funding_fund_shares.csv", dtype={"code": str})
+    avg = shares.groupby("code")["fund_share_of_term"].mean()
+    b["avg_fund_share_of_term"] = b["bank"].map({n: avg.get(c) for c, n in top.items()})
+    b.round(4).to_csv(out / "cost_betas.csv", index=False)
+    sys_ = b[(b["bank"] == "System") & (b["lag_months"] == 3)]
+    for _, r in sys_.iterrows():
+        _notice("notice", f"Beta {r['cycle']}", f"system {r['beta']:.2f} ({r['measure']}), TPM {r['tpm_change']:+.2f}")
+    last = b[(b["lag_months"] == 3) & (b["start"] == b["start"].max()) & (b["bank"] != "System")]
+    if len(last) > 2:
+        corr = last["beta"].corr(last["avg_fund_share_of_term"])
+        _notice(
+            "notice", "Beta vs funds", f"{last['cycle'].iloc[0]}: corr(beta, fund share) = {corr:.2f}, n={len(last)}"
+        )
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="liquidity")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -127,8 +164,11 @@ def main(argv=None) -> int:
     f.add_argument("--out", type=Path, default=Path("data/processed"))
     fu = sub.add_parser("funding", help="share of each bank's term deposits held by mutual funds, and run-off")
     fu.add_argument("--out", type=Path, default=Path("data/processed"))
+    c = sub.add_parser("cost", help="cost of deposits and deposit beta by rate cycle")
+    c.add_argument("--out", type=Path, default=Path("data/processed"))
     a = p.parse_args(argv)
-    return {"data": cmd_data, "deposits": cmd_deposits, "forecast": cmd_forecast, "funding": cmd_funding}[a.cmd](a.out)
+    cmds = {"data": cmd_data, "deposits": cmd_deposits, "forecast": cmd_forecast, "funding": cmd_funding}
+    return {**cmds, "cost": cmd_cost}[a.cmd](a.out)
 
 
 if __name__ == "__main__":

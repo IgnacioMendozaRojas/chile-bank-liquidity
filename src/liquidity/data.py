@@ -37,8 +37,12 @@ def read(path: Path) -> pd.DataFrame:
     return pd.read_csv(path, dtype={"code": str, "period": str})
 
 
-def download(path: Path, api: CmfApi, start=START, end=None, log=print) -> list[str]:
-    """Add every missing month between start and end; returns the months added."""
+def download(path: Path, api: CmfApi, start=START, end=None, log=print, kind: str = "balances") -> list[str]:
+    """Add every missing month between start and end; returns the months added.
+
+    kind "balances" stores balance-sheet items; "resultados" income-statement items.
+    """
+    fetch, extract = (api.balance, accounts.extract) if kind == "balances" else (api.results, accounts.extract_income)
     done = set(read(path)["period"])
     added = []
     for y, m in months(start, end or last_month()):
@@ -46,13 +50,13 @@ def download(path: Path, api: CmfApi, start=START, end=None, log=print) -> list[
         if label in done:
             continue
         try:
-            banks = api.institutions(y, m)
+            banks = api.institutions(y, m, kind)
         except Exception as exc:  # noqa: BLE001 - a month not yet published ends the run
             log(f"{label}: not available ({exc!r})"[:400])
             break
         rows = []
         for code, name in banks.items():
-            values = accounts.extract(api.balance(y, m, code), y, m)
+            values = extract(fetch(y, m, code), y, m)
             rows += [(label, code, name, item, round(v, 4)) for item, v in values.items()]
         new = pd.DataFrame(rows, columns=COLUMNS)
         new.to_csv(path, mode="a", header=not Path(path).exists(), index=False)
