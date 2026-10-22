@@ -1,0 +1,2914 @@
+period,issuer_rut,asset_class,bank,clp_bn
+2019-01,59203500,Bank deposits,CCB,20.1228
+2019-01,76362099,Bank bonds,BTG Pactual,25.5613
+2019-01,76362099,Bank deposits,BTG Pactual,171.2802
+2019-01,82878900,Bank bonds,Coopeuch,40.2129
+2019-01,82878900,Bank deposits,Coopeuch,65.3791
+2019-01,96509660,Bank bonds,Banco Falabella,41.1276
+2019-01,96509660,Bank deposits,Banco Falabella,434.6758
+2019-01,97004000,Bank bonds,Banco de Chile,1018.2998
+2019-01,97004000,Bank deposits,Banco de Chile,1074.3708
+2019-01,97006000,Bank bonds,BCI,648.9283
+2019-01,97006000,Bank deposits,BCI,2206.4537
+2019-01,97011000,Bank bonds,Internacional,114.6795
+2019-01,97011000,Bank deposits,Internacional,618.6231
+2019-01,97018000,Bank bonds,Scotiabank,1443.0556
+2019-01,97018000,Bank deposits,Scotiabank,2426.054
+2019-01,97023000,Bank bonds,Itaú,787.9127
+2019-01,97023000,Bank deposits,Itaú,1428.6618
+2019-01,97030000,Bank bonds,BancoEstado,589.8745
+2019-01,97030000,Bank deposits,BancoEstado,1471.7507
+2019-01,97032000,Bank bonds,BBV,5.8203
+2019-01,97032000,Bank deposits,BBV,12.5395
+2019-01,97036000,Bank bonds,Santander,1269.388
+2019-01,97036000,Bank deposits,Santander,1062.7192
+2019-01,97053000,Bank bonds,Security,624.7292
+2019-01,97053000,Bank deposits,Security,697.5976
+2019-01,97080000,Bank bonds,BICE,234.4675
+2019-01,97080000,Bank deposits,BICE,1297.0287
+2019-01,97947000,Bank bonds,RPL,131.3764
+2019-01,97947000,Bank deposits,RPL,183.5661
+2019-01,97951000,Bank deposits,HSB,69.4306
+2019-01,99500410,Bank bonds,Consorcio,285.3284
+2019-01,99500410,Bank deposits,Consorcio,949.7901
+2019-02,59203500,Bank deposits,CCB,22.6914
+2019-02,76362099,Bank bonds,BTG Pactual,25.5107
+2019-02,76362099,Bank deposits,BTG Pactual,165.5047
+2019-02,76645030,Bank deposits,Itaú,2.9383
+2019-02,82878900,Bank bonds,Coopeuch,41.8084
+2019-02,82878900,Bank deposits,Coopeuch,82.422
+2019-02,96509660,Bank bonds,Banco Falabella,42.2652
+2019-02,96509660,Bank deposits,Banco Falabella,380.8239
+2019-02,97004000,Bank bonds,Banco de Chile,1150.146
+2019-02,97004000,Bank deposits,Banco de Chile,1162.0871
+2019-02,97006000,Bank bonds,BCI,674.613
+2019-02,97006000,Bank deposits,BCI,2055.6194
+2019-02,97011000,Bank bonds,Internacional,115.2321
+2019-02,97011000,Bank deposits,Internacional,644.7198
+2019-02,97018000,Bank bonds,Scotiabank,1515.0322
+2019-02,97018000,Bank deposits,Scotiabank,2163.4059
+2019-02,97023000,Bank bonds,Itaú,876.4266
+2019-02,97023000,Bank deposits,Itaú,1329.181
+2019-02,97030000,Bank bonds,BancoEstado,775.5944
+2019-02,97030000,Bank deposits,BancoEstado,1231.1884
+2019-02,97032000,Bank bonds,BBV,5.6304
+2019-02,97032000,Bank deposits,BBV,2.6202
+2019-02,97036000,Bank bonds,Santander,1327.8186
+2019-02,97036000,Bank deposits,Santander,1074.0898
+2019-02,97053000,Bank bonds,Security,626.8766
+2019-02,97053000,Bank deposits,Security,681.2075
+2019-02,97080000,Bank bonds,BICE,214.0398
+2019-02,97080000,Bank deposits,BICE,1158.8634
+2019-02,97947000,Bank bonds,RPL,136.8164
+2019-02,97947000,Bank deposits,RPL,154.8038
+2019-02,97951000,Bank deposits,HSB,115.6092
+2019-02,99500410,Bank bonds,Consorcio,290.5995
+2019-02,99500410,Bank deposits,Consorcio,868.9602
+2019-03,59203500,Bank deposits,CCB,22.7449
+2019-03,76362099,Bank bonds,BTG Pactual,25.605
+2019-03,76362099,Bank deposits,BTG Pactual,182.8089
+2019-03,82878900,Bank bonds,Coopeuch,39.7362
+2019-03,82878900,Bank deposits,Coopeuch,63.1389
+2019-03,96509660,Bank bonds,Banco Falabella,43.9152
+2019-03,96509660,Bank deposits,Banco Falabella,418.8593
+2019-03,97004000,Bank bonds,Banco de Chile,1259.1157
+2019-03,97004000,Bank deposits,Banco de Chile,1152.992
+2019-03,97006000,Bank bonds,BCI,736.1091
+2019-03,97006000,Bank deposits,BCI,2020.796
+2019-03,97011000,Bank bonds,Internacional,126.7669
+2019-03,97011000,Bank deposits,Internacional,627.3349
+2019-03,97018000,Bank bonds,Scotiabank,1555.5783
+2019-03,97018000,Bank deposits,Scotiabank,2291.6081
+2019-03,97023000,Bank bonds,Itaú,862.2753
+2019-03,97023000,Bank deposits,Itaú,1292.9225
+2019-03,97030000,Bank bonds,BancoEstado,930.8732
+2019-03,97030000,Bank deposits,BancoEstado,1469.8231
+2019-03,97032000,Bank bonds,BBV,0.0142
+2019-03,97032000,Bank deposits,BBV,0.1182
+2019-03,97036000,Bank bonds,Santander,1376.2095
+2019-03,97036000,Bank deposits,Santander,974.6697
+2019-03,97053000,Bank bonds,Security,647.7864
+2019-03,97053000,Bank deposits,Security,644.2288
+2019-03,97080000,Bank bonds,BICE,163.9238
+2019-03,97080000,Bank deposits,BICE,1327.2547
+2019-03,97947000,Bank bonds,RPL,141.0565
+2019-03,97947000,Bank deposits,RPL,170.2173
+2019-03,97951000,Bank deposits,HSB,123.9813
+2019-03,99500410,Bank bonds,Consorcio,294.2126
+2019-03,99500410,Bank deposits,Consorcio,967.2106
+2019-04,59203500,Bank deposits,CCB,15.2335
+2019-04,76362099,Bank bonds,BTG Pactual,31.2415
+2019-04,76362099,Bank deposits,BTG Pactual,151.2079
+2019-04,82878900,Bank bonds,Coopeuch,40.0318
+2019-04,82878900,Bank deposits,Coopeuch,121.4969
+2019-04,96509660,Bank bonds,Banco Falabella,43.8472
+2019-04,96509660,Bank deposits,Banco Falabella,607.2097
+2019-04,97004000,Bank bonds,Banco de Chile,1330.6687
+2019-04,97004000,Bank deposits,Banco de Chile,1013.7626
+2019-04,97006000,Bank bonds,BCI,745.1001
+2019-04,97006000,Bank deposits,BCI,2355.2599
+2019-04,97011000,Bank bonds,Internacional,129.0949
+2019-04,97011000,Bank deposits,Internacional,674.034
+2019-04,97018000,Bank bonds,Scotiabank,1559.9389
+2019-04,97018000,Bank deposits,Scotiabank,2465.2297
+2019-04,97023000,Bank bonds,Itaú,880.9991
+2019-04,97023000,Bank deposits,Itaú,1349.3095
+2019-04,97030000,Bank bonds,BancoEstado,1077.0551
+2019-04,97030000,Bank deposits,BancoEstado,1477.686
+2019-04,97036000,Bank bonds,Santander,1515.201
+2019-04,97036000,Bank deposits,Santander,956.0182
+2019-04,97053000,Bank bonds,Security,658.6448
+2019-04,97053000,Bank deposits,Security,685.3977
+2019-04,97080000,Bank bonds,BICE,171.0217
+2019-04,97080000,Bank deposits,BICE,1212.913
+2019-04,97947000,Bank bonds,RPL,110.302
+2019-04,97947000,Bank deposits,RPL,191.637
+2019-04,97951000,Bank deposits,HSB,234.8619
+2019-04,99500410,Bank bonds,Consorcio,284.0771
+2019-04,99500410,Bank deposits,Consorcio,1044.8491
+2019-05,59203500,Bank deposits,CCB,10.1992
+2019-05,76362099,Bank bonds,BTG Pactual,33.251
+2019-05,76362099,Bank deposits,BTG Pactual,178.3783
+2019-05,82878900,Bank bonds,Coopeuch,40.5712
+2019-05,82878900,Bank deposits,Coopeuch,89.6683
+2019-05,96509660,Bank bonds,Banco Falabella,50.9169
+2019-05,96509660,Bank deposits,Banco Falabella,588.998
+2019-05,97004000,Bank bonds,Banco de Chile,1460.0895
+2019-05,97004000,Bank deposits,Banco de Chile,955.2631
+2019-05,97006000,Bank bonds,BCI,790.3533
+2019-05,97006000,Bank deposits,BCI,2493.2513
+2019-05,97011000,Bank bonds,Internacional,166.2906
+2019-05,97011000,Bank deposits,Internacional,755.7244
+2019-05,97018000,Bank bonds,Scotiabank,1468.358
+2019-05,97018000,Bank deposits,Scotiabank,2738.7017
+2019-05,97023000,Bank bonds,Itaú,946.5223
+2019-05,97023000,Bank deposits,Itaú,1455.3309
+2019-05,97030000,Bank bonds,BancoEstado,1115.4127
+2019-05,97030000,Bank deposits,BancoEstado,1471.4166
+2019-05,97036000,Bank bonds,Santander,1561.6552
+2019-05,97036000,Bank deposits,Santander,1106.5196
+2019-05,97053000,Bank bonds,Security,706.954
+2019-05,97053000,Bank deposits,Security,685.038
+2019-05,97080000,Bank bonds,BICE,177.5813
+2019-05,97080000,Bank deposits,BICE,1167.6699
+2019-05,97947000,Bank bonds,RPL,115.9314
+2019-05,97947000,Bank deposits,RPL,198.9095
+2019-05,97951000,Bank deposits,HSB,199.4691
+2019-05,99500410,Bank bonds,Consorcio,320.3934
+2019-05,99500410,Bank deposits,Consorcio,1138.9875
+2019-06,59203500,Bank deposits,CCB,19.9857
+2019-06,76362099,Bank bonds,BTG Pactual,35.6431
+2019-06,76362099,Bank deposits,BTG Pactual,190.8543
+2019-06,82878900,Bank bonds,Coopeuch,39.8343
+2019-06,82878900,Bank deposits,Coopeuch,104.9084
+2019-06,94271000,Bank deposits,,1.7982
+2019-06,96509660,Bank bonds,Banco Falabella,50.3244
+2019-06,96509660,Bank deposits,Banco Falabella,591.428
+2019-06,97004000,Bank bonds,Banco de Chile,1522.185
+2019-06,97004000,Bank deposits,Banco de Chile,804.1084
+2019-06,97006000,Bank bonds,BCI,866.9312
+2019-06,97006000,Bank deposits,BCI,2738.2896
+2019-06,97011000,Bank bonds,Internacional,186.59
+2019-06,97011000,Bank deposits,Internacional,730.5262
+2019-06,97018000,Bank bonds,Scotiabank,1503.8228
+2019-06,97018000,Bank deposits,Scotiabank,2656.2278
+2019-06,97023000,Bank bonds,Itaú,947.4365
+2019-06,97023000,Bank deposits,Itaú,1796.8763
+2019-06,97030000,Bank bonds,BancoEstado,1134.3536
+2019-06,97030000,Bank deposits,BancoEstado,1330.0703
+2019-06,97032000,Bank deposits,BBV,0.9974
+2019-06,97036000,Bank bonds,Santander,1543.3272
+2019-06,97036000,Bank deposits,Santander,962.974
+2019-06,97053000,Bank bonds,Security,702.8084
+2019-06,97053000,Bank deposits,Security,786.7191
+2019-06,97080000,Bank bonds,BICE,177.0442
+2019-06,97080000,Bank deposits,BICE,1162.7085
+2019-06,97947000,Bank bonds,RPL,118.5832
+2019-06,97947000,Bank deposits,RPL,218.2825
+2019-06,97951000,Bank deposits,HSB,230.9035
+2019-06,99500410,Bank bonds,Consorcio,349.2348
+2019-06,99500410,Bank deposits,Consorcio,1195.3859
+2019-07,59203500,Bank deposits,CCB,32.0452
+2019-07,76362099,Bank bonds,BTG Pactual,49.9904
+2019-07,76362099,Bank deposits,BTG Pactual,165.5306
+2019-07,82878900,Bank bonds,Coopeuch,39.8289
+2019-07,82878900,Bank deposits,Coopeuch,66.1244
+2019-07,96509660,Bank bonds,Banco Falabella,50.649
+2019-07,96509660,Bank deposits,Banco Falabella,571.9622
+2019-07,96896990,Bank deposits,,0.0008
+2019-07,97004000,Bank bonds,Banco de Chile,1598.8373
+2019-07,97004000,Bank deposits,Banco de Chile,888.9015
+2019-07,97006000,Bank bonds,BCI,894.3741
+2019-07,97006000,Bank deposits,BCI,2807.9596
+2019-07,97011000,Bank bonds,Internacional,235.6162
+2019-07,97011000,Bank deposits,Internacional,757.622
+2019-07,97018000,Bank bonds,Scotiabank,1535.5079
+2019-07,97018000,Bank deposits,Scotiabank,2582.4567
+2019-07,97023000,Bank bonds,Itaú,977.4692
+2019-07,97023000,Bank deposits,Itaú,2052.6177
+2019-07,97030000,Bank bonds,BancoEstado,1112.6829
+2019-07,97030000,Bank deposits,BancoEstado,1579.4762
+2019-07,97036000,Bank bonds,Santander,1520.3592
+2019-07,97036000,Bank deposits,Santander,1116.6931
+2019-07,97053000,Bank bonds,Security,688.1744
+2019-07,97053000,Bank deposits,Security,886.5543
+2019-07,97080000,Bank bonds,BICE,177.5173
+2019-07,97080000,Bank deposits,BICE,1315.2507
+2019-07,97947000,Bank bonds,RPL,119.3309
+2019-07,97947000,Bank deposits,RPL,239.4164
+2019-07,97951000,Bank deposits,HSB,85.6451
+2019-07,99500410,Bank bonds,Consorcio,364.9301
+2019-07,99500410,Bank deposits,Consorcio,1224.3632
+2019-08,59203500,Bank deposits,CCB,32.1121
+2019-08,76362099,Bank bonds,BTG Pactual,57.0598
+2019-08,76362099,Bank deposits,BTG Pactual,193.4046
+2019-08,82878900,Bank bonds,Coopeuch,42.1747
+2019-08,82878900,Bank deposits,Coopeuch,63.645
+2019-08,96509660,Bank bonds,Banco Falabella,51.3075
+2019-08,96509660,Bank deposits,Banco Falabella,555.4314
+2019-08,97004000,Bank bonds,Banco de Chile,1641.2294
+2019-08,97004000,Bank deposits,Banco de Chile,1117.5665
+2019-08,97006000,Bank bonds,BCI,1065.5537
+2019-08,97006000,Bank deposits,BCI,2665.3378
+2019-08,97011000,Bank bonds,Internacional,305.2916
+2019-08,97011000,Bank deposits,Internacional,722.2013
+2019-08,97018000,Bank bonds,Scotiabank,1580.9579
+2019-08,97018000,Bank deposits,Scotiabank,2543.748
+2019-08,97023000,Bank bonds,Itaú,1015.3741
+2019-08,97023000,Bank deposits,Itaú,2137.4916
+2019-08,97030000,Bank bonds,BancoEstado,1117.3403
+2019-08,97030000,Bank deposits,BancoEstado,1797.9222
+2019-08,97036000,Bank bonds,Santander,1640.4102
+2019-08,97036000,Bank deposits,Santander,1021.3225
+2019-08,97053000,Bank bonds,Security,768.4028
+2019-08,97053000,Bank deposits,Security,925.6006
+2019-08,97080000,Bank bonds,BICE,175.6712
+2019-08,97080000,Bank deposits,BICE,1370.2582
+2019-08,97947000,Bank bonds,RPL,119.716
+2019-08,97947000,Bank deposits,RPL,241.6138
+2019-08,97951000,Bank deposits,HSB,130.0879
+2019-08,99500410,Bank bonds,Consorcio,375.7123
+2019-08,99500410,Bank deposits,Consorcio,1159.2955
+2019-09,59203500,Bank deposits,CCB,32.1755
+2019-09,76362099,Bank bonds,BTG Pactual,61.0208
+2019-09,76362099,Bank deposits,BTG Pactual,181.8489
+2019-09,82878900,Bank bonds,Coopeuch,40.735
+2019-09,82878900,Bank deposits,Coopeuch,55.9302
+2019-09,96509660,Bank bonds,Banco Falabella,51.6607
+2019-09,96509660,Bank deposits,Banco Falabella,572.4206
+2019-09,97004000,Bank bonds,Banco de Chile,1643.9328
+2019-09,97004000,Bank deposits,Banco de Chile,1391.7246
+2019-09,97006000,Bank bonds,BCI,1077.0315
+2019-09,97006000,Bank deposits,BCI,2247.8626
+2019-09,97011000,Bank bonds,Internacional,321.7812
+2019-09,97011000,Bank deposits,Internacional,732.0403
+2019-09,97018000,Bank bonds,Scotiabank,1590.5917
+2019-09,97018000,Bank deposits,Scotiabank,2544.4107
+2019-09,97023000,Bank bonds,Itaú,994.9706
+2019-09,97023000,Bank deposits,Itaú,2205.7157
+2019-09,97030000,Bank bonds,BancoEstado,1120.8184
+2019-09,97030000,Bank deposits,BancoEstado,1961.9374
+2019-09,97036000,Bank bonds,Santander,1655.0162
+2019-09,97036000,Bank deposits,Santander,1126.602
+2019-09,97053000,Bank bonds,Security,780.1536
+2019-09,97053000,Bank deposits,Security,955.0698
+2019-09,97080000,Bank bonds,BICE,178.0055
+2019-09,97080000,Bank deposits,BICE,1519.988
+2019-09,97947000,Bank bonds,RPL,122.9298
+2019-09,97947000,Bank deposits,RPL,220.8509
+2019-09,97951000,Bank deposits,HSB,181.4876
+2019-09,99500410,Bank bonds,Consorcio,377.6318
+2019-09,99500410,Bank deposits,Consorcio,1208.8819
+2019-10,59203500,Bank deposits,CCB,27.3691
+2019-10,76362099,Bank bonds,BTG Pactual,60.4438
+2019-10,76362099,Bank deposits,BTG Pactual,195.3854
+2019-10,82878900,Bank bonds,Coopeuch,41.2805
+2019-10,82878900,Bank deposits,Coopeuch,48.194
+2019-10,96509660,Bank bonds,Banco Falabella,48.8409
+2019-10,96509660,Bank deposits,Banco Falabella,657.9322
+2019-10,96896990,Bank deposits,,0.0
+2019-10,97004000,Bank bonds,Banco de Chile,1469.4752
+2019-10,97004000,Bank deposits,Banco de Chile,1464.0327
+2019-10,97006000,Bank bonds,BCI,845.1387
+2019-10,97006000,Bank deposits,BCI,2348.025
+2019-10,97011000,Bank bonds,Internacional,308.372
+2019-10,97011000,Bank deposits,Internacional,659.7549
+2019-10,97018000,Bank bonds,Scotiabank,1521.2811
+2019-10,97018000,Bank deposits,Scotiabank,2777.8925
+2019-10,97023000,Bank bonds,Itaú,941.7362
+2019-10,97023000,Bank deposits,Itaú,2206.968
+2019-10,97030000,Bank bonds,BancoEstado,950.5103
+2019-10,97030000,Bank deposits,BancoEstado,1644.3711
+2019-10,97036000,Bank bonds,Santander,1554.959
+2019-10,97036000,Bank deposits,Santander,1111.0611
+2019-10,97053000,Bank bonds,Security,740.9761
+2019-10,97053000,Bank deposits,Security,909.2754
+2019-10,97080000,Bank bonds,BICE,138.7903
+2019-10,97080000,Bank deposits,BICE,1556.1056
+2019-10,97947000,Bank bonds,RPL,118.452
+2019-10,97947000,Bank deposits,RPL,232.8155
+2019-10,97951000,Bank deposits,HSB,103.9468
+2019-10,99500410,Bank bonds,Consorcio,389.1534
+2019-10,99500410,Bank deposits,Consorcio,1085.7604
+2019-11,59203500,Bank deposits,CCB,23.2537
+2019-11,76362099,Bank bonds,BTG Pactual,58.1557
+2019-11,76362099,Bank deposits,BTG Pactual,198.556
+2019-11,82878900,Bank bonds,Coopeuch,39.403
+2019-11,82878900,Bank deposits,Coopeuch,77.4425
+2019-11,96509660,Bank bonds,Banco Falabella,51.3269
+2019-11,96509660,Bank deposits,Banco Falabella,699.4585
+2019-11,96896990,Bank deposits,,0.0
+2019-11,97004000,Bank bonds,Banco de Chile,1212.8549
+2019-11,97004000,Bank deposits,Banco de Chile,1740.3673
+2019-11,97006000,Bank bonds,BCI,616.441
+2019-11,97006000,Bank deposits,BCI,2433.6405
+2019-11,97011000,Bank bonds,Internacional,302.4028
+2019-11,97011000,Bank deposits,Internacional,691.4554
+2019-11,97018000,Bank bonds,Scotiabank,1187.0892
+2019-11,97018000,Bank deposits,Scotiabank,2964.8423
+2019-11,97023000,Bank bonds,Itaú,863.5902
+2019-11,97023000,Bank deposits,Itaú,2214.4463
+2019-11,97030000,Bank bonds,BancoEstado,776.235
+2019-11,97030000,Bank deposits,BancoEstado,1987.7939
+2019-11,97036000,Bank bonds,Santander,1169.8684
+2019-11,97036000,Bank deposits,Santander,1097.0534
+2019-11,97053000,Bank bonds,Security,678.7631
+2019-11,97053000,Bank deposits,Security,910.3401
+2019-11,97080000,Bank bonds,BICE,133.5834
+2019-11,97080000,Bank deposits,BICE,1653.983
+2019-11,97947000,Bank bonds,RPL,115.8973
+2019-11,97947000,Bank deposits,RPL,230.0101
+2019-11,97951000,Bank deposits,HSB,143.8522
+2019-11,99500410,Bank bonds,Consorcio,369.3303
+2019-11,99500410,Bank deposits,Consorcio,1273.3255
+2019-12,59203500,Bank deposits,CCB,15.1754
+2019-12,76362099,Bank bonds,BTG Pactual,56.1819
+2019-12,76362099,Bank deposits,BTG Pactual,183.4378
+2019-12,82878900,Bank bonds,Coopeuch,41.7313
+2019-12,82878900,Bank deposits,Coopeuch,85.5139
+2019-12,96509660,Bank bonds,Banco Falabella,50.1524
+2019-12,96509660,Bank deposits,Banco Falabella,684.533
+2019-12,96896990,Bank deposits,,0.0
+2019-12,97004000,Bank bonds,Banco de Chile,1116.6491
+2019-12,97004000,Bank deposits,Banco de Chile,1424.5349
+2019-12,97006000,Bank bonds,BCI,602.02
+2019-12,97006000,Bank deposits,BCI,2593.9196
+2019-12,97011000,Bank bonds,Internacional,299.1874
+2019-12,97011000,Bank deposits,Internacional,705.1596
+2019-12,97018000,Bank bonds,Scotiabank,1168.2451
+2019-12,97018000,Bank deposits,Scotiabank,2884.5325
+2019-12,97023000,Bank bonds,Itaú,849.581
+2019-12,97023000,Bank deposits,Itaú,2141.2478
+2019-12,97030000,Bank bonds,BancoEstado,755.418
+2019-12,97030000,Bank deposits,BancoEstado,1815.0225
+2019-12,97036000,Bank bonds,Santander,1168.2243
+2019-12,97036000,Bank deposits,Santander,917.4209
+2019-12,97053000,Bank bonds,Security,697.8716
+2019-12,97053000,Bank deposits,Security,882.8115
+2019-12,97080000,Bank bonds,BICE,132.5404
+2019-12,97080000,Bank deposits,BICE,1539.4872
+2019-12,97947000,Bank bonds,RPL,112.5841
+2019-12,97947000,Bank deposits,RPL,236.6367
+2019-12,97951000,Bank deposits,HSB,132.938
+2019-12,99500410,Bank bonds,Consorcio,371.1165
+2019-12,99500410,Bank deposits,Consorcio,1406.5192
+2020-01,59203500,Bank deposits,CCB,23.8471
+2020-01,76362099,Bank bonds,BTG Pactual,56.3958
+2020-01,76362099,Bank deposits,BTG Pactual,186.8558
+2020-01,82878900,Bank bonds,Coopeuch,41.6227
+2020-01,82878900,Bank deposits,Coopeuch,70.9071
+2020-01,96509660,Bank bonds,Banco Falabella,48.1534
+2020-01,96509660,Bank deposits,Banco Falabella,756.735
+2020-01,96896990,Bank deposits,,0.0
+2020-01,97004000,Bank bonds,Banco de Chile,1231.4759
+2020-01,97004000,Bank deposits,Banco de Chile,1469.0358
+2020-01,97006000,Bank bonds,BCI,619.2474
+2020-01,97006000,Bank deposits,BCI,2838.9252
+2020-01,97011000,Bank bonds,Internacional,320.7086
+2020-01,97011000,Bank deposits,Internacional,635.5942
+2020-01,97018000,Bank bonds,Scotiabank,1264.8643
+2020-01,97018000,Bank deposits,Scotiabank,3082.3145
+2020-01,97023000,Bank bonds,Itaú,890.0823
+2020-01,97023000,Bank deposits,Itaú,2308.9259
+2020-01,97030000,Bank bonds,BancoEstado,741.0258
+2020-01,97030000,Bank deposits,BancoEstado,1452.5796
+2020-01,97036000,Bank bonds,Santander,1075.7378
+2020-01,97036000,Bank deposits,Santander,1054.4569
+2020-01,97053000,Bank bonds,Security,745.3317
+2020-01,97053000,Bank deposits,Security,858.575
+2020-01,97080000,Bank bonds,BICE,146.1781
+2020-01,97080000,Bank deposits,BICE,1446.1085
+2020-01,97947000,Bank bonds,RPL,114.0193
+2020-01,97947000,Bank deposits,RPL,250.1266
+2020-01,97951000,Bank deposits,HSB,173.8391
+2020-01,99500410,Bank bonds,Consorcio,378.776
+2020-01,99500410,Bank deposits,Consorcio,1294.8543
+2020-02,59203500,Bank deposits,CCB,18.877
+2020-02,76362099,Bank bonds,BTG Pactual,56.5821
+2020-02,76362099,Bank deposits,BTG Pactual,183.7684
+2020-02,82878900,Bank bonds,Coopeuch,41.0979
+2020-02,82878900,Bank deposits,Coopeuch,76.3034
+2020-02,96509660,Bank bonds,Banco Falabella,48.1792
+2020-02,96509660,Bank deposits,Banco Falabella,704.5243
+2020-02,96896990,Bank deposits,,0.0
+2020-02,97004000,Bank bonds,Banco de Chile,1058.7941
+2020-02,97004000,Bank deposits,Banco de Chile,1521.0512
+2020-02,97006000,Bank bonds,BCI,586.8482
+2020-02,97006000,Bank deposits,BCI,2830.8904
+2020-02,97011000,Bank bonds,Internacional,319.5184
+2020-02,97011000,Bank deposits,Internacional,620.1975
+2020-02,97018000,Bank bonds,Scotiabank,1193.2981
+2020-02,97018000,Bank deposits,Scotiabank,3033.7745
+2020-02,97023000,Bank bonds,Itaú,861.4729
+2020-02,97023000,Bank deposits,Itaú,2168.4317
+2020-02,97030000,Bank bonds,BancoEstado,675.6861
+2020-02,97030000,Bank deposits,BancoEstado,1513.0511
+2020-02,97036000,Bank bonds,Santander,941.4439
+2020-02,97036000,Bank deposits,Santander,1322.9348
+2020-02,97053000,Bank bonds,Security,701.0021
+2020-02,97053000,Bank deposits,Security,824.2185
+2020-02,97080000,Bank bonds,BICE,132.9893
+2020-02,97080000,Bank deposits,BICE,1547.736
+2020-02,97947000,Bank bonds,RPL,110.0848
+2020-02,97947000,Bank deposits,RPL,257.045
+2020-02,97951000,Bank deposits,HSB,175.2821
+2020-02,99500410,Bank bonds,Consorcio,377.4827
+2020-02,99500410,Bank deposits,Consorcio,1308.2913
+2020-03,59203500,Bank deposits,CCB,23.9802
+2020-03,76362099,Bank bonds,BTG Pactual,53.3803
+2020-03,76362099,Bank deposits,BTG Pactual,224.3801
+2020-03,82878900,Bank bonds,Coopeuch,39.7942
+2020-03,82878900,Bank deposits,Coopeuch,116.0188
+2020-03,96509660,Bank bonds,Banco Falabella,49.6847
+2020-03,96509660,Bank deposits,Banco Falabella,813.2245
+2020-03,96896990,Bank deposits,,0.0
+2020-03,97004000,Bank bonds,Banco de Chile,867.0052
+2020-03,97004000,Bank deposits,Banco de Chile,1454.7454
+2020-03,97006000,Bank bonds,BCI,473.1471
+2020-03,97006000,Bank deposits,BCI,3225.8507
+2020-03,97011000,Bank bonds,Internacional,263.5763
+2020-03,97011000,Bank deposits,Internacional,714.9693
+2020-03,97018000,Bank bonds,Scotiabank,918.3668
+2020-03,97018000,Bank deposits,Scotiabank,3187.1856
+2020-03,97023000,Bank bonds,Itaú,710.6061
+2020-03,97023000,Bank deposits,Itaú,2364.8053
+2020-03,97030000,Bank bonds,BancoEstado,513.8847
+2020-03,97030000,Bank deposits,BancoEstado,2242.9135
+2020-03,97036000,Bank bonds,Santander,748.2435
+2020-03,97036000,Bank deposits,Santander,1415.5756
+2020-03,97053000,Bank bonds,Security,583.2283
+2020-03,97053000,Bank deposits,Security,885.8033
+2020-03,97080000,Bank bonds,BICE,126.4941
+2020-03,97080000,Bank deposits,BICE,1665.3617
+2020-03,97947000,Bank bonds,RPL,57.1172
+2020-03,97947000,Bank deposits,RPL,295.6698
+2020-03,97951000,Bank deposits,HSB,181.5169
+2020-03,99500410,Bank bonds,Consorcio,327.424
+2020-03,99500410,Bank deposits,Consorcio,1612.6313
+2020-04,59203500,Bank deposits,CCB,30.2905
+2020-04,76362099,Bank bonds,BTG Pactual,51.4096
+2020-04,76362099,Bank deposits,BTG Pactual,244.9577
+2020-04,82878900,Bank bonds,Coopeuch,37.6527
+2020-04,82878900,Bank deposits,Coopeuch,114.2463
+2020-04,96509660,Bank bonds,Banco Falabella,52.1281
+2020-04,96509660,Bank deposits,Banco Falabella,773.9706
+2020-04,96896990,Bank deposits,,0.0
+2020-04,97004000,Bank bonds,Banco de Chile,966.8209
+2020-04,97004000,Bank deposits,Banco de Chile,1297.2869
+2020-04,97006000,Bank bonds,BCI,491.1261
+2020-04,97006000,Bank deposits,BCI,3576.4827
+2020-04,97011000,Bank bonds,Internacional,199.2479
+2020-04,97011000,Bank deposits,Internacional,820.1673
+2020-04,97018000,Bank bonds,Scotiabank,999.6479
+2020-04,97018000,Bank deposits,Scotiabank,3353.238
+2020-04,97023000,Bank bonds,Itaú,685.3082
+2020-04,97023000,Bank deposits,Itaú,2471.711
+2020-04,97030000,Bank bonds,BancoEstado,599.2589
+2020-04,97030000,Bank deposits,BancoEstado,1846.9732
+2020-04,97036000,Bank bonds,Santander,713.4603
+2020-04,97036000,Bank deposits,Santander,1735.9337
+2020-04,97053000,Bank bonds,Security,616.7176
+2020-04,97053000,Bank deposits,Security,796.3397
+2020-04,97080000,Bank bonds,BICE,194.7988
+2020-04,97080000,Bank deposits,BICE,1595.476
+2020-04,97947000,Bank bonds,RPL,53.9853
+2020-04,97947000,Bank deposits,RPL,291.4697
+2020-04,97951000,Bank deposits,HSB,69.807
+2020-04,99500410,Bank bonds,Consorcio,288.6068
+2020-04,99500410,Bank deposits,Consorcio,1737.8044
+2020-05,59203500,Bank deposits,CCB,25.0008
+2020-05,76362099,Bank bonds,BTG Pactual,53.1487
+2020-05,76362099,Bank deposits,BTG Pactual,247.3606
+2020-05,82878900,Bank bonds,Coopeuch,39.9378
+2020-05,82878900,Bank deposits,Coopeuch,119.3579
+2020-05,96509660,Bank bonds,Banco Falabella,43.141
+2020-05,96509660,Bank deposits,Banco Falabella,687.9556
+2020-05,96896990,Bank deposits,,0.0
+2020-05,97004000,Bank bonds,Banco de Chile,997.3487
+2020-05,97004000,Bank deposits,Banco de Chile,1091.7404
+2020-05,97006000,Bank bonds,BCI,537.9306
+2020-05,97006000,Bank deposits,BCI,3977.5464
+2020-05,97011000,Bank bonds,Internacional,206.4655
+2020-05,97011000,Bank deposits,Internacional,838.9602
+2020-05,97018000,Bank bonds,Scotiabank,1070.3403
+2020-05,97018000,Bank deposits,Scotiabank,3456.8902
+2020-05,97023000,Bank bonds,Itaú,736.4106
+2020-05,97023000,Bank deposits,Itaú,2749.036
+2020-05,97030000,Bank bonds,BancoEstado,598.5515
+2020-05,97030000,Bank deposits,BancoEstado,1066.9301
+2020-05,97036000,Bank bonds,Santander,748.6875
+2020-05,97036000,Bank deposits,Santander,1914.4322
+2020-05,97053000,Bank bonds,Security,650.4352
+2020-05,97053000,Bank deposits,Security,801.4344
+2020-05,97080000,Bank bonds,BICE,180.1554
+2020-05,97080000,Bank deposits,BICE,1382.1516
+2020-05,97947000,Bank bonds,RPL,54.9025
+2020-05,97947000,Bank deposits,RPL,279.627
+2020-05,97951000,Bank deposits,HSB,246.453
+2020-05,99500410,Bank bonds,Consorcio,305.0615
+2020-05,99500410,Bank deposits,Consorcio,1605.7233
+2020-06,59203500,Bank deposits,CCB,18.403
+2020-06,76362099,Bank bonds,BTG Pactual,51.8901
+2020-06,76362099,Bank deposits,BTG Pactual,214.9733
+2020-06,82878900,Bank bonds,Coopeuch,44.5647
+2020-06,82878900,Bank deposits,Coopeuch,165.42
+2020-06,96509660,Bank bonds,Banco Falabella,31.2952
+2020-06,96509660,Bank deposits,Banco Falabella,751.6711
+2020-06,96896990,Bank deposits,,0.0
+2020-06,97004000,Bank bonds,Banco de Chile,1063.4449
+2020-06,97004000,Bank deposits,Banco de Chile,933.1374
+2020-06,97006000,Bank bonds,BCI,559.4971
+2020-06,97006000,Bank deposits,BCI,3785.7313
+2020-06,97011000,Bank bonds,Internacional,239.8922
+2020-06,97011000,Bank deposits,Internacional,849.6921
+2020-06,97018000,Bank bonds,Scotiabank,1030.4251
+2020-06,97018000,Bank deposits,Scotiabank,3320.9362
+2020-06,97023000,Bank bonds,Itaú,768.0034
+2020-06,97023000,Bank deposits,Itaú,2926.1916
+2020-06,97030000,Bank bonds,BancoEstado,652.0679
+2020-06,97030000,Bank deposits,BancoEstado,704.4022
+2020-06,97036000,Bank bonds,Santander,791.0053
+2020-06,97036000,Bank deposits,Santander,1587.1224
+2020-06,97053000,Bank bonds,Security,595.9998
+2020-06,97053000,Bank deposits,Security,739.9513
+2020-06,97080000,Bank bonds,BICE,181.9379
+2020-06,97080000,Bank deposits,BICE,1283.295
+2020-06,97947000,Bank bonds,RPL,52.4029
+2020-06,97947000,Bank deposits,RPL,249.9828
+2020-06,97951000,Bank deposits,HSB,230.2381
+2020-06,99500410,Bank bonds,Consorcio,319.7935
+2020-06,99500410,Bank deposits,Consorcio,1527.0334
+2020-07,59203500,Bank deposits,CCB,15.9115
+2020-07,76362099,Bank bonds,BTG Pactual,45.7563
+2020-07,76362099,Bank deposits,BTG Pactual,248.8248
+2020-07,82878900,Bank bonds,Coopeuch,43.138
+2020-07,82878900,Bank deposits,Coopeuch,121.4058
+2020-07,96509660,Bank bonds,Banco Falabella,30.3398
+2020-07,96509660,Bank deposits,Banco Falabella,709.5789
+2020-07,96604380,Bank deposits,,0.0046
+2020-07,96896990,Bank deposits,,0.0
+2020-07,97004000,Bank bonds,Banco de Chile,1087.1567
+2020-07,97004000,Bank deposits,Banco de Chile,623.5638
+2020-07,97006000,Bank bonds,BCI,561.4794
+2020-07,97006000,Bank deposits,BCI,2740.625
+2020-07,97011000,Bank bonds,Internacional,240.7136
+2020-07,97011000,Bank deposits,Internacional,809.4362
+2020-07,97018000,Bank bonds,Scotiabank,1050.1722
+2020-07,97018000,Bank deposits,Scotiabank,2971.5202
+2020-07,97023000,Bank bonds,Itaú,579.6056
+2020-07,97023000,Bank deposits,Itaú,3102.9617
+2020-07,97030000,Bank bonds,BancoEstado,656.2402
+2020-07,97030000,Bank deposits,BancoEstado,447.5009
+2020-07,97036000,Bank bonds,Santander,789.3526
+2020-07,97036000,Bank deposits,Santander,1095.4457
+2020-07,97053000,Bank bonds,Security,541.1932
+2020-07,97053000,Bank deposits,Security,677.0641
+2020-07,97080000,Bank bonds,BICE,184.5746
+2020-07,97080000,Bank deposits,BICE,1217.0253
+2020-07,97947000,Bank bonds,RPL,34.5426
+2020-07,97947000,Bank deposits,RPL,232.3734
+2020-07,97951000,Bank deposits,HSB,160.6219
+2020-07,99500410,Bank bonds,Consorcio,331.0637
+2020-07,99500410,Bank deposits,Consorcio,1333.0908
+2020-08,59203500,Bank deposits,CCB,6.9061
+2020-08,76362099,Bank bonds,BTG Pactual,48.0532
+2020-08,76362099,Bank deposits,BTG Pactual,216.9013
+2020-08,82878900,Bank bonds,Coopeuch,52.2802
+2020-08,82878900,Bank deposits,Coopeuch,89.5349
+2020-08,90160000,Bank deposits,,0.3593
+2020-08,96509660,Bank bonds,Banco Falabella,32.416
+2020-08,96509660,Bank deposits,Banco Falabella,653.604
+2020-08,96529340,Bank deposits,,0.0235
+2020-08,96604380,Bank deposits,,0.0
+2020-08,96814430,Bank deposits,,0.0091
+2020-08,96882560,Bank deposits,,0.0
+2020-08,96896990,Bank deposits,,0.0
+2020-08,97004000,Bank bonds,Banco de Chile,1120.2785
+2020-08,97004000,Bank deposits,Banco de Chile,493.1153
+2020-08,97006000,Bank bonds,BCI,579.0648
+2020-08,97006000,Bank deposits,BCI,2431.0172
+2020-08,97011000,Bank bonds,Internacional,270.5129
+2020-08,97011000,Bank deposits,Internacional,742.2826
+2020-08,97018000,Bank bonds,Scotiabank,1099.6578
+2020-08,97018000,Bank deposits,Scotiabank,2752.5819
+2020-08,97023000,Bank bonds,Itaú,617.0093
+2020-08,97023000,Bank deposits,Itaú,2981.7973
+2020-08,97030000,Bank bonds,BancoEstado,722.9586
+2020-08,97030000,Bank deposits,BancoEstado,237.3715
+2020-08,97032000,Bank bonds,,9.8615
+2020-08,97036000,Bank bonds,Santander,802.4555
+2020-08,97036000,Bank deposits,Santander,673.9721
+2020-08,97053000,Bank bonds,Security,565.0698
+2020-08,97053000,Bank deposits,Security,549.0316
+2020-08,97080000,Bank bonds,BICE,190.2554
+2020-08,97080000,Bank deposits,BICE,1192.9641
+2020-08,97947000,Bank bonds,RPL,42.2291
+2020-08,97947000,Bank deposits,RPL,202.4552
+2020-08,97951000,Bank deposits,HSB,65.1699
+2020-08,99500410,Bank bonds,Consorcio,378.2586
+2020-08,99500410,Bank deposits,Consorcio,1254.4896
+2020-09,59203500,Bank deposits,CCB,6.9151
+2020-09,7219,Bank deposits,,0.0
+2020-09,76362099,Bank bonds,BTG Pactual,48.2594
+2020-09,76362099,Bank deposits,BTG Pactual,186.0953
+2020-09,82878900,Bank bonds,Coopeuch,50.9673
+2020-09,82878900,Bank deposits,Coopeuch,74.2604
+2020-09,96509660,Bank bonds,Banco Falabella,25.8218
+2020-09,96509660,Bank deposits,Banco Falabella,493.9237
+2020-09,96604380,Bank deposits,,0.0
+2020-09,96896990,Bank deposits,,0.0
+2020-09,97004000,Bank bonds,Banco de Chile,1119.0321
+2020-09,97004000,Bank deposits,Banco de Chile,418.5206
+2020-09,97006000,Bank bonds,BCI,581.6293
+2020-09,97006000,Bank deposits,BCI,1932.3837
+2020-09,97011000,Bank bonds,Internacional,281.2729
+2020-09,97011000,Bank deposits,Internacional,697.2281
+2020-09,97018000,Bank bonds,Scotiabank,1088.8206
+2020-09,97018000,Bank deposits,Scotiabank,2542.4547
+2020-09,97023000,Bank bonds,Itaú,598.0503
+2020-09,97023000,Bank deposits,Itaú,2837.663
+2020-09,97030000,Bank bonds,BancoEstado,728.221
+2020-09,97030000,Bank deposits,BancoEstado,204.5088
+2020-09,97036000,Bank bonds,Santander,771.0121
+2020-09,97036000,Bank deposits,Santander,431.916
+2020-09,97053000,Bank bonds,Security,564.1442
+2020-09,97053000,Bank deposits,Security,473.8031
+2020-09,97080000,Bank bonds,BICE,167.9414
+2020-09,97080000,Bank deposits,BICE,955.1438
+2020-09,97947000,Bank bonds,RPL,49.6344
+2020-09,97947000,Bank deposits,RPL,178.6858
+2020-09,97951000,Bank deposits,HSB,139.533
+2020-09,99500410,Bank bonds,Consorcio,345.6666
+2020-09,99500410,Bank deposits,Consorcio,1322.1166
+2020-10,59203500,Bank deposits,CCB,4.9368
+2020-10,7219,Bank deposits,,0.0
+2020-10,76362099,Bank bonds,BTG Pactual,56.0847
+2020-10,76362099,Bank deposits,BTG Pactual,174.6683
+2020-10,82878900,Bank bonds,Coopeuch,51.3384
+2020-10,82878900,Bank deposits,Coopeuch,38.2757
+2020-10,96509660,Bank bonds,Banco Falabella,28.2492
+2020-10,96509660,Bank deposits,Banco Falabella,461.8137
+2020-10,96529340,Bank deposits,,0.0006
+2020-10,96604380,Bank deposits,,0.0
+2020-10,96896990,Bank deposits,,0.0
+2020-10,97004000,Bank bonds,Banco de Chile,1105.4705
+2020-10,97004000,Bank deposits,Banco de Chile,360.4604
+2020-10,97006000,Bank bonds,BCI,599.8873
+2020-10,97006000,Bank deposits,BCI,1709.4809
+2020-10,97011000,Bank bonds,Internacional,302.7573
+2020-10,97011000,Bank deposits,Internacional,741.3052
+2020-10,97018000,Bank bonds,Scotiabank,1182.2532
+2020-10,97018000,Bank deposits,Scotiabank,2158.2388
+2020-10,97023000,Bank bonds,Itaú,616.8522
+2020-10,97023000,Bank deposits,Itaú,2913.4426
+2020-10,97030000,Bank bonds,BancoEstado,726.1036
+2020-10,97030000,Bank deposits,BancoEstado,184.8179
+2020-10,97036000,Bank bonds,Santander,786.3033
+2020-10,97036000,Bank deposits,Santander,213.2348
+2020-10,97053000,Bank bonds,Security,572.2943
+2020-10,97053000,Bank deposits,Security,443.3943
+2020-10,97080000,Bank bonds,BICE,180.3998
+2020-10,97080000,Bank deposits,BICE,958.005
+2020-10,97947000,Bank bonds,RPL,47.8888
+2020-10,97947000,Bank deposits,RPL,142.4733
+2020-10,97951000,Bank deposits,HSB,243.6713
+2020-10,99500410,Bank bonds,Consorcio,355.1168
+2020-10,99500410,Bank deposits,Consorcio,1340.1337
+2020-11,59203500,Bank deposits,CCB,4.9595
+2020-11,7219,Bank deposits,,0.0
+2020-11,76362099,Bank bonds,BTG Pactual,67.9021
+2020-11,76362099,Bank deposits,BTG Pactual,162.016
+2020-11,80860400,Bank deposits,,0.0048
+2020-11,82878900,Bank bonds,Coopeuch,46.8309
+2020-11,82878900,Bank deposits,Coopeuch,27.9868
+2020-11,96509660,Bank bonds,Banco Falabella,34.4461
+2020-11,96509660,Bank deposits,Banco Falabella,482.0273
+2020-11,96604380,Bank deposits,,0.0
+2020-11,96896990,Bank deposits,,0.0
+2020-11,97004000,Bank bonds,Banco de Chile,1198.832
+2020-11,97004000,Bank deposits,Banco de Chile,332.1886
+2020-11,97006000,Bank bonds,BCI,606.3824
+2020-11,97006000,Bank deposits,BCI,2180.5093
+2020-11,97011000,Bank bonds,Internacional,320.1651
+2020-11,97011000,Bank deposits,Internacional,611.5812
+2020-11,97018000,Bank bonds,Scotiabank,1238.7297
+2020-11,97018000,Bank deposits,Scotiabank,1934.6598
+2020-11,97023000,Bank bonds,Itaú,608.6094
+2020-11,97023000,Bank deposits,Itaú,2777.4126
+2020-11,97030000,Bank bonds,BancoEstado,796.8085
+2020-11,97030000,Bank deposits,BancoEstado,178.0237
+2020-11,97036000,Bank bonds,Santander,834.6126
+2020-11,97036000,Bank deposits,Santander,97.7414
+2020-11,97053000,Bank bonds,Security,587.3747
+2020-11,97053000,Bank deposits,Security,411.2001
+2020-11,97080000,Bank bonds,BICE,195.2188
+2020-11,97080000,Bank deposits,BICE,1005.6039
+2020-11,97947000,Bank bonds,RPL,46.1929
+2020-11,97947000,Bank deposits,RPL,139.369
+2020-11,97951000,Bank deposits,HSB,141.6721
+2020-11,99500410,Bank bonds,Consorcio,366.2882
+2020-11,99500410,Bank deposits,Consorcio,1224.6198
+2020-12,59203500,Bank deposits,CCB,0.0082
+2020-12,76362099,Bank bonds,BTG Pactual,69.0166
+2020-12,76362099,Bank deposits,BTG Pactual,162.3352
+2020-12,82878900,Bank bonds,Coopeuch,49.5608
+2020-12,82878900,Bank deposits,Coopeuch,24.9969
+2020-12,94272000,Bank deposits,,0.1295
+2020-12,96509660,Bank bonds,Banco Falabella,33.1466
+2020-12,96509660,Bank deposits,Banco Falabella,436.0265
+2020-12,96604380,Bank deposits,,0.0
+2020-12,96896990,Bank deposits,,0.0
+2020-12,97004000,Bank bonds,Banco de Chile,1205.9909
+2020-12,97004000,Bank deposits,Banco de Chile,393.5778
+2020-12,97006000,Bank bonds,BCI,618.4882
+2020-12,97006000,Bank deposits,BCI,2728.48
+2020-12,97011000,Bank bonds,Internacional,324.4524
+2020-12,97011000,Bank deposits,Internacional,573.4509
+2020-12,97018000,Bank bonds,Scotiabank,1325.9852
+2020-12,97018000,Bank deposits,Scotiabank,2210.2317
+2020-12,97023000,Bank bonds,Itaú,616.8407
+2020-12,97023000,Bank deposits,Itaú,2792.6089
+2020-12,97030000,Bank bonds,BancoEstado,791.0708
+2020-12,97030000,Bank deposits,BancoEstado,201.9266
+2020-12,97036000,Bank bonds,Santander,837.1945
+2020-12,97036000,Bank deposits,Santander,1103.254
+2020-12,97053000,Bank bonds,Security,572.6445
+2020-12,97053000,Bank deposits,Security,375.5511
+2020-12,97080000,Bank bonds,BICE,198.8217
+2020-12,97080000,Bank deposits,BICE,994.1066
+2020-12,97947000,Bank bonds,RPL,47.0022
+2020-12,97947000,Bank deposits,RPL,126.4441
+2020-12,97951000,Bank deposits,HSB,42.8651
+2020-12,99500410,Bank bonds,Consorcio,365.969
+2020-12,99500410,Bank deposits,Consorcio,1191.8691
+2021-01,59203500,Bank deposits,CCB,0.005
+2021-01,76362099,Bank bonds,BTG Pactual,76.4359
+2021-01,76362099,Bank deposits,BTG Pactual,143.3595
+2021-01,82878900,Bank bonds,Coopeuch,48.5252
+2021-01,82878900,Bank deposits,Coopeuch,21.4992
+2021-01,96509660,Bank bonds,Banco Falabella,33.1887
+2021-01,96509660,Bank deposits,Banco Falabella,400.6777
+2021-01,96604380,Bank deposits,,0.0
+2021-01,96766600,Bank deposits,,0.0178
+2021-01,96896990,Bank deposits,,0.0
+2021-01,97004000,Bank bonds,Banco de Chile,1278.3635
+2021-01,97004000,Bank deposits,Banco de Chile,369.3931
+2021-01,97006000,Bank bonds,BCI,696.8203
+2021-01,97006000,Bank deposits,BCI,2729.3076
+2021-01,97011000,Bank bonds,Internacional,338.0325
+2021-01,97011000,Bank deposits,Internacional,481.8047
+2021-01,97018000,Bank bonds,Scotiabank,1429.525
+2021-01,97018000,Bank deposits,Scotiabank,2269.9782
+2021-01,97023000,Bank bonds,Itaú,672.2718
+2021-01,97023000,Bank deposits,Itaú,2406.762
+2021-01,97030000,Bank bonds,BancoEstado,825.939
+2021-01,97030000,Bank deposits,BancoEstado,154.2486
+2021-01,97036000,Bank bonds,Santander,848.8689
+2021-01,97036000,Bank deposits,Santander,1177.2009
+2021-01,97053000,Bank bonds,Security,592.4891
+2021-01,97053000,Bank deposits,Security,411.5809
+2021-01,97080000,Bank bonds,BICE,224.0202
+2021-01,97080000,Bank deposits,BICE,1129.929
+2021-01,97947000,Bank bonds,RPL,49.8365
+2021-01,97947000,Bank deposits,RPL,124.0903
+2021-01,97951000,Bank deposits,HSB,1.2752
+2021-01,99500410,Bank bonds,Consorcio,393.6658
+2021-01,99500410,Bank deposits,Consorcio,1307.0713
+2021-02,76362099,Bank bonds,BTG Pactual,95.7741
+2021-02,76362099,Bank deposits,BTG Pactual,131.0711
+2021-02,82878900,Bank bonds,Coopeuch,48.4163
+2021-02,82878900,Bank deposits,Coopeuch,27.4987
+2021-02,96509660,Bank bonds,Banco Falabella,33.1564
+2021-02,96509660,Bank deposits,Banco Falabella,329.0572
+2021-02,96604380,Bank deposits,,0.0
+2021-02,96896990,Bank deposits,,0.0
+2021-02,97004000,Bank bonds,Banco de Chile,1257.9143
+2021-02,97004000,Bank deposits,Banco de Chile,350.8865
+2021-02,97006000,Bank bonds,BCI,746.5913
+2021-02,97006000,Bank deposits,BCI,1807.446
+2021-02,97011000,Bank bonds,Internacional,345.9711
+2021-02,97011000,Bank deposits,Internacional,518.9316
+2021-02,97018000,Bank bonds,Scotiabank,1433.8796
+2021-02,97018000,Bank deposits,Scotiabank,2229.852
+2021-02,97023000,Bank bonds,Itaú,703.2712
+2021-02,97023000,Bank deposits,Itaú,2371.5835
+2021-02,97030000,Bank bonds,BancoEstado,830.01
+2021-02,97030000,Bank deposits,BancoEstado,160.2812
+2021-02,97036000,Bank bonds,Santander,838.3364
+2021-02,97036000,Bank deposits,Santander,1259.307
+2021-02,97053000,Bank bonds,Security,602.1287
+2021-02,97053000,Bank deposits,Security,344.4063
+2021-02,97080000,Bank bonds,BICE,180.4242
+2021-02,97080000,Bank deposits,BICE,1389.5389
+2021-02,97947000,Bank bonds,RPL,51.7502
+2021-02,97947000,Bank deposits,RPL,173.4425
+2021-02,97951000,Bank deposits,HSB,1.0442
+2021-02,99500410,Bank bonds,Consorcio,413.5879
+2021-02,99500410,Bank deposits,Consorcio,1365.8033
+2021-03,76362099,Bank bonds,BTG Pactual,113.738
+2021-03,76362099,Bank deposits,BTG Pactual,139.2865
+2021-03,82878900,Bank bonds,Coopeuch,47.4405
+2021-03,82878900,Bank deposits,Coopeuch,26.4985
+2021-03,93007000,Bank deposits,,1.3344
+2021-03,96509660,Bank bonds,Banco Falabella,32.6533
+2021-03,96509660,Bank deposits,Banco Falabella,392.3377
+2021-03,96604380,Bank deposits,,0.0385
+2021-03,96896990,Bank deposits,,0.0
+2021-03,97004000,Bank bonds,Banco de Chile,1365.7032
+2021-03,97004000,Bank deposits,Banco de Chile,182.7357
+2021-03,97006000,Bank bonds,BCI,859.0491
+2021-03,97006000,Bank deposits,BCI,1829.667
+2021-03,97011000,Bank bonds,Internacional,384.8727
+2021-03,97011000,Bank deposits,Internacional,541.7004
+2021-03,97018000,Bank bonds,Scotiabank,1465.2908
+2021-03,97018000,Bank deposits,Scotiabank,2345.1497
+2021-03,97023000,Bank bonds,Itaú,695.7547
+2021-03,97023000,Bank deposits,Itaú,2452.5898
+2021-03,97030000,Bank bonds,BancoEstado,872.1269
+2021-03,97030000,Bank deposits,BancoEstado,147.041
+2021-03,97036000,Bank bonds,Santander,816.2695
+2021-03,97036000,Bank deposits,Santander,1180.8867
+2021-03,97053000,Bank bonds,Security,667.3901
+2021-03,97053000,Bank deposits,Security,279.559
+2021-03,97080000,Bank bonds,BICE,179.9673
+2021-03,97080000,Bank deposits,BICE,1354.7686
+2021-03,97947000,Bank bonds,RPL,58.2518
+2021-03,97947000,Bank deposits,RPL,176.7746
+2021-03,97951000,Bank deposits,HSB,0.9214
+2021-03,99500410,Bank bonds,Consorcio,401.3595
+2021-03,99500410,Bank deposits,Consorcio,1337.7614
+2021-04,76362099,Bank bonds,BTG Pactual,121.2744
+2021-04,76362099,Bank deposits,BTG Pactual,151.3196
+2021-04,82878900,Bank bonds,Coopeuch,47.0416
+2021-04,82878900,Bank deposits,Coopeuch,25.399
+2021-04,96509660,Bank bonds,Banco Falabella,31.3661
+2021-04,96509660,Bank deposits,Banco Falabella,370.3978
+2021-04,96604380,Bank deposits,,0.0
+2021-04,96896990,Bank deposits,,0.0
+2021-04,97004000,Bank bonds,Banco de Chile,1295.7458
+2021-04,97004000,Bank deposits,Banco de Chile,139.3928
+2021-04,97006000,Bank bonds,BCI,879.4994
+2021-04,97006000,Bank deposits,BCI,1934.4419
+2021-04,97011000,Bank bonds,Internacional,374.1394
+2021-04,97011000,Bank deposits,Internacional,462.8854
+2021-04,97018000,Bank bonds,Scotiabank,1434.6843
+2021-04,97018000,Bank deposits,Scotiabank,2475.0634
+2021-04,97023000,Bank bonds,Itaú,676.6709
+2021-04,97023000,Bank deposits,Itaú,2450.8704
+2021-04,97030000,Bank bonds,BancoEstado,810.094
+2021-04,97030000,Bank deposits,BancoEstado,150.1351
+2021-04,97036000,Bank bonds,Santander,770.1003
+2021-04,97036000,Bank deposits,Santander,1353.3949
+2021-04,97053000,Bank bonds,Security,647.2022
+2021-04,97053000,Bank deposits,Security,295.7631
+2021-04,97080000,Bank bonds,BICE,170.8272
+2021-04,97080000,Bank deposits,BICE,1209.1131
+2021-04,97947000,Bank bonds,RPL,59.6598
+2021-04,97947000,Bank deposits,RPL,179.5287
+2021-04,97951000,Bank deposits,HSB,205.9723
+2021-04,99500410,Bank bonds,Consorcio,404.9228
+2021-04,99500410,Bank deposits,Consorcio,1292.5221
+2021-05,59203500,Bank deposits,CCB,4.0121
+2021-05,76362099,Bank bonds,BTG Pactual,140.9757
+2021-05,76362099,Bank deposits,BTG Pactual,183.3203
+2021-05,82878900,Bank bonds,Coopeuch,42.835
+2021-05,82878900,Bank deposits,Coopeuch,26.4996
+2021-05,96509660,Bank bonds,Banco Falabella,31.0972
+2021-05,96509660,Bank deposits,Banco Falabella,321.6903
+2021-05,96604380,Bank deposits,,0.0
+2021-05,96896990,Bank deposits,,0.0
+2021-05,97004000,Bank bonds,Banco de Chile,1234.3414
+2021-05,97004000,Bank deposits,Banco de Chile,150.3951
+2021-05,97006000,Bank bonds,BCI,850.5409
+2021-05,97006000,Bank deposits,BCI,2224.5651
+2021-05,97011000,Bank bonds,Internacional,370.2697
+2021-05,97011000,Bank deposits,Internacional,547.6424
+2021-05,97018000,Bank bonds,Scotiabank,1353.2155
+2021-05,97018000,Bank deposits,Scotiabank,2426.0918
+2021-05,97023000,Bank bonds,Itaú,673.1279
+2021-05,97023000,Bank deposits,Itaú,2357.347
+2021-05,97030000,Bank bonds,BancoEstado,794.796
+2021-05,97030000,Bank deposits,BancoEstado,93.0475
+2021-05,97036000,Bank bonds,Santander,762.3858
+2021-05,97036000,Bank deposits,Santander,1752.2671
+2021-05,97053000,Bank bonds,Security,641.5499
+2021-05,97053000,Bank deposits,Security,201.2837
+2021-05,97080000,Bank bonds,BICE,170.4177
+2021-05,97080000,Bank deposits,BICE,1276.8501
+2021-05,97947000,Bank bonds,RPL,60.1325
+2021-05,97947000,Bank deposits,RPL,170.3078
+2021-05,97951000,Bank deposits,HSB,291.9634
+2021-05,99500410,Bank bonds,Consorcio,413.9704
+2021-05,99500410,Bank deposits,Consorcio,1192.1401
+2021-06,59203500,Bank deposits,CCB,3.9998
+2021-06,76362099,Bank bonds,BTG Pactual,124.737
+2021-06,76362099,Bank deposits,BTG Pactual,169.3315
+2021-06,82878900,Bank bonds,Coopeuch,43.7131
+2021-06,82878900,Bank deposits,Coopeuch,26.4988
+2021-06,96509660,Bank bonds,Banco Falabella,30.0135
+2021-06,96509660,Bank deposits,Banco Falabella,298.0547
+2021-06,96604380,Bank deposits,,0.0
+2021-06,96896990,Bank deposits,,0.0
+2021-06,97004000,Bank bonds,Banco de Chile,1181.096
+2021-06,97004000,Bank deposits,Banco de Chile,146.1839
+2021-06,97006000,Bank bonds,BCI,792.4293
+2021-06,97006000,Bank deposits,BCI,1315.379
+2021-06,97011000,Bank bonds,Internacional,362.7886
+2021-06,97011000,Bank deposits,Internacional,577.3695
+2021-06,97018000,Bank bonds,Scotiabank,1248.8105
+2021-06,97018000,Bank deposits,Scotiabank,2352.7973
+2021-06,97023000,Bank bonds,Itaú,636.8987
+2021-06,97023000,Bank deposits,Itaú,2130.4101
+2021-06,97030000,Bank bonds,BancoEstado,680.8718
+2021-06,97030000,Bank deposits,BancoEstado,72.557
+2021-06,97036000,Bank bonds,Santander,722.2426
+2021-06,97036000,Bank deposits,Santander,1744.1528
+2021-06,97053000,Bank bonds,Security,619.2465
+2021-06,97053000,Bank deposits,Security,245.1961
+2021-06,97080000,Bank bonds,BICE,155.5812
+2021-06,97080000,Bank deposits,BICE,1113.4451
+2021-06,97947000,Bank bonds,RPL,40.0408
+2021-06,97947000,Bank deposits,RPL,170.6859
+2021-06,97951000,Bank deposits,HSB,157.9712
+2021-06,99500410,Bank bonds,Consorcio,424.7783
+2021-06,99500410,Bank deposits,Consorcio,1152.9088
+2021-07,76362099,Bank bonds,BTG Pactual,105.7917
+2021-07,76362099,Bank deposits,BTG Pactual,109.217
+2021-07,82878900,Bank bonds,Coopeuch,41.8625
+2021-07,82878900,Bank deposits,Coopeuch,49.9961
+2021-07,96509660,Bank bonds,Banco Falabella,29.4729
+2021-07,96509660,Bank deposits,Banco Falabella,154.623
+2021-07,96604380,Bank deposits,,0.0
+2021-07,96896990,Bank deposits,,0.0
+2021-07,97004000,Bank bonds,Banco de Chile,1037.2503
+2021-07,97004000,Bank deposits,Banco de Chile,209.0909
+2021-07,97006000,Bank bonds,BCI,734.2394
+2021-07,97006000,Bank deposits,BCI,1388.0234
+2021-07,97011000,Bank bonds,Internacional,358.8698
+2021-07,97011000,Bank deposits,Internacional,539.7497
+2021-07,97018000,Bank bonds,Scotiabank,1175.549
+2021-07,97018000,Bank deposits,Scotiabank,2284.0759
+2021-07,97023000,Bank bonds,Itaú,569.7335
+2021-07,97023000,Bank deposits,Itaú,1757.476
+2021-07,97030000,Bank bonds,BancoEstado,645.4108
+2021-07,97030000,Bank deposits,BancoEstado,55.31
+2021-07,97036000,Bank bonds,Santander,647.4474
+2021-07,97036000,Bank deposits,Santander,1252.1813
+2021-07,97053000,Bank bonds,Security,601.3291
+2021-07,97053000,Bank deposits,Security,353.7847
+2021-07,97080000,Bank bonds,BICE,147.14
+2021-07,97080000,Bank deposits,BICE,934.788
+2021-07,97947000,Bank bonds,RPL,34.5526
+2021-07,97947000,Bank deposits,RPL,139.0386
+2021-07,97951000,Bank deposits,HSB,321.8315
+2021-07,99500410,Bank bonds,Consorcio,413.4278
+2021-07,99500410,Bank deposits,Consorcio,1261.7684
+2021-08,59203500,Bank deposits,CCB,0.002
+2021-08,76362099,Bank bonds,BTG Pactual,106.6463
+2021-08,76362099,Bank deposits,BTG Pactual,96.5396
+2021-08,82878900,Bank bonds,Coopeuch,39.2334
+2021-08,82878900,Bank deposits,Coopeuch,49.3967
+2021-08,96509660,Bank bonds,Banco Falabella,29.7284
+2021-08,96509660,Bank deposits,Banco Falabella,146.497
+2021-08,96604380,Bank deposits,,0.0
+2021-08,96896990,Bank deposits,,0.0
+2021-08,97004000,Bank bonds,Banco de Chile,1047.0688
+2021-08,97004000,Bank deposits,Banco de Chile,220.6581
+2021-08,97006000,Bank bonds,BCI,748.4999
+2021-08,97006000,Bank deposits,BCI,1122.3434
+2021-08,97011000,Bank bonds,Internacional,368.564
+2021-08,97011000,Bank deposits,Internacional,485.0186
+2021-08,97018000,Bank bonds,Scotiabank,1178.6315
+2021-08,97018000,Bank deposits,Scotiabank,1879.4778
+2021-08,97023000,Bank bonds,Itaú,587.6121
+2021-08,97023000,Bank deposits,Itaú,1646.4403
+2021-08,97030000,Bank bonds,BancoEstado,644.243
+2021-08,97030000,Bank deposits,BancoEstado,35.9407
+2021-08,97036000,Bank bonds,Santander,614.6286
+2021-08,97036000,Bank deposits,Santander,1125.1953
+2021-08,97053000,Bank bonds,Security,557.4488
+2021-08,97053000,Bank deposits,Security,367.4319
+2021-08,97080000,Bank bonds,BICE,152.3417
+2021-08,97080000,Bank deposits,BICE,781.8166
+2021-08,97947000,Bank bonds,RPL,36.9918
+2021-08,97947000,Bank deposits,RPL,125.0736
+2021-08,97951000,Bank deposits,HSB,431.325
+2021-08,99500410,Bank bonds,Consorcio,424.6051
+2021-08,99500410,Bank deposits,Consorcio,1230.1639
+2021-09,59203500,Bank deposits,CCB,0.005
+2021-09,76362099,Bank bonds,BTG Pactual,103.7634
+2021-09,76362099,Bank deposits,BTG Pactual,126.5046
+2021-09,82878900,Bank bonds,Coopeuch,36.7017
+2021-09,82878900,Bank deposits,Coopeuch,49.9923
+2021-09,96509660,Bank bonds,Banco Falabella,28.414
+2021-09,96509660,Bank deposits,Banco Falabella,154.4032
+2021-09,96604380,Bank deposits,,0.0
+2021-09,96896990,Bank deposits,,0.0
+2021-09,97004000,Bank bonds,Banco de Chile,916.7986
+2021-09,97004000,Bank deposits,Banco de Chile,156.3079
+2021-09,97006000,Bank bonds,BCI,719.0187
+2021-09,97006000,Bank deposits,BCI,1040.884
+2021-09,97011000,Bank bonds,Internacional,370.7976
+2021-09,97011000,Bank deposits,Internacional,419.4652
+2021-09,97018000,Bank bonds,Scotiabank,1084.1354
+2021-09,97018000,Bank deposits,Scotiabank,1510.8153
+2021-09,97023000,Bank bonds,Itaú,510.5958
+2021-09,97023000,Bank deposits,Itaú,1270.4759
+2021-09,97029000,Bank deposits,,17.9964
+2021-09,97030000,Bank bonds,BancoEstado,612.5764
+2021-09,97030000,Bank deposits,BancoEstado,25.4803
+2021-09,97036000,Bank bonds,Santander,596.2606
+2021-09,97036000,Bank deposits,Santander,953.3687
+2021-09,97043000,Bank deposits,CHA,3.9951
+2021-09,97053000,Bank bonds,Security,544.7565
+2021-09,97053000,Bank deposits,Security,310.3597
+2021-09,97080000,Bank bonds,BICE,131.7468
+2021-09,97080000,Bank deposits,BICE,910.686
+2021-09,97947000,Bank bonds,RPL,36.4787
+2021-09,97947000,Bank deposits,RPL,122.7265
+2021-09,97951000,Bank deposits,HSB,298.2917
+2021-09,99500410,Bank bonds,Consorcio,409.7736
+2021-09,99500410,Bank deposits,Consorcio,1092.3656
+2021-10,59203500,Bank deposits,CCB,0.005
+2021-10,76362099,Bank bonds,BTG Pactual,101.2022
+2021-10,76362099,Bank deposits,BTG Pactual,82.3341
+2021-10,82878900,Bank bonds,Coopeuch,32.4733
+2021-10,82878900,Bank deposits,Coopeuch,48.8955
+2021-10,96509660,Bank bonds,Banco Falabella,27.9922
+2021-10,96509660,Bank deposits,Banco Falabella,104.192
+2021-10,96604380,Bank deposits,,0.0
+2021-10,96896990,Bank deposits,,0.0
+2021-10,97004000,Bank bonds,Banco de Chile,746.0495
+2021-10,97004000,Bank deposits,Banco de Chile,143.1125
+2021-10,97006000,Bank bonds,BCI,643.4681
+2021-10,97006000,Bank deposits,BCI,721.5933
+2021-10,97011000,Bank bonds,Internacional,363.7129
+2021-10,97011000,Bank deposits,Internacional,372.3924
+2021-10,97018000,Bank bonds,Scotiabank,966.0584
+2021-10,97018000,Bank deposits,Scotiabank,1051.1151
+2021-10,97023000,Bank bonds,Itaú,477.6969
+2021-10,97023000,Bank deposits,Itaú,920.0782
+2021-10,97030000,Bank bonds,BancoEstado,528.5805
+2021-10,97030000,Bank deposits,BancoEstado,31.7693
+2021-10,97036000,Bank bonds,Santander,521.9905
+2021-10,97036000,Bank deposits,Santander,451.1991
+2021-10,97043000,Bank deposits,CHA,16.9857
+2021-10,97053000,Bank bonds,Security,531.9851
+2021-10,97053000,Bank deposits,Security,263.267
+2021-10,97080000,Bank bonds,BICE,131.1567
+2021-10,97080000,Bank deposits,BICE,738.0425
+2021-10,97947000,Bank bonds,RPL,36.6262
+2021-10,97947000,Bank deposits,RPL,81.9482
+2021-10,97951000,Bank deposits,HSB,367.8
+2021-10,99500410,Bank bonds,Consorcio,399.4608
+2021-10,99500410,Bank deposits,Consorcio,938.4779
+2021-11,59203500,Bank deposits,CCB,0.003
+2021-11,76065596,Bank deposits,,0.0007
+2021-11,76362099,Bank bonds,BTG Pactual,102.61
+2021-11,76362099,Bank deposits,BTG Pactual,99.6361
+2021-11,82878900,Bank bonds,Coopeuch,33.3457
+2021-11,82878900,Bank deposits,Coopeuch,49.9732
+2021-11,96509660,Bank bonds,Banco Falabella,28.4498
+2021-11,96509660,Bank deposits,Banco Falabella,70.6051
+2021-11,96604380,Bank deposits,,0.0
+2021-11,96896990,Bank deposits,,0.0
+2021-11,97004000,Bank bonds,Banco de Chile,776.2653
+2021-11,97004000,Bank deposits,Banco de Chile,104.2353
+2021-11,97006000,Bank bonds,BCI,610.1557
+2021-11,97006000,Bank deposits,BCI,1240.2001
+2021-11,97011000,Bank bonds,Internacional,369.1583
+2021-11,97011000,Bank deposits,Internacional,327.338
+2021-11,97018000,Bank bonds,Scotiabank,956.9579
+2021-11,97018000,Bank deposits,Scotiabank,642.5497
+2021-11,97023000,Bank bonds,Itaú,508.7246
+2021-11,97023000,Bank deposits,Itaú,686.2802
+2021-11,97030000,Bank bonds,BancoEstado,519.2363
+2021-11,97030000,Bank deposits,BancoEstado,11.2432
+2021-11,97036000,Bank bonds,Santander,534.6348
+2021-11,97036000,Bank deposits,Santander,448.632
+2021-11,97043000,Bank deposits,CHA,6.9849
+2021-11,97053000,Bank bonds,Security,514.6576
+2021-11,97053000,Bank deposits,Security,190.1486
+2021-11,97080000,Bank bonds,BICE,145.8189
+2021-11,97080000,Bank deposits,BICE,429.9406
+2021-11,97947000,Bank bonds,RPL,38.2557
+2021-11,97947000,Bank deposits,RPL,68.3527
+2021-11,97951000,Bank deposits,HSB,225.6273
+2021-11,99500410,Bank bonds,Consorcio,397.3612
+2021-11,99500410,Bank deposits,Consorcio,782.1219
+2021-12,59203500,Bank deposits,CCB,2.5433
+2021-12,76362099,Bank bonds,BTG Pactual,103.9849
+2021-12,76362099,Bank deposits,BTG Pactual,194.4371
+2021-12,82878900,Bank bonds,Coopeuch,38.3254
+2021-12,82878900,Bank deposits,Coopeuch,49.9776
+2021-12,96509660,Bank bonds,Banco Falabella,27.7661
+2021-12,96509660,Bank deposits,Banco Falabella,77.0091
+2021-12,96604380,Bank deposits,,0.0
+2021-12,96896990,Bank deposits,,0.0
+2021-12,97004000,Bank bonds,Banco de Chile,760.5542
+2021-12,97004000,Bank deposits,Banco de Chile,79.9349
+2021-12,97006000,Bank bonds,BCI,574.6485
+2021-12,97006000,Bank deposits,BCI,1198.7981
+2021-12,97011000,Bank bonds,Internacional,358.9788
+2021-12,97011000,Bank deposits,Internacional,301.4382
+2021-12,97018000,Bank bonds,Scotiabank,945.2694
+2021-12,97018000,Bank deposits,Scotiabank,1116.6765
+2021-12,97023000,Bank bonds,Itaú,496.3484
+2021-12,97023000,Bank deposits,Itaú,614.981
+2021-12,97030000,Bank bonds,BancoEstado,536.2082
+2021-12,97030000,Bank deposits,BancoEstado,11.221
+2021-12,97036000,Bank bonds,Santander,516.9869
+2021-12,97036000,Bank deposits,Santander,187.8872
+2021-12,97043000,Bank deposits,CHA,14.2438
+2021-12,97053000,Bank bonds,Security,507.6892
+2021-12,97053000,Bank deposits,Security,202.0913
+2021-12,97080000,Bank bonds,BICE,145.2168
+2021-12,97080000,Bank deposits,BICE,679.7458
+2021-12,97947000,Bank bonds,RPL,38.8896
+2021-12,97947000,Bank deposits,RPL,70.0795
+2021-12,97951000,Bank deposits,HSB,51.0865
+2021-12,99500410,Bank bonds,Consorcio,391.3806
+2021-12,99500410,Bank deposits,Consorcio,1050.6319
+2022-01,59203500,Bank deposits,CCB,0.0015
+2022-01,76362099,Bank bonds,BTG Pactual,103.7794
+2022-01,76362099,Bank deposits,BTG Pactual,194.9923
+2022-01,82878900,Bank bonds,Coopeuch,38.0003
+2022-01,82878900,Bank deposits,Coopeuch,49.9642
+2022-01,96509660,Bank bonds,Banco Falabella,26.4704
+2022-01,96509660,Bank deposits,Banco Falabella,147.8395
+2022-01,96604380,Bank deposits,,0.0
+2022-01,96896990,Bank deposits,,0.0
+2022-01,97004000,Bank bonds,Banco de Chile,805.4986
+2022-01,97004000,Bank deposits,Banco de Chile,53.3422
+2022-01,97006000,Bank bonds,BCI,546.7583
+2022-01,97006000,Bank deposits,BCI,737.2188
+2022-01,97011000,Bank bonds,Internacional,367.5732
+2022-01,97011000,Bank deposits,Internacional,176.6299
+2022-01,97018000,Bank bonds,Scotiabank,950.6778
+2022-01,97018000,Bank deposits,Scotiabank,866.7971
+2022-01,97023000,Bank bonds,Itaú,495.0032
+2022-01,97023000,Bank deposits,Itaú,517.4818
+2022-01,97030000,Bank bonds,BancoEstado,527.236
+2022-01,97030000,Bank deposits,BancoEstado,16.3579
+2022-01,97036000,Bank bonds,Santander,505.3354
+2022-01,97036000,Bank deposits,Santander,75.1992
+2022-01,97053000,Bank bonds,Security,517.2397
+2022-01,97053000,Bank deposits,Security,186.9199
+2022-01,97080000,Bank bonds,BICE,144.6065
+2022-01,97080000,Bank deposits,BICE,599.6358
+2022-01,97947000,Bank bonds,RPL,44.6983
+2022-01,97947000,Bank deposits,RPL,87.4639
+2022-01,97951000,Bank deposits,HSB,93.0292
+2022-01,99500410,Bank bonds,Consorcio,389.9451
+2022-01,99500410,Bank deposits,Consorcio,1094.7708
+2022-02,59203500,Bank deposits,CCB,0.0015
+2022-02,76362099,Bank bonds,BTG Pactual,107.1362
+2022-02,76362099,Bank deposits,BTG Pactual,208.1697
+2022-02,82878900,Bank bonds,Coopeuch,38.7555
+2022-02,82878900,Bank deposits,Coopeuch,49.9532
+2022-02,96509660,Bank bonds,Banco Falabella,27.0315
+2022-02,96509660,Bank deposits,Banco Falabella,127.229
+2022-02,96896990,Bank deposits,,0.0
+2022-02,97004000,Bank bonds,Banco de Chile,777.3163
+2022-02,97004000,Bank deposits,Banco de Chile,46.4975
+2022-02,97006000,Bank bonds,BCI,566.3677
+2022-02,97006000,Bank deposits,BCI,578.9992
+2022-02,97011000,Bank bonds,Internacional,369.7846
+2022-02,97011000,Bank deposits,Internacional,184.2987
+2022-02,97018000,Bank bonds,Scotiabank,949.4541
+2022-02,97018000,Bank deposits,Scotiabank,595.0653
+2022-02,97023000,Bank bonds,Itaú,494.9156
+2022-02,97023000,Bank deposits,Itaú,598.3422
+2022-02,97030000,Bank bonds,BancoEstado,530.3567
+2022-02,97030000,Bank deposits,BancoEstado,11.5772
+2022-02,97036000,Bank bonds,Santander,488.8598
+2022-02,97036000,Bank deposits,Santander,34.5746
+2022-02,97053000,Bank bonds,Security,485.0148
+2022-02,97053000,Bank deposits,Security,201.3149
+2022-02,97080000,Bank bonds,BICE,141.3327
+2022-02,97080000,Bank deposits,BICE,651.0001
+2022-02,97947000,Bank bonds,RPL,43.2508
+2022-02,97947000,Bank deposits,RPL,80.3476
+2022-02,97951000,Bank deposits,HSB,179.8157
+2022-02,99500410,Bank bonds,Consorcio,401.8054
+2022-02,99500410,Bank deposits,Consorcio,1023.986
+2022-03,59203500,Bank deposits,CCB,0.0479
+2022-03,76362099,Bank bonds,BTG Pactual,117.0199
+2022-03,76362099,Bank deposits,BTG Pactual,257.0599
+2022-03,82878900,Bank bonds,Coopeuch,38.6985
+2022-03,82878900,Bank deposits,Coopeuch,49.961
+2022-03,96509660,Bank bonds,Banco Falabella,28.8763
+2022-03,96509660,Bank deposits,Banco Falabella,177.5179
+2022-03,97004000,Bank bonds,Banco de Chile,805.1674
+2022-03,97004000,Bank deposits,Banco de Chile,95.6176
+2022-03,97006000,Bank bonds,BCI,567.2774
+2022-03,97006000,Bank deposits,BCI,533.7886
+2022-03,97011000,Bank bonds,Internacional,375.7791
+2022-03,97011000,Bank deposits,Internacional,168.4107
+2022-03,97018000,Bank bonds,Scotiabank,984.9768
+2022-03,97018000,Bank deposits,Scotiabank,515.9983
+2022-03,97023000,Bank bonds,Itaú,508.2271
+2022-03,97023000,Bank deposits,Itaú,572.5667
+2022-03,97030000,Bank bonds,BancoEstado,500.1649
+2022-03,97030000,Bank deposits,BancoEstado,107.9493
+2022-03,97036000,Bank bonds,Santander,481.6605
+2022-03,97036000,Bank deposits,Santander,164.7935
+2022-03,97053000,Bank bonds,Security,473.8086
+2022-03,97053000,Bank deposits,Security,129.1974
+2022-03,97080000,Bank bonds,BICE,162.8307
+2022-03,97080000,Bank deposits,BICE,757.4285
+2022-03,97947000,Bank bonds,RPL,45.7581
+2022-03,97947000,Bank deposits,RPL,83.9612
+2022-03,97951000,Bank deposits,HSB,254.9204
+2022-03,99500410,Bank bonds,Consorcio,398.4914
+2022-03,99500410,Bank deposits,Consorcio,1188.2388
+2022-04,59203500,Bank deposits,CCB,0.0729
+2022-04,76362099,Bank bonds,BTG Pactual,121.7654
+2022-04,76362099,Bank deposits,BTG Pactual,213.8565
+2022-04,82878900,Bank bonds,Coopeuch,40.4929
+2022-04,82878900,Bank deposits,Coopeuch,49.9633
+2022-04,96509660,Bank bonds,Banco Falabella,29.1673
+2022-04,96509660,Bank deposits,Banco Falabella,169.2093
+2022-04,97004000,Bank bonds,,846.5426
+2022-04,97004000,Bank deposits,,108.1609
+2022-04,97006000,Bank bonds,BCI,608.7318
+2022-04,97006000,Bank deposits,BCI,418.557
+2022-04,97011000,Bank bonds,Internacional,416.3515
+2022-04,97011000,Bank deposits,Internacional,293.162
+2022-04,97018000,Bank bonds,Scotiabank,929.576
+2022-04,97018000,Bank deposits,Scotiabank,593.9417
+2022-04,97023000,Bank bonds,Itaú,540.4572
+2022-04,97023000,Bank deposits,Itaú,454.4447
+2022-04,97030000,Bank bonds,BancoEstado,524.639
+2022-04,97030000,Bank deposits,BancoEstado,7.2956
+2022-04,97036000,Bank bonds,Santander,525.0896
+2022-04,97036000,Bank deposits,Santander,164.8759
+2022-04,97053000,Bank bonds,Security,483.8414
+2022-04,97053000,Bank deposits,Security,150.1705
+2022-04,97080000,Bank bonds,BICE,191.3877
+2022-04,97080000,Bank deposits,BICE,820.1929
+2022-04,97947000,Bank bonds,RPL,56.5875
+2022-04,97947000,Bank deposits,RPL,120.1486
+2022-04,97951000,Bank deposits,HSB,141.8557
+2022-04,99500410,Bank bonds,Consorcio,446.0195
+2022-04,99500410,Bank deposits,Consorcio,1247.4338
+2022-05,59203500,Bank deposits,CCB,0.0599
+2022-05,76362099,Bank bonds,BTG Pactual,123.3347
+2022-05,76362099,Bank deposits,BTG Pactual,249.9754
+2022-05,82878900,Bank bonds,Coopeuch,34.3127
+2022-05,82878900,Bank deposits,Coopeuch,49.9061
+2022-05,96509660,Bank bonds,Banco Falabella,26.1954
+2022-05,96509660,Bank deposits,Banco Falabella,168.9542
+2022-05,97004000,Bank bonds,Banco de Chile,863.009
+2022-05,97004000,Bank deposits,Banco de Chile,126.0028
+2022-05,97006000,Bank bonds,BCI,598.1927
+2022-05,97006000,Bank deposits,BCI,382.0361
+2022-05,97011000,Bank bonds,Internacional,411.744
+2022-05,97011000,Bank deposits,Internacional,300.3967
+2022-05,97018000,Bank bonds,Scotiabank,956.2172
+2022-05,97018000,Bank deposits,Scotiabank,844.2844
+2022-05,97023000,Bank bonds,Itaú,548.8398
+2022-05,97023000,Bank deposits,Itaú,481.8494
+2022-05,97030000,Bank bonds,BancoEstado,466.6619
+2022-05,97030000,Bank deposits,BancoEstado,17.8498
+2022-05,97036000,Bank bonds,Santander,564.3949
+2022-05,97036000,Bank deposits,Santander,589.5825
+2022-05,97053000,Bank bonds,Security,514.6368
+2022-05,97053000,Bank deposits,Security,232.421
+2022-05,97080000,Bank bonds,BICE,189.5386
+2022-05,97080000,Bank deposits,BICE,822.3557
+2022-05,97947000,Bank bonds,RPL,61.4255
+2022-05,97947000,Bank deposits,RPL,134.9445
+2022-05,97951000,Bank deposits,HSB,165.3735
+2022-05,99500410,Bank bonds,Consorcio,471.9705
+2022-05,99500410,Bank deposits,Consorcio,1138.5329
+2022-05,99565970,Bank bonds,,0.0796
+2022-06,59203500,Bank deposits,CCB,0.0767
+2022-06,76362099,Bank bonds,BTG Pactual,125.0444
+2022-06,76362099,Bank deposits,BTG Pactual,221.8019
+2022-06,82878900,Bank bonds,Coopeuch,39.0914
+2022-06,82878900,Bank deposits,Coopeuch,55.8103
+2022-06,96509660,Bank bonds,Banco Falabella,26.1623
+2022-06,96509660,Bank deposits,Banco Falabella,191.1525
+2022-06,97004000,Bank bonds,Banco de Chile,851.8169
+2022-06,97004000,Bank deposits,Banco de Chile,152.5525
+2022-06,97006000,Bank bonds,BCI,645.115
+2022-06,97006000,Bank deposits,BCI,540.0962
+2022-06,97011000,Bank bonds,Internacional,391.6662
+2022-06,97011000,Bank deposits,Internacional,339.1951
+2022-06,97018000,Bank bonds,Scotiabank,947.1569
+2022-06,97018000,Bank deposits,Scotiabank,969.8479
+2022-06,97023000,Bank bonds,Itaú,595.0757
+2022-06,97023000,Bank deposits,Itaú,540.5684
+2022-06,97030000,Bank bonds,BancoEstado,451.3563
+2022-06,97030000,Bank deposits,BancoEstado,60.594
+2022-06,97036000,Bank bonds,Santander,624.9868
+2022-06,97036000,Bank deposits,Santander,926.2986
+2022-06,97053000,Bank bonds,Security,552.5972
+2022-06,97053000,Bank deposits,Security,199.0228
+2022-06,97080000,Bank bonds,BICE,198.75
+2022-06,97080000,Bank deposits,BICE,895.0471
+2022-06,97947000,Bank bonds,RPL,68.1683
+2022-06,97947000,Bank deposits,RPL,160.1745
+2022-06,97951000,Bank deposits,HSB,110.0715
+2022-06,99500410,Bank bonds,Consorcio,484.4701
+2022-06,99500410,Bank deposits,Consorcio,1182.9761
+2022-07,59203500,Bank deposits,CCB,0.3997
+2022-07,76362099,Bank bonds,BTG Pactual,125.1335
+2022-07,76362099,Bank deposits,BTG Pactual,301.4125
+2022-07,82878900,Bank bonds,Coopeuch,38.7444
+2022-07,82878900,Bank deposits,Coopeuch,260.5505
+2022-07,96509660,Bank bonds,Banco Falabella,26.2327
+2022-07,96509660,Bank deposits,Banco Falabella,316.339
+2022-07,97004000,Bank bonds,Banco de Chile,911.3847
+2022-07,97004000,Bank deposits,Banco de Chile,154.0923
+2022-07,97006000,Bank bonds,BCI,706.5036
+2022-07,97006000,Bank deposits,BCI,690.6601
+2022-07,97011000,Bank bonds,Internacional,403.4793
+2022-07,97011000,Bank deposits,Internacional,362.6635
+2022-07,97018000,Bank bonds,Scotiabank,969.3582
+2022-07,97018000,Bank deposits,Scotiabank,949.4133
+2022-07,97023000,Bank bonds,Itaú,549.4732
+2022-07,97023000,Bank deposits,Itaú,573.6621
+2022-07,97030000,Bank bonds,BancoEstado,431.0691
+2022-07,97030000,Bank deposits,BancoEstado,28.3041
+2022-07,97036000,Bank bonds,Santander,717.8201
+2022-07,97036000,Bank deposits,Santander,894.415
+2022-07,97053000,Bank bonds,Security,598.6481
+2022-07,97053000,Bank deposits,Security,246.9323
+2022-07,97080000,Bank bonds,BICE,210.9397
+2022-07,97080000,Bank deposits,BICE,831.3312
+2022-07,97947000,Bank bonds,RPL,59.4831
+2022-07,97947000,Bank deposits,RPL,177.8791
+2022-07,97951000,Bank deposits,HSB,111.6271
+2022-07,99500410,Bank bonds,Consorcio,531.6652
+2022-07,99500410,Bank deposits,Consorcio,1307.0758
+2022-08,59203500,Bank deposits,CCB,14.9434
+2022-08,76362099,Bank bonds,BTG Pactual,123.8433
+2022-08,76362099,Bank deposits,BTG Pactual,406.9871
+2022-08,82878900,Bank bonds,Coopeuch,35.1616
+2022-08,82878900,Bank deposits,Coopeuch,253.6246
+2022-08,9082,Bank deposits,,0.0
+2022-08,96509660,Bank bonds,Banco Falabella,26.0319
+2022-08,96509660,Bank deposits,Banco Falabella,285.305
+2022-08,97004000,Bank bonds,Banco de Chile,855.7242
+2022-08,97004000,Bank deposits,Banco de Chile,142.8913
+2022-08,97006000,Bank bonds,BCI,694.0242
+2022-08,97006000,Bank deposits,BCI,1279.9351
+2022-08,97011000,Bank bonds,Internacional,404.7709
+2022-08,97011000,Bank deposits,Internacional,378.6255
+2022-08,97018000,Bank bonds,Scotiabank,954.7768
+2022-08,97018000,Bank deposits,Scotiabank,1171.5755
+2022-08,97023000,Bank bonds,Itaú,550.0362
+2022-08,97023000,Bank deposits,Itaú,836.4724
+2022-08,97030000,Bank bonds,BancoEstado,378.0952
+2022-08,97030000,Bank deposits,BancoEstado,32.5089
+2022-08,97036000,Bank bonds,Santander,702.6666
+2022-08,97036000,Bank deposits,Santander,936.8445
+2022-08,97053000,Bank bonds,Security,580.3734
+2022-08,97053000,Bank deposits,Security,378.8576
+2022-08,97080000,Bank bonds,BICE,184.3864
+2022-08,97080000,Bank deposits,BICE,1091.525
+2022-08,97947000,Bank bonds,RPL,63.7615
+2022-08,97947000,Bank deposits,RPL,181.1938
+2022-08,97951000,Bank deposits,HSB,112.193
+2022-08,99500410,Bank bonds,Consorcio,486.9807
+2022-08,99500410,Bank deposits,Consorcio,1372.8718
+2022-09,59203500,Bank deposits,CCB,15.277
+2022-09,76362099,Bank bonds,BTG Pactual,130.3494
+2022-09,76362099,Bank deposits,BTG Pactual,338.5541
+2022-09,82878900,Bank bonds,Coopeuch,42.0278
+2022-09,82878900,Bank deposits,Coopeuch,285.0326
+2022-09,96509660,Bank bonds,Banco Falabella,25.8781
+2022-09,96509660,Bank deposits,Banco Falabella,283.6181
+2022-09,97004000,Bank bonds,Banco de Chile,790.646
+2022-09,97004000,Bank deposits,Banco de Chile,136.9102
+2022-09,97006000,Bank bonds,BCI,683.8447
+2022-09,97006000,Bank deposits,BCI,610.3676
+2022-09,97011000,Bank bonds,Internacional,397.9422
+2022-09,97011000,Bank deposits,Internacional,389.8454
+2022-09,97018000,Bank bonds,Scotiabank,887.5306
+2022-09,97018000,Bank deposits,Scotiabank,1178.8775
+2022-09,97023000,Bank bonds,Itaú,485.8247
+2022-09,97023000,Bank deposits,Itaú,753.7751
+2022-09,97030000,Bank bonds,BancoEstado,360.1633
+2022-09,97030000,Bank deposits,BancoEstado,45.0763
+2022-09,97036000,Bank bonds,Santander,618.023
+2022-09,97036000,Bank deposits,Santander,916.0448
+2022-09,97053000,Bank bonds,Security,565.0101
+2022-09,97053000,Bank deposits,Security,388.5712
+2022-09,97080000,Bank bonds,BICE,165.4822
+2022-09,97080000,Bank deposits,BICE,1215.2237
+2022-09,97947000,Bank bonds,RPL,64.3857
+2022-09,97947000,Bank deposits,RPL,174.8013
+2022-09,97951000,Bank deposits,HSB,3.1457
+2022-09,99500410,Bank bonds,Consorcio,483.6284
+2022-09,99500410,Bank deposits,Consorcio,1252.6765
+2022-10,59203500,Bank deposits,CCB,15.2332
+2022-10,76362099,Bank bonds,BTG Pactual,125.1809
+2022-10,76362099,Bank deposits,BTG Pactual,376.6307
+2022-10,82878900,Bank bonds,Coopeuch,42.1458
+2022-10,82878900,Bank deposits,Coopeuch,257.9654
+2022-10,96509660,Bank bonds,Banco Falabella,25.6629
+2022-10,96509660,Bank deposits,Banco Falabella,268.5418
+2022-10,97004000,Bank bonds,Banco de Chile,725.6778
+2022-10,97004000,Bank deposits,Banco de Chile,119.8167
+2022-10,97006000,Bank bonds,BCI,635.7303
+2022-10,97006000,Bank deposits,BCI,826.0074
+2022-10,97011000,Bank bonds,Internacional,401.3319
+2022-10,97011000,Bank deposits,Internacional,460.8938
+2022-10,97018000,Bank bonds,Scotiabank,836.8995
+2022-10,97018000,Bank deposits,Scotiabank,1211.2942
+2022-10,97023000,Bank bonds,Itaú,472.8266
+2022-10,97023000,Bank deposits,Itaú,808.8308
+2022-10,97030000,Bank bonds,BancoEstado,363.7225
+2022-10,97030000,Bank deposits,BancoEstado,94.9953
+2022-10,97036000,Bank bonds,Santander,620.879
+2022-10,97036000,Bank deposits,Santander,820.2374
+2022-10,97053000,Bank bonds,Security,478.7552
+2022-10,97053000,Bank deposits,Security,463.9693
+2022-10,97080000,Bank bonds,BICE,167.332
+2022-10,97080000,Bank deposits,BICE,1099.7551
+2022-10,97947000,Bank bonds,RPL,64.6598
+2022-10,97947000,Bank deposits,RPL,196.3117
+2022-10,97951000,Bank deposits,HSB,1.9168
+2022-10,99500410,Bank bonds,Consorcio,470.1377
+2022-10,99500410,Bank deposits,Consorcio,1302.2257
+2022-11,59203500,Bank deposits,CCB,20.1884
+2022-11,76362099,Bank bonds,BTG Pactual,132.0089
+2022-11,76362099,Bank deposits,BTG Pactual,370.8764
+2022-11,82878900,Bank bonds,Coopeuch,35.7916
+2022-11,82878900,Bank deposits,Coopeuch,286.0279
+2022-11,96509660,Bank bonds,Banco Falabella,26.6369
+2022-11,96509660,Bank deposits,Banco Falabella,285.2491
+2022-11,97004000,Bank bonds,Banco de Chile,764.0874
+2022-11,97004000,Bank deposits,Banco de Chile,102.0295
+2022-11,97006000,Bank bonds,BCI,638.6214
+2022-11,97006000,Bank deposits,BCI,1015.0315
+2022-11,97011000,Bank bonds,Internacional,420.7839
+2022-11,97011000,Bank deposits,Internacional,524.3361
+2022-11,97018000,Bank bonds,Scotiabank,839.4498
+2022-11,97018000,Bank deposits,Scotiabank,1368.9083
+2022-11,97023000,Bank bonds,Itaú,445.2303
+2022-11,97023000,Bank deposits,Itaú,835.7691
+2022-11,97030000,Bank bonds,BancoEstado,389.1789
+2022-11,97030000,Bank deposits,BancoEstado,153.555
+2022-11,97036000,Bank bonds,Santander,684.5384
+2022-11,97036000,Bank deposits,Santander,855.3719
+2022-11,97053000,Bank bonds,Security,467.6376
+2022-11,97053000,Bank deposits,Security,670.1052
+2022-11,97080000,Bank bonds,BICE,173.552
+2022-11,97080000,Bank deposits,BICE,1074.868
+2022-11,97947000,Bank bonds,RPL,66.8084
+2022-11,97947000,Bank deposits,RPL,202.744
+2022-11,97951000,Bank deposits,HSB,32.5232
+2022-11,99500410,Bank bonds,Consorcio,494.9725
+2022-11,99500410,Bank deposits,Consorcio,1404.6455
+2022-12,59203500,Bank deposits,CCB,10.2876
+2022-12,76362099,Bank bonds,BTG Pactual,131.7158
+2022-12,76362099,Bank deposits,BTG Pactual,446.4841
+2022-12,82878900,Bank bonds,Coopeuch,35.3854
+2022-12,82878900,Bank deposits,Coopeuch,351.6793
+2022-12,96509660,Bank bonds,Banco Falabella,24.5031
+2022-12,96509660,Bank deposits,Banco Falabella,294.0952
+2022-12,97004000,Bank bonds,Banco de Chile,761.5166
+2022-12,97004000,Bank deposits,Banco de Chile,160.0137
+2022-12,97006000,Bank bonds,BCI,627.1285
+2022-12,97006000,Bank deposits,BCI,859.1355
+2022-12,97011000,Bank bonds,Internacional,379.0818
+2022-12,97011000,Bank deposits,Internacional,551.7425
+2022-12,97018000,Bank bonds,Scotiabank,908.9195
+2022-12,97018000,Bank deposits,Scotiabank,1413.2497
+2022-12,97023000,Bank bonds,Itaú,463.7522
+2022-12,97023000,Bank deposits,Itaú,1110.1521
+2022-12,97029000,Bank deposits,,0.0058
+2022-12,97030000,Bank bonds,BancoEstado,403.0657
+2022-12,97030000,Bank deposits,BancoEstado,139.404
+2022-12,97036000,Bank bonds,Santander,592.4256
+2022-12,97036000,Bank deposits,Santander,788.2851
+2022-12,97053000,Bank bonds,Security,457.2601
+2022-12,97053000,Bank deposits,Security,678.8883
+2022-12,97080000,Bank bonds,BICE,184.3985
+2022-12,97080000,Bank deposits,BICE,1280.9942
+2022-12,97947000,Bank bonds,RPL,67.8743
+2022-12,97947000,Bank deposits,RPL,240.0551
+2022-12,97951000,Bank deposits,HSB,84.4811
+2022-12,99500410,Bank bonds,Consorcio,531.6674
+2022-12,99500410,Bank deposits,Consorcio,1353.3167
+2023-01,59203500,Bank deposits,CCB,10.1673
+2023-01,76362099,Bank bonds,BTG Pactual,135.9509
+2023-01,76362099,Bank deposits,BTG Pactual,418.5799
+2023-01,82878900,Bank bonds,Coopeuch,34.873
+2023-01,82878900,Bank deposits,Coopeuch,371.5266
+2023-01,96509660,Bank bonds,Banco Falabella,23.5563
+2023-01,96509660,Bank deposits,Banco Falabella,262.8364
+2023-01,96885880,Bank deposits,,0.0215
+2023-01,97004000,Bank bonds,Banco de Chile,832.4267
+2023-01,97004000,Bank deposits,Banco de Chile,155.9269
+2023-01,97006000,Bank bonds,BCI,672.1671
+2023-01,97006000,Bank deposits,BCI,889.1999
+2023-01,97011000,Bank bonds,Internacional,392.8637
+2023-01,97011000,Bank deposits,Internacional,562.4171
+2023-01,97018000,Bank bonds,Scotiabank,982.1446
+2023-01,97018000,Bank deposits,Scotiabank,1360.1759
+2023-01,97023000,Bank bonds,Itaú,482.286
+2023-01,97023000,Bank deposits,Itaú,1101.3322
+2023-01,97030000,Bank bonds,BancoEstado,464.5158
+2023-01,97030000,Bank deposits,BancoEstado,130.7363
+2023-01,97036000,Bank bonds,Santander,635.656
+2023-01,97036000,Bank deposits,Santander,833.9443
+2023-01,97053000,Bank bonds,Security,502.2556
+2023-01,97053000,Bank deposits,Security,627.8995
+2023-01,97080000,Bank bonds,BICE,179.0255
+2023-01,97080000,Bank deposits,BICE,1702.9107
+2023-01,97947000,Bank bonds,RPL,68.8313
+2023-01,97947000,Bank deposits,RPL,244.0621
+2023-01,97951000,Bank deposits,HSB,37.0474
+2023-01,99500410,Bank bonds,Consorcio,507.4533
+2023-01,99500410,Bank deposits,Consorcio,1402.4693
+2023-02,59203500,Bank deposits,CCB,10.2342
+2023-02,76362099,Bank bonds,BTG Pactual,147.9137
+2023-02,76362099,Bank deposits,BTG Pactual,410.6709
+2023-02,82878900,Bank bonds,Coopeuch,36.3053
+2023-02,82878900,Bank deposits,Coopeuch,408.8395
+2023-02,96509660,Bank bonds,Banco Falabella,23.6619
+2023-02,96509660,Bank deposits,Banco Falabella,282.4988
+2023-02,97004000,Bank bonds,Banco de Chile,798.5364
+2023-02,97004000,Bank deposits,Banco de Chile,141.4542
+2023-02,97006000,Bank bonds,BCI,722.6887
+2023-02,97006000,Bank deposits,BCI,923.766
+2023-02,97011000,Bank bonds,Internacional,390.7401
+2023-02,97011000,Bank deposits,Internacional,583.5886
+2023-02,97018000,Bank bonds,Scotiabank,960.4774
+2023-02,97018000,Bank deposits,Scotiabank,1246.982
+2023-02,97023000,Bank bonds,Itaú,500.0646
+2023-02,97023000,Bank deposits,Itaú,895.2561
+2023-02,97030000,Bank bonds,BancoEstado,488.0514
+2023-02,97030000,Bank deposits,BancoEstado,135.8531
+2023-02,97036000,Bank bonds,Santander,636.7345
+2023-02,97036000,Bank deposits,Santander,823.814
+2023-02,97053000,Bank bonds,Security,517.7934
+2023-02,97053000,Bank deposits,Security,659.0479
+2023-02,97080000,Bank bonds,BICE,174.5518
+2023-02,97080000,Bank deposits,BICE,1608.8904
+2023-02,97947000,Bank bonds,RPL,75.8766
+2023-02,97947000,Bank deposits,RPL,215.5253
+2023-02,97951000,Bank deposits,HSB,2.4394
+2023-02,99500410,Bank bonds,Consorcio,507.4422
+2023-02,99500410,Bank deposits,Consorcio,1435.6394
+2023-03,59203500,Bank deposits,CCB,0.0569
+2023-03,76362099,Bank bonds,BTG Pactual,151.7065
+2023-03,76362099,Bank deposits,BTG Pactual,406.641
+2023-03,82878900,Bank bonds,Coopeuch,21.2329
+2023-03,82878900,Bank deposits,Coopeuch,461.573
+2023-03,96509660,Bank bonds,Banco Falabella,21.2698
+2023-03,96509660,Bank deposits,Banco Falabella,272.7933
+2023-03,97004000,Bank bonds,Banco de Chile,806.8863
+2023-03,97004000,Bank deposits,Banco de Chile,54.1421
+2023-03,97006000,Bank bonds,BCI,751.5384
+2023-03,97006000,Bank deposits,BCI,878.86
+2023-03,97011000,Bank bonds,Internacional,320.7849
+2023-03,97011000,Bank deposits,Internacional,596.7717
+2023-03,97018000,Bank bonds,Scotiabank,955.9838
+2023-03,97018000,Bank deposits,Scotiabank,998.1368
+2023-03,97023000,Bank bonds,Itaú,541.8082
+2023-03,97023000,Bank deposits,Itaú,976.1888
+2023-03,97030000,Bank bonds,BancoEstado,485.4649
+2023-03,97030000,Bank deposits,BancoEstado,447.4724
+2023-03,97036000,Bank bonds,Santander,641.6234
+2023-03,97036000,Bank deposits,Santander,783.1063
+2023-03,97053000,Bank bonds,Security,566.8049
+2023-03,97053000,Bank deposits,Security,656.9709
+2023-03,97080000,Bank bonds,BICE,177.6533
+2023-03,97080000,Bank deposits,BICE,1691.6153
+2023-03,97947000,Bank bonds,RPL,77.6317
+2023-03,97947000,Bank deposits,RPL,227.3123
+2023-03,97951000,Bank deposits,HSB,5.8007
+2023-03,99500410,Bank bonds,Consorcio,501.1716
+2023-03,99500410,Bank deposits,Consorcio,1568.7703
+2023-04,59203500,Bank deposits,CCB,0.0768
+2023-04,76362099,Bank bonds,BTG Pactual,151.077
+2023-04,76362099,Bank deposits,BTG Pactual,390.6617
+2023-04,82878900,Bank bonds,Coopeuch,20.7065
+2023-04,82878900,Bank deposits,Coopeuch,493.0039
+2023-04,96509660,Bank bonds,Banco Falabella,19.9643
+2023-04,96509660,Bank deposits,Banco Falabella,287.6759
+2023-04,97004000,Bank bonds,Banco de Chile,851.2996
+2023-04,97004000,Bank deposits,Banco de Chile,60.6673
+2023-04,97006000,Bank bonds,BCI,749.2182
+2023-04,97006000,Bank deposits,BCI,926.7842
+2023-04,97011000,Bank bonds,Internacional,333.0497
+2023-04,97011000,Bank deposits,Internacional,565.3058
+2023-04,97018000,Bank bonds,Scotiabank,984.3713
+2023-04,97018000,Bank deposits,Scotiabank,1050.8687
+2023-04,97023000,Bank bonds,Itaú,581.2114
+2023-04,97023000,Bank deposits,Itaú,929.3151
+2023-04,97030000,Bank bonds,BancoEstado,462.5489
+2023-04,97030000,Bank deposits,BancoEstado,413.2065
+2023-04,97036000,Bank bonds,Santander,632.982
+2023-04,97036000,Bank deposits,Santander,825.2409
+2023-04,97053000,Bank bonds,Security,564.8876
+2023-04,97053000,Bank deposits,Security,682.903
+2023-04,97080000,Bank bonds,BICE,195.873
+2023-04,97080000,Bank deposits,BICE,1629.1744
+2023-04,97947000,Bank bonds,RPL,78.0597
+2023-04,97947000,Bank deposits,RPL,234.2444
+2023-04,97951000,Bank deposits,HSB,18.6685
+2023-04,99500410,Bank bonds,Consorcio,509.5362
+2023-04,99500410,Bank deposits,Consorcio,1565.1712
+2023-05,59203500,Bank deposits,CCB,0.0722
+2023-05,76362099,Bank bonds,BTG Pactual,154.7143
+2023-05,76362099,Bank deposits,BTG Pactual,377.5165
+2023-05,82878900,Bank bonds,Coopeuch,20.1936
+2023-05,82878900,Bank deposits,Coopeuch,547.1055
+2023-05,96509660,Bank bonds,Banco Falabella,19.4906
+2023-05,96509660,Bank deposits,Banco Falabella,304.7664
+2023-05,97004000,Bank bonds,Banco de Chile,851.3358
+2023-05,97004000,Bank deposits,Banco de Chile,61.5828
+2023-05,97006000,Bank bonds,BCI,694.8381
+2023-05,97006000,Bank deposits,BCI,616.3067
+2023-05,97011000,Bank bonds,Internacional,332.4172
+2023-05,97011000,Bank deposits,Internacional,603.5932
+2023-05,97018000,Bank bonds,Scotiabank,914.1186
+2023-05,97018000,Bank deposits,Scotiabank,872.1515
+2023-05,97023000,Bank bonds,Itaú,540.9439
+2023-05,97023000,Bank deposits,Itaú,722.8038
+2023-05,97030000,Bank bonds,BancoEstado,405.7863
+2023-05,97030000,Bank deposits,BancoEstado,861.8599
+2023-05,97036000,Bank bonds,Santander,633.8122
+2023-05,97036000,Bank deposits,Santander,954.6533
+2023-05,97053000,Bank bonds,Security,557.31
+2023-05,97053000,Bank deposits,Security,704.3175
+2023-05,97080000,Bank bonds,BICE,140.6269
+2023-05,97080000,Bank deposits,BICE,1717.3389
+2023-05,97947000,Bank bonds,RPL,73.5337
+2023-05,97947000,Bank deposits,RPL,276.4898
+2023-05,97951000,Bank deposits,HSB,5.5784
+2023-05,99500410,Bank bonds,Consorcio,517.6529
+2023-05,99500410,Bank deposits,Consorcio,1560.9955
+2023-06,59203500,Bank deposits,CCB,0.0697
+2023-06,76362099,Bank bonds,BTG Pactual,153.8287
+2023-06,76362099,Bank deposits,BTG Pactual,368.334
+2023-06,82878900,Bank bonds,Coopeuch,24.575
+2023-06,82878900,Bank deposits,Coopeuch,563.4788
+2023-06,96509660,Bank bonds,Banco Falabella,24.6717
+2023-06,96509660,Bank deposits,Banco Falabella,340.3582
+2023-06,97004000,Bank bonds,Banco de Chile,968.0476
+2023-06,97004000,Bank deposits,Banco de Chile,60.6936
+2023-06,97006000,Bank bonds,BCI,673.7641
+2023-06,97006000,Bank deposits,BCI,710.4137
+2023-06,97011000,Bank bonds,Internacional,357.789
+2023-06,97011000,Bank deposits,Internacional,615.4819
+2023-06,97018000,Bank bonds,Scotiabank,1073.3052
+2023-06,97018000,Bank deposits,Scotiabank,849.1424
+2023-06,97023000,Bank bonds,Itaú,605.0977
+2023-06,97023000,Bank deposits,Itaú,755.7419
+2023-06,97030000,Bank bonds,BancoEstado,427.6957
+2023-06,97030000,Bank deposits,BancoEstado,867.7773
+2023-06,97036000,Bank bonds,Santander,727.4267
+2023-06,97036000,Bank deposits,Santander,1077.0499
+2023-06,97053000,Bank bonds,Security,598.7102
+2023-06,97053000,Bank deposits,Security,692.1721
+2023-06,97080000,Bank bonds,BICE,137.6957
+2023-06,97080000,Bank deposits,BICE,1772.1045
+2023-06,97947000,Bank bonds,RPL,58.2698
+2023-06,97947000,Bank deposits,RPL,250.8948
+2023-06,97951000,Bank deposits,HSB,30.6422
+2023-06,99500410,Bank bonds,Consorcio,557.815
+2023-06,99500410,Bank deposits,Consorcio,1614.5225
+2023-07,59203500,Bank deposits,CCB,10.5638
+2023-07,76362099,Bank bonds,BTG Pactual,132.1794
+2023-07,76362099,Bank deposits,BTG Pactual,334.4555
+2023-07,82878900,Bank bonds,Coopeuch,24.6389
+2023-07,82878900,Bank deposits,Coopeuch,578.5149
+2023-07,96509660,Bank bonds,Banco Falabella,44.3814
+2023-07,96509660,Bank deposits,Banco Falabella,296.1387
+2023-07,97004000,Bank bonds,Banco de Chile,1030.486
+2023-07,97004000,Bank deposits,Banco de Chile,70.8948
+2023-07,97006000,Bank bonds,BCI,731.6246
+2023-07,97006000,Bank deposits,BCI,732.5801
+2023-07,97011000,Bank bonds,Internacional,360.8497
+2023-07,97011000,Bank deposits,Internacional,572.5958
+2023-07,97018000,Bank bonds,Scotiabank,1096.824
+2023-07,97018000,Bank deposits,Scotiabank,880.7056
+2023-07,97023000,Bank bonds,Itaú,632.4039
+2023-07,97023000,Bank deposits,Itaú,723.0273
+2023-07,97030000,Bank bonds,BancoEstado,436.4687
+2023-07,97030000,Bank deposits,BancoEstado,345.8499
+2023-07,97036000,Bank bonds,Santander,792.7635
+2023-07,97036000,Bank deposits,Santander,1373.0389
+2023-07,97053000,Bank bonds,Security,647.1586
+2023-07,97053000,Bank deposits,Security,673.1327
+2023-07,97080000,Bank bonds,BICE,168.8719
+2023-07,97080000,Bank deposits,BICE,2005.2667
+2023-07,97947000,Bank bonds,RPL,54.2445
+2023-07,97947000,Bank deposits,RPL,212.9843
+2023-07,97951000,Bank deposits,HSB,5.665
+2023-07,99500410,Bank bonds,Consorcio,596.5326
+2023-07,99500410,Bank deposits,Consorcio,1582.6861
+2023-08,59203500,Bank deposits,CCB,10.7169
+2023-08,76362099,Bank bonds,BTG Pactual,135.9813
+2023-08,76362099,Bank deposits,BTG Pactual,290.4874
+2023-08,76645030,Bank deposits,Itaú,2.1362
+2023-08,82878900,Bank bonds,Coopeuch,24.7072
+2023-08,82878900,Bank deposits,Coopeuch,610.9386
+2023-08,96509660,Bank bonds,Banco Falabella,43.3508
+2023-08,96509660,Bank deposits,Banco Falabella,316.3874
+2023-08,97004000,Bank bonds,Banco de Chile,1177.732
+2023-08,97004000,Bank deposits,Banco de Chile,68.3786
+2023-08,97006000,Bank bonds,BCI,798.2052
+2023-08,97006000,Bank deposits,BCI,599.1274
+2023-08,97011000,Bank bonds,Internacional,378.4942
+2023-08,97011000,Bank deposits,Internacional,548.8012
+2023-08,97018000,Bank bonds,Scotiabank,1191.6639
+2023-08,97018000,Bank deposits,Scotiabank,799.9794
+2023-08,97023000,Bank bonds,Itaú,701.0997
+2023-08,97023000,Bank deposits,Itaú,758.5756
+2023-08,97030000,Bank bonds,BancoEstado,414.3555
+2023-08,97030000,Bank deposits,BancoEstado,941.3604
+2023-08,97036000,Bank bonds,Santander,774.5278
+2023-08,97036000,Bank deposits,Santander,1448.1455
+2023-08,97053000,Bank bonds,Security,667.438
+2023-08,97053000,Bank deposits,Security,612.7882
+2023-08,97080000,Bank bonds,BICE,193.1244
+2023-08,97080000,Bank deposits,BICE,1863.2163
+2023-08,97947000,Bank bonds,RPL,55.5453
+2023-08,97947000,Bank deposits,RPL,208.1491
+2023-08,97951000,Bank deposits,HSB,5.7214
+2023-08,99500410,Bank bonds,Consorcio,629.8476
+2023-08,99500410,Bank deposits,Consorcio,1347.7477
+2023-09,59203500,Bank deposits,CCB,10.7706
+2023-09,76362099,Bank bonds,BTG Pactual,178.1463
+2023-09,76362099,Bank deposits,BTG Pactual,323.5127
+2023-09,82878900,Bank bonds,Coopeuch,23.773
+2023-09,82878900,Bank deposits,Coopeuch,625.1846
+2023-09,96509660,Bank bonds,Banco Falabella,42.0007
+2023-09,96509660,Bank deposits,Banco Falabella,285.033
+2023-09,97004000,Bank bonds,Banco de Chile,1173.0624
+2023-09,97004000,Bank deposits,Banco de Chile,68.5223
+2023-09,97006000,Bank bonds,BCI,835.7453
+2023-09,97006000,Bank deposits,BCI,516.4388
+2023-09,97011000,Bank bonds,Internacional,395.7009
+2023-09,97011000,Bank deposits,Internacional,681.1863
+2023-09,97018000,Bank bonds,Scotiabank,1111.2222
+2023-09,97018000,Bank deposits,Scotiabank,816.7286
+2023-09,97023000,Bank bonds,Itaú,681.9282
+2023-09,97023000,Bank deposits,Itaú,859.8766
+2023-09,97030000,Bank bonds,BancoEstado,422.3871
+2023-09,97030000,Bank deposits,BancoEstado,340.1326
+2023-09,97036000,Bank bonds,Santander,807.663
+2023-09,97036000,Bank deposits,Santander,1626.4084
+2023-09,97053000,Bank bonds,Security,680.5013
+2023-09,97053000,Bank deposits,Security,682.9978
+2023-09,97080000,Bank bonds,BICE,215.7711
+2023-09,97080000,Bank deposits,BICE,1576.4354
+2023-09,97947000,Bank bonds,RPL,55.5834
+2023-09,97947000,Bank deposits,RPL,208.3904
+2023-09,97951000,Bank deposits,HSB,5.4443
+2023-09,99500410,Bank bonds,Consorcio,627.2814
+2023-09,99500410,Bank deposits,Consorcio,1497.761
+2023-10,59203500,Bank deposits,CCB,20.9099
+2023-10,76362099,Bank bonds,BTG Pactual,182.8477
+2023-10,76362099,Bank deposits,BTG Pactual,461.9194
+2023-10,82878900,Bank bonds,Coopeuch,25.7849
+2023-10,82878900,Bank deposits,Coopeuch,633.0163
+2023-10,96509660,Bank bonds,Banco Falabella,41.2045
+2023-10,96509660,Bank deposits,Banco Falabella,275.8277
+2023-10,97004000,Bank bonds,Banco de Chile,1155.3298
+2023-10,97004000,Bank deposits,Banco de Chile,152.937
+2023-10,97006000,Bank bonds,BCI,837.2069
+2023-10,97006000,Bank deposits,BCI,503.7278
+2023-10,97011000,Bank bonds,Internacional,402.3128
+2023-10,97011000,Bank deposits,Internacional,650.4375
+2023-10,97018000,Bank bonds,Scotiabank,1088.0969
+2023-10,97018000,Bank deposits,Scotiabank,854.6643
+2023-10,97023000,Bank bonds,Itaú,678.4574
+2023-10,97023000,Bank deposits,Itaú,1032.3014
+2023-10,97030000,Bank bonds,BancoEstado,410.071
+2023-10,97030000,Bank deposits,BancoEstado,207.0655
+2023-10,97036000,Bank bonds,Santander,819.3776
+2023-10,97036000,Bank deposits,Santander,1836.5392
+2023-10,97053000,Bank bonds,Security,597.9296
+2023-10,97053000,Bank deposits,Security,799.189
+2023-10,97080000,Bank bonds,BICE,208.1618
+2023-10,97080000,Bank deposits,BICE,1642.7346
+2023-10,97947000,Bank bonds,RPL,55.9877
+2023-10,97947000,Bank deposits,RPL,210.686
+2023-10,97951000,Bank deposits,HSB,4.2026
+2023-10,9806,Bank deposits,,0.0
+2023-10,99500410,Bank bonds,Consorcio,624.1205
+2023-10,99500410,Bank deposits,Consorcio,1413.4273
+2023-11,59203500,Bank deposits,CCB,16.127
+2023-11,76362099,Bank bonds,BTG Pactual,153.3607
+2023-11,76362099,Bank deposits,BTG Pactual,435.9186
+2023-11,82878900,Bank bonds,Coopeuch,21.387
+2023-11,82878900,Bank deposits,Coopeuch,535.8804
+2023-11,96509660,Bank bonds,Banco Falabella,42.9932
+2023-11,96509660,Bank deposits,Banco Falabella,259.7684
+2023-11,97004000,Bank bonds,Banco de Chile,1160.3467
+2023-11,97004000,Bank deposits,Banco de Chile,241.8682
+2023-11,97006000,Bank bonds,BCI,911.2899
+2023-11,97006000,Bank deposits,BCI,377.0506
+2023-11,97011000,Bank bonds,Internacional,397.7783
+2023-11,97011000,Bank deposits,Internacional,600.9743
+2023-11,97018000,Bank bonds,Scotiabank,1135.5303
+2023-11,97018000,Bank deposits,Scotiabank,775.6281
+2023-11,97023000,Bank bonds,Itaú,741.0555
+2023-11,97023000,Bank deposits,Itaú,952.2474
+2023-11,97030000,Bank bonds,BancoEstado,436.0403
+2023-11,97030000,Bank deposits,BancoEstado,188.9303
+2023-11,97036000,Bank bonds,Santander,920.469
+2023-11,97036000,Bank deposits,Santander,1995.8318
+2023-11,97053000,Bank bonds,Security,614.3741
+2023-11,97053000,Bank deposits,Security,817.2084
+2023-11,97080000,Bank bonds,BICE,235.0121
+2023-11,97080000,Bank deposits,BICE,1584.2851
+2023-11,97947000,Bank bonds,RPL,56.6368
+2023-11,97947000,Bank deposits,RPL,191.4183
+2023-11,97951000,Bank deposits,HSB,49.0709
+2023-11,9806,Bank deposits,,0.0
+2023-11,99500410,Bank bonds,Consorcio,664.6853
+2023-11,99500410,Bank deposits,Consorcio,1277.723
+2023-12,59203500,Bank deposits,CCB,11.2963
+2023-12,7014,Bank deposits,,0.0006
+2023-12,76362099,Bank bonds,BTG Pactual,155.6078
+2023-12,76362099,Bank deposits,BTG Pactual,439.3001
+2023-12,82878900,Bank bonds,Coopeuch,26.2943
+2023-12,82878900,Bank deposits,Coopeuch,504.1015
+2023-12,96509660,Bank bonds,Banco Falabella,43.1527
+2023-12,96509660,Bank deposits,Banco Falabella,274.6824
+2023-12,97004000,Bank bonds,Banco de Chile,1232.583
+2023-12,97004000,Bank deposits,Banco de Chile,232.1275
+2023-12,97006000,Bank bonds,BCI,1013.8433
+2023-12,97006000,Bank deposits,BCI,438.9202
+2023-12,97011000,Bank bonds,Internacional,416.2089
+2023-12,97011000,Bank deposits,Internacional,620.6813
+2023-12,97018000,Bank bonds,Scotiabank,1279.5751
+2023-12,97018000,Bank deposits,Scotiabank,818.4178
+2023-12,97023000,Bank bonds,Itaú,794.0512
+2023-12,97023000,Bank deposits,Itaú,929.7345
+2023-12,97030000,Bank bonds,BancoEstado,507.848
+2023-12,97030000,Bank deposits,BancoEstado,192.6627
+2023-12,97036000,Bank bonds,Santander,1033.2798
+2023-12,97036000,Bank deposits,Santander,2403.6388
+2023-12,97053000,Bank bonds,Security,668.4287
+2023-12,97053000,Bank deposits,Security,900.8412
+2023-12,97080000,Bank bonds,BICE,262.587
+2023-12,97080000,Bank deposits,BICE,1581.4792
+2023-12,97947000,Bank bonds,RPL,57.3543
+2023-12,97947000,Bank deposits,RPL,213.0764
+2023-12,97951000,Bank deposits,HSB,3.9513
+2023-12,99500410,Bank bonds,Consorcio,705.2
+2023-12,99500410,Bank deposits,Consorcio,1210.6677
+2024-01,59203500,Bank deposits,CCB,0.0926
+2024-01,7014,Bank deposits,,0.0005
+2024-01,76362099,Bank bonds,BTG Pactual,175.2629
+2024-01,76362099,Bank deposits,BTG Pactual,531.9874
+2024-01,82878900,Bank bonds,Coopeuch,23.3098
+2024-01,82878900,Bank deposits,Coopeuch,484.2825
+2024-01,96509660,Bank bonds,Banco Falabella,43.0225
+2024-01,96509660,Bank deposits,Banco Falabella,232.0243
+2024-01,97004000,Bank bonds,Banco de Chile,1354.0848
+2024-01,97004000,Bank deposits,Banco de Chile,295.2495
+2024-01,97006000,Bank bonds,BCI,1043.0355
+2024-01,97006000,Bank deposits,BCI,409.9385
+2024-01,97011000,Bank bonds,Internacional,420.0899
+2024-01,97011000,Bank deposits,Internacional,487.6288
+2024-01,97018000,Bank bonds,Scotiabank,1411.3725
+2024-01,97018000,Bank deposits,Scotiabank,828.4431
+2024-01,97023000,Bank bonds,Itaú,839.3438
+2024-01,97023000,Bank deposits,Itaú,921.4479
+2024-01,97030000,Bank bonds,BancoEstado,630.5026
+2024-01,97030000,Bank deposits,BancoEstado,185.1545
+2024-01,97036000,Bank bonds,Santander,1109.7361
+2024-01,97036000,Bank deposits,Santander,2296.6822
+2024-01,97053000,Bank bonds,Security,715.8191
+2024-01,97053000,Bank deposits,Security,940.1137
+2024-01,97080000,Bank bonds,BICE,270.2549
+2024-01,97080000,Bank deposits,BICE,1550.6063
+2024-01,97947000,Bank bonds,RPL,57.4807
+2024-01,97947000,Bank deposits,RPL,223.6966
+2024-01,97951000,Bank deposits,HSB,3.9725
+2024-01,99500410,Bank bonds,Consorcio,712.1895
+2024-01,99500410,Bank deposits,Consorcio,1167.1735
+2024-02,59203500,Bank deposits,CCB,0.0715
+2024-02,76362099,Bank bonds,BTG Pactual,180.0517
+2024-02,76362099,Bank deposits,BTG Pactual,616.4112
+2024-02,76645030,Bank deposits,Itaú,0.3191
+2024-02,82878900,Bank bonds,Coopeuch,33.6179
+2024-02,82878900,Bank deposits,Coopeuch,448.2419
+2024-02,96509660,Bank bonds,Banco Falabella,42.4376
+2024-02,96509660,Bank deposits,Banco Falabella,233.9423
+2024-02,97004000,Bank bonds,Banco de Chile,1468.6389
+2024-02,97004000,Bank deposits,Banco de Chile,467.5825
+2024-02,97006000,Bank bonds,BCI,1140.545
+2024-02,97006000,Bank deposits,BCI,750.4047
+2024-02,97011000,Bank bonds,Internacional,429.8888
+2024-02,97011000,Bank deposits,Internacional,454.1695
+2024-02,97018000,Bank bonds,Scotiabank,1518.9234
+2024-02,97018000,Bank deposits,Scotiabank,1079.1437
+2024-02,97023000,Bank bonds,Itaú,903.6015
+2024-02,97023000,Bank deposits,Itaú,982.6652
+2024-02,97030000,Bank bonds,BancoEstado,761.0957
+2024-02,97030000,Bank deposits,BancoEstado,252.3719
+2024-02,97036000,Bank bonds,Santander,1173.0331
+2024-02,97036000,Bank deposits,Santander,2316.4348
+2024-02,97053000,Bank bonds,Security,714.2061
+2024-02,97053000,Bank deposits,Security,891.4362
+2024-02,97080000,Bank bonds,BICE,291.5954
+2024-02,97080000,Bank deposits,BICE,1646.6166
+2024-02,97947000,Bank bonds,RPL,24.7635
+2024-02,97947000,Bank deposits,RPL,211.0631
+2024-02,97951000,Bank deposits,HSB,34.1
+2024-02,99500410,Bank bonds,Consorcio,728.7811
+2024-02,99500410,Bank deposits,Consorcio,1127.98
+2024-03,59203500,Bank deposits,CCB,0.0697
+2024-03,76362099,Bank bonds,BTG Pactual,194.3561
+2024-03,76362099,Bank deposits,BTG Pactual,672.1654
+2024-03,82878900,Bank bonds,Coopeuch,36.1024
+2024-03,82878900,Bank deposits,Coopeuch,472.9102
+2024-03,96509660,Bank bonds,Banco Falabella,42.6099
+2024-03,96509660,Bank deposits,Banco Falabella,197.9772
+2024-03,97004000,Bank bonds,Banco de Chile,1603.7796
+2024-03,97004000,Bank deposits,Banco de Chile,513.3501
+2024-03,97006000,Bank bonds,BCI,1172.8874
+2024-03,97006000,Bank deposits,BCI,800.6312
+2024-03,97011000,Bank bonds,Internacional,441.7515
+2024-03,97011000,Bank deposits,Internacional,411.1473
+2024-03,97018000,Bank bonds,Scotiabank,1632.0692
+2024-03,97018000,Bank deposits,Scotiabank,1197.2702
+2024-03,97023000,Bank bonds,Itaú,1024.4257
+2024-03,97023000,Bank deposits,Itaú,1006.1529
+2024-03,97030000,Bank bonds,BancoEstado,959.2608
+2024-03,97030000,Bank deposits,BancoEstado,249.9796
+2024-03,97036000,Bank bonds,Santander,1247.6047
+2024-03,97036000,Bank deposits,Santander,2210.7465
+2024-03,97053000,Bank bonds,Security,796.734
+2024-03,97053000,Bank deposits,Security,820.5298
+2024-03,97080000,Bank bonds,BICE,320.6097
+2024-03,97080000,Bank deposits,BICE,1900.6853
+2024-03,97947000,Bank bonds,RPL,27.1066
+2024-03,97947000,Bank deposits,RPL,225.318
+2024-03,97951000,Bank deposits,HSB,74.3209
+2024-03,99500410,Bank bonds,Consorcio,730.3199
+2024-03,99500410,Bank deposits,Consorcio,1113.7033
+2024-04,59203500,Bank deposits,CCB,0.0773
+2024-04,76362099,Bank bonds,BTG Pactual,163.4715
+2024-04,76362099,Bank deposits,BTG Pactual,635.1121
+2024-04,82878900,Bank bonds,Coopeuch,33.8701
+2024-04,82878900,Bank deposits,Coopeuch,519.8547
+2024-04,96509660,Bank bonds,Banco Falabella,42.3341
+2024-04,96509660,Bank deposits,Banco Falabella,198.305
+2024-04,97004000,Bank bonds,Banco de Chile,1698.6587
+2024-04,97004000,Bank deposits,Banco de Chile,657.7426
+2024-04,97006000,Bank bonds,BCI,1187.9601
+2024-04,97006000,Bank deposits,BCI,1531.8816
+2024-04,97011000,Bank bonds,Internacional,465.1767
+2024-04,97011000,Bank deposits,Internacional,408.4268
+2024-04,97018000,Bank bonds,Scotiabank,1646.7833
+2024-04,97018000,Bank deposits,Scotiabank,1243.205
+2024-04,97023000,Bank bonds,Itaú,1078.621
+2024-04,97023000,Bank deposits,Itaú,1051.9675
+2024-04,97030000,Bank bonds,BancoEstado,995.8876
+2024-04,97030000,Bank deposits,BancoEstado,167.5472
+2024-04,97036000,Bank bonds,Santander,1302.889
+2024-04,97036000,Bank deposits,Santander,2406.7718
+2024-04,97053000,Bank bonds,Security,852.4161
+2024-04,97053000,Bank deposits,Security,900.057
+2024-04,97080000,Bank bonds,BICE,319.6949
+2024-04,97080000,Bank deposits,BICE,2100.3556
+2024-04,97947000,Bank bonds,RPL,26.9442
+2024-04,97947000,Bank deposits,RPL,217.9559
+2024-04,97951000,Bank deposits,HSB,56.8359
+2024-04,99500410,Bank bonds,Consorcio,759.234
+2024-04,99500410,Bank deposits,Consorcio,920.9313
+2024-05,59203500,Bank deposits,CCB,0.0397
+2024-05,76362099,Bank bonds,BTG Pactual,193.9317
+2024-05,76362099,Bank deposits,BTG Pactual,686.8442
+2024-05,82878900,Bank bonds,Coopeuch,26.4444
+2024-05,82878900,Bank deposits,Coopeuch,560.3261
+2024-05,96509660,Bank bonds,Banco Falabella,44.076
+2024-05,96509660,Bank deposits,Banco Falabella,154.2027
+2024-05,97004000,Bank bonds,Banco de Chile,1708.7996
+2024-05,97004000,Bank deposits,Banco de Chile,804.7073
+2024-05,97006000,Bank bonds,BCI,1240.1478
+2024-05,97006000,Bank deposits,BCI,1675.1648
+2024-05,97011000,Bank bonds,Internacional,495.978
+2024-05,97011000,Bank deposits,Internacional,360.0822
+2024-05,97018000,Bank bonds,Scotiabank,1664.2514
+2024-05,97018000,Bank deposits,Scotiabank,1401.9438
+2024-05,97023000,Bank bonds,Itaú,1157.2277
+2024-05,97023000,Bank deposits,Itaú,1029.9916
+2024-05,97030000,Bank bonds,BancoEstado,1005.5857
+2024-05,97030000,Bank deposits,BancoEstado,148.3941
+2024-05,97036000,Bank bonds,Santander,1382.9288
+2024-05,97036000,Bank deposits,Santander,2484.6145
+2024-05,97053000,Bank bonds,Security,931.5996
+2024-05,97053000,Bank deposits,Security,1107.7651
+2024-05,97080000,Bank bonds,BICE,357.5921
+2024-05,97080000,Bank deposits,BICE,2094.3284
+2024-05,97947000,Bank bonds,RPL,30.0837
+2024-05,97947000,Bank deposits,RPL,201.3745
+2024-05,97951000,Bank deposits,HSB,56.6244
+2024-05,99500410,Bank bonds,Consorcio,788.6913
+2024-05,99500410,Bank deposits,Consorcio,787.1201
+2024-06,59203500,Bank deposits,CCB,0.0299
+2024-06,60805000,Bank deposits,,14.8735
+2024-06,76017019,Bank deposits,,0.0237
+2024-06,76362099,Bank bonds,BTG Pactual,197.4406
+2024-06,76362099,Bank deposits,BTG Pactual,749.1814
+2024-06,82878900,Bank bonds,Coopeuch,25.9941
+2024-06,82878900,Bank deposits,Coopeuch,692.3166
+2024-06,96509660,Bank bonds,Banco Falabella,42.449
+2024-06,96509660,Bank deposits,Banco Falabella,127.3897
+2024-06,97004000,Bank bonds,Banco de Chile,1699.9144
+2024-06,97004000,Bank deposits,Banco de Chile,910.0979
+2024-06,97006000,Bank bonds,BCI,1216.7101
+2024-06,97006000,Bank deposits,BCI,1591.9981
+2024-06,97011000,Bank bonds,Internacional,502.6809
+2024-06,97011000,Bank deposits,Internacional,376.4502
+2024-06,97018000,Bank bonds,Scotiabank,1768.4052
+2024-06,97018000,Bank deposits,Scotiabank,1451.178
+2024-06,97023000,Bank bonds,Itaú,1084.7517
+2024-06,97023000,Bank deposits,Itaú,1676.9523
+2024-06,97030000,Bank bonds,BancoEstado,1000.808
+2024-06,97030000,Bank deposits,BancoEstado,146.8413
+2024-06,97036000,Bank bonds,Santander,1432.7617
+2024-06,97036000,Bank deposits,Santander,2396.2597
+2024-06,97053000,Bank bonds,Security,931.7279
+2024-06,97053000,Bank deposits,Security,1134.3397
+2024-06,97080000,Bank bonds,BICE,346.9878
+2024-06,97080000,Bank deposits,BICE,2392.6916
+2024-06,97947000,Bank bonds,RPL,30.2632
+2024-06,97947000,Bank deposits,RPL,212.1819
+2024-06,97951000,Bank deposits,HSB,156.4599
+2024-06,99500410,Bank bonds,Consorcio,801.0935
+2024-06,99500410,Bank deposits,Consorcio,889.9568
+2024-07,59203500,Bank deposits,CCB,0.0346
+2024-07,76362099,Bank bonds,BTG Pactual,221.7046
+2024-07,76362099,Bank deposits,BTG Pactual,832.9175
+2024-07,82878900,Bank bonds,Coopeuch,26.0177
+2024-07,82878900,Bank deposits,Coopeuch,782.1187
+2024-07,96509660,Bank bonds,Banco Falabella,42.6524
+2024-07,96509660,Bank deposits,Banco Falabella,131.2639
+2024-07,97004000,Bank bonds,Banco de Chile,1826.177
+2024-07,97004000,Bank deposits,Banco de Chile,916.18
+2024-07,97006000,Bank bonds,BCI,1243.2041
+2024-07,97006000,Bank deposits,BCI,2688.3483
+2024-07,97011000,Bank bonds,Internacional,523.8258
+2024-07,97011000,Bank deposits,Internacional,398.0621
+2024-07,97018000,Bank bonds,Scotiabank,1789.2341
+2024-07,97018000,Bank deposits,Scotiabank,1814.7361
+2024-07,97023000,Bank bonds,Itaú,1095.7435
+2024-07,97023000,Bank deposits,Itaú,1466.9075
+2024-07,97030000,Bank bonds,BancoEstado,1015.7887
+2024-07,97030000,Bank deposits,BancoEstado,149.3047
+2024-07,97036000,Bank bonds,Santander,1548.8
+2024-07,97036000,Bank deposits,Santander,2852.6647
+2024-07,97053000,Bank bonds,Security,959.051
+2024-07,97053000,Bank deposits,Security,1093.2703
+2024-07,97080000,Bank bonds,BICE,376.9481
+2024-07,97080000,Bank deposits,BICE,2455.862
+2024-07,97947000,Bank bonds,RPL,29.9858
+2024-07,97947000,Bank deposits,RPL,225.2386
+2024-07,97951000,Bank deposits,HSB,137.5599
+2024-07,99500410,Bank bonds,Consorcio,807.9826
+2024-07,99500410,Bank deposits,Consorcio,999.9414
+2024-08,59203500,Bank deposits,CCB,0.0396
+2024-08,76362099,Bank bonds,BTG Pactual,240.0571
+2024-08,76362099,Bank deposits,BTG Pactual,832.7978
+2024-08,82878900,Bank bonds,Coopeuch,35.0379
+2024-08,82878900,Bank deposits,Coopeuch,860.9401
+2024-08,96509660,Bank bonds,Banco Falabella,41.5903
+2024-08,96509660,Bank deposits,Banco Falabella,135.261
+2024-08,97004000,Bank bonds,Banco de Chile,2035.3923
+2024-08,97004000,Bank deposits,Banco de Chile,1036.855
+2024-08,97006000,Bank bonds,BCI,1342.5387
+2024-08,97006000,Bank deposits,BCI,2800.4122
+2024-08,97011000,Bank bonds,Internacional,522.6488
+2024-08,97011000,Bank deposits,Internacional,392.7893
+2024-08,97018000,Bank bonds,Scotiabank,1883.6592
+2024-08,97018000,Bank deposits,Scotiabank,1927.9898
+2024-08,97023000,Bank bonds,Itaú,1420.9435
+2024-08,97023000,Bank deposits,Itaú,1427.9036
+2024-08,97030000,Bank bonds,BancoEstado,948.2074
+2024-08,97030000,Bank deposits,BancoEstado,203.5839
+2024-08,97036000,Bank bonds,Santander,1616.467
+2024-08,97036000,Bank deposits,Santander,3250.8752
+2024-08,97053000,Bank bonds,Security,1033.2475
+2024-08,97053000,Bank deposits,Security,1254.1678
+2024-08,97080000,Bank bonds,BICE,388.2784
+2024-08,97080000,Bank deposits,BICE,2428.9953
+2024-08,97947000,Bank bonds,RPL,34.509
+2024-08,97947000,Bank deposits,RPL,222.7708
+2024-08,97951000,Bank deposits,HSB,214.4492
+2024-08,99500410,Bank bonds,Consorcio,855.8132
+2024-08,99500410,Bank deposits,Consorcio,1155.2505
+2024-09,59203500,Bank deposits,CCB,0.0348
+2024-09,76362099,Bank bonds,BTG Pactual,251.7327
+2024-09,76362099,Bank deposits,BTG Pactual,781.4119
+2024-09,82878900,Bank bonds,Coopeuch,35.7958
+2024-09,82878900,Bank deposits,Coopeuch,893.6843
+2024-09,96509660,Bank bonds,Banco Falabella,54.7372
+2024-09,96509660,Bank deposits,Banco Falabella,139.777
+2024-09,97004000,Bank bonds,Banco de Chile,2162.2539
+2024-09,97004000,Bank deposits,Banco de Chile,1053.1062
+2024-09,97006000,Bank bonds,BCI,1478.8163
+2024-09,97006000,Bank deposits,BCI,2762.763
+2024-09,97011000,Bank bonds,Internacional,552.9784
+2024-09,97011000,Bank deposits,Internacional,392.4235
+2024-09,97018000,Bank bonds,Scotiabank,2028.8249
+2024-09,97018000,Bank deposits,Scotiabank,1764.1924
+2024-09,97023000,Bank bonds,Itaú,1450.5096
+2024-09,97023000,Bank deposits,Itaú,1537.0407
+2024-09,97030000,Bank bonds,BancoEstado,1011.8582
+2024-09,97030000,Bank deposits,BancoEstado,210.5532
+2024-09,97036000,Bank bonds,Santander,1664.0504
+2024-09,97036000,Bank deposits,Santander,3376.9396
+2024-09,97053000,Bank bonds,Security,1158.3549
+2024-09,97053000,Bank deposits,Security,1284.7591
+2024-09,97080000,Bank bonds,BICE,419.5117
+2024-09,97080000,Bank deposits,BICE,2352.677
+2024-09,97947000,Bank bonds,RPL,14.8329
+2024-09,97947000,Bank deposits,RPL,255.1328
+2024-09,97951000,Bank deposits,HSB,135.915
+2024-09,99500410,Bank bonds,Consorcio,914.6002
+2024-09,99500410,Bank deposits,Consorcio,1139.8747
+2024-10,59203500,Bank deposits,CCB,0.0496
+2024-10,76362099,Bank bonds,BTG Pactual,270.2117
+2024-10,76362099,Bank deposits,BTG Pactual,772.8354
+2024-10,82878900,Bank bonds,Coopeuch,35.3208
+2024-10,82878900,Bank deposits,Coopeuch,840.1564
+2024-10,96509660,Bank bonds,Banco Falabella,54.0639
+2024-10,96509660,Bank deposits,Banco Falabella,101.8625
+2024-10,97004000,Bank bonds,Banco de Chile,2159.4368
+2024-10,97004000,Bank deposits,Banco de Chile,1066.1797
+2024-10,97006000,Bank bonds,BCI,1373.8106
+2024-10,97006000,Bank deposits,BCI,3723.3081
+2024-10,97011000,Bank bonds,Internacional,567.3776
+2024-10,97011000,Bank deposits,Internacional,419.2254
+2024-10,97018000,Bank bonds,Scotiabank,2036.3069
+2024-10,97018000,Bank deposits,Scotiabank,2030.7564
+2024-10,97023000,Bank bonds,Itaú,1510.265
+2024-10,97023000,Bank deposits,Itaú,1482.71
+2024-10,97030000,Bank bonds,BancoEstado,1003.9115
+2024-10,97030000,Bank deposits,BancoEstado,344.2481
+2024-10,97036000,Bank bonds,Santander,1676.9386
+2024-10,97036000,Bank deposits,Santander,3466.1037
+2024-10,97053000,Bank bonds,Security,1080.3622
+2024-10,97053000,Bank deposits,Security,1131.3677
+2024-10,97080000,Bank bonds,BICE,450.8845
+2024-10,97080000,Bank deposits,BICE,2311.2269
+2024-10,97947000,Bank bonds,RPL,22.5365
+2024-10,97947000,Bank deposits,RPL,268.9569
+2024-10,97951000,Bank deposits,HSB,105.4437
+2024-10,99500410,Bank bonds,Consorcio,944.5447
+2024-10,99500410,Bank deposits,Consorcio,1099.828
+2024-11,59203500,Bank deposits,CCB,0.0641
+2024-11,76362099,Bank bonds,BTG Pactual,302.115
+2024-11,76362099,Bank deposits,BTG Pactual,713.5329
+2024-11,82878900,Bank bonds,Coopeuch,42.3591
+2024-11,82878900,Bank deposits,Coopeuch,791.5111
+2024-11,96509660,Bank bonds,Banco Falabella,54.5547
+2024-11,96509660,Bank deposits,Banco Falabella,86.605
+2024-11,97004000,Bank bonds,Banco de Chile,2272.6341
+2024-11,97004000,Bank deposits,Banco de Chile,1107.1734
+2024-11,97006000,Bank bonds,BCI,1458.1395
+2024-11,97006000,Bank deposits,BCI,3256.8057
+2024-11,97011000,Bank bonds,Internacional,603.5992
+2024-11,97011000,Bank deposits,Internacional,351.3993
+2024-11,97018000,Bank bonds,Scotiabank,2014.3997
+2024-11,97018000,Bank deposits,Scotiabank,2123.3797
+2024-11,97023000,Bank bonds,Itaú,1512.4833
+2024-11,97023000,Bank deposits,Itaú,1588.6493
+2024-11,97030000,Bank bonds,BancoEstado,1053.3039
+2024-11,97030000,Bank deposits,BancoEstado,345.6223
+2024-11,97036000,Bank bonds,Santander,1748.2469
+2024-11,97036000,Bank deposits,Santander,3372.9852
+2024-11,97053000,Bank bonds,Security,1103.6604
+2024-11,97053000,Bank deposits,Security,1119.2599
+2024-11,97080000,Bank bonds,BICE,461.8204
+2024-11,97080000,Bank deposits,BICE,2253.8337
+2024-11,97947000,Bank bonds,RPL,31.136
+2024-11,97947000,Bank deposits,RPL,246.5439
+2024-11,97951000,Bank deposits,HSB,90.8533
+2024-11,99500410,Bank bonds,Consorcio,949.3655
+2024-11,99500410,Bank deposits,Consorcio,905.8372
+2024-12,59203500,Bank deposits,CCB,0.0692
+2024-12,60805000,Bank deposits,,10.0029
+2024-12,76362099,Bank bonds,BTG Pactual,310.3795
+2024-12,76362099,Bank deposits,BTG Pactual,767.5997
+2024-12,82878900,Bank bonds,Coopeuch,48.9046
+2024-12,82878900,Bank deposits,Coopeuch,826.3665
+2024-12,96509660,Bank bonds,Banco Falabella,56.3535
+2024-12,96509660,Bank deposits,Banco Falabella,84.5496
+2024-12,97004000,Bank bonds,Banco de Chile,2259.8533
+2024-12,97004000,Bank deposits,Banco de Chile,1227.4265
+2024-12,97006000,Bank bonds,BCI,1412.4197
+2024-12,97006000,Bank deposits,BCI,3181.3097
+2024-12,97011000,Bank bonds,Internacional,612.7784
+2024-12,97011000,Bank deposits,Internacional,307.38
+2024-12,97018000,Bank bonds,Scotiabank,1927.9318
+2024-12,97018000,Bank deposits,Scotiabank,1964.5197
+2024-12,97023000,Bank bonds,Itaú,1452.7729
+2024-12,97023000,Bank deposits,Itaú,1635.7446
+2024-12,97030000,Bank bonds,BancoEstado,1044.2367
+2024-12,97030000,Bank deposits,BancoEstado,366.5951
+2024-12,97036000,Bank bonds,Santander,1702.4603
+2024-12,97036000,Bank deposits,Santander,3576.8741
+2024-12,97053000,Bank bonds,Security,1078.7122
+2024-12,97053000,Bank deposits,Security,1060.7679
+2024-12,97080000,Bank bonds,BICE,465.4656
+2024-12,97080000,Bank deposits,BICE,2084.6946
+2024-12,97947000,Bank bonds,RPL,30.9693
+2024-12,97947000,Bank deposits,RPL,287.7645
+2024-12,97951000,Bank deposits,HSB,154.7971
+2024-12,99500410,Bank bonds,Consorcio,969.4263
+2024-12,99500410,Bank deposits,Consorcio,1088.4663
+2025-01,59203500,Bank deposits,CCB,0.0695
+2025-01,76362099,Bank bonds,BTG Pactual,334.2323
+2025-01,76362099,Bank deposits,BTG Pactual,724.64
+2025-01,82878900,Bank bonds,Coopeuch,54.8402
+2025-01,82878900,Bank deposits,Coopeuch,867.2619
+2025-01,96509660,Bank bonds,Banco Falabella,58.3373
+2025-01,96509660,Bank deposits,Banco Falabella,69.1326
+2025-01,97004000,Bank bonds,Banco de Chile,2353.4345
+2025-01,97004000,Bank deposits,Banco de Chile,1638.2221
+2025-01,97006000,Bank bonds,BCI,1468.4889
+2025-01,97006000,Bank deposits,BCI,3000.3979
+2025-01,97011000,Bank bonds,Internacional,625.3227
+2025-01,97011000,Bank deposits,Internacional,275.6655
+2025-01,97018000,Bank bonds,Scotiabank,2111.2402
+2025-01,97018000,Bank deposits,Scotiabank,2085.834
+2025-01,97023000,Bank bonds,Itaú,1732.0048
+2025-01,97023000,Bank deposits,Itaú,1619.2095
+2025-01,97030000,Bank bonds,BancoEstado,1096.2745
+2025-01,97030000,Bank deposits,BancoEstado,263.1401
+2025-01,97036000,Bank bonds,Santander,1894.0468
+2025-01,97036000,Bank deposits,Santander,3787.5097
+2025-01,97053000,Bank bonds,Security,1109.6029
+2025-01,97053000,Bank deposits,Security,970.3454
+2025-01,97080000,Bank bonds,BICE,498.1675
+2025-01,97080000,Bank deposits,BICE,1965.5782
+2025-01,97947000,Bank bonds,RPL,44.8596
+2025-01,97947000,Bank deposits,RPL,300.1954
+2025-01,97951000,Bank deposits,HSB,106.4164
+2025-01,99500410,Bank bonds,Consorcio,957.1959
+2025-01,99500410,Bank deposits,Consorcio,1099.7095
+2025-02,59203500,Bank deposits,CCB,0.0695
+2025-02,76362099,Bank bonds,BTG Pactual,351.0422
+2025-02,76362099,Bank deposits,BTG Pactual,687.901
+2025-02,82878900,Bank bonds,Coopeuch,55.4453
+2025-02,82878900,Bank deposits,Coopeuch,838.389
+2025-02,96509660,Bank bonds,Banco Falabella,57.8306
+2025-02,96509660,Bank deposits,Banco Falabella,62.6956
+2025-02,97004000,Bank bonds,Banco de Chile,2353.3199
+2025-02,97004000,Bank deposits,Banco de Chile,2004.1466
+2025-02,97006000,Bank bonds,BCI,1570.986
+2025-02,97006000,Bank deposits,BCI,2373.1761
+2025-02,97011000,Bank bonds,Internacional,631.6311
+2025-02,97011000,Bank deposits,Internacional,265.8524
+2025-02,97018000,Bank bonds,Scotiabank,2132.8841
+2025-02,97018000,Bank deposits,Scotiabank,2083.7004
+2025-02,97023000,Bank bonds,Itaú,1866.9248
+2025-02,97023000,Bank deposits,Itaú,1516.1354
+2025-02,97030000,Bank bonds,BancoEstado,1138.6421
+2025-02,97030000,Bank deposits,BancoEstado,275.029
+2025-02,97036000,Bank bonds,Santander,2041.5804
+2025-02,97036000,Bank deposits,Santander,3623.9933
+2025-02,97053000,Bank bonds,Security,1130.9373
+2025-02,97053000,Bank deposits,Security,1089.7808
+2025-02,97080000,Bank bonds,BICE,545.8127
+2025-02,97080000,Bank deposits,BICE,1940.5098
+2025-02,97947000,Bank bonds,RPL,54.4913
+2025-02,97947000,Bank deposits,RPL,288.2658
+2025-02,97951000,Bank deposits,HSB,91.4887
+2025-02,99500410,Bank bonds,Consorcio,978.4801
+2025-02,99500410,Bank deposits,Consorcio,1287.5779
+2025-03,59203500,Bank deposits,CCB,0.0743
+2025-03,76362099,Bank bonds,BTG Pactual,359.8759
+2025-03,76362099,Bank deposits,BTG Pactual,613.7796
+2025-03,82878900,Bank bonds,Coopeuch,57.9636
+2025-03,82878900,Bank deposits,Coopeuch,855.7855
+2025-03,96509660,Bank bonds,Banco Falabella,60.4432
+2025-03,96509660,Bank deposits,Banco Falabella,54.6566
+2025-03,97004000,Bank bonds,Banco de Chile,2545.9408
+2025-03,97004000,Bank deposits,Banco de Chile,2176.569
+2025-03,97006000,Bank bonds,BCI,1608.1607
+2025-03,97006000,Bank deposits,BCI,1986.6051
+2025-03,97011000,Bank bonds,Internacional,646.2323
+2025-03,97011000,Bank deposits,Internacional,187.983
+2025-03,97018000,Bank bonds,Scotiabank,2221.0841
+2025-03,97018000,Bank deposits,Scotiabank,2076.5342
+2025-03,97023000,Bank bonds,Itaú,2013.2163
+2025-03,97023000,Bank deposits,Itaú,1567.5924
+2025-03,97030000,Bank bonds,BancoEstado,1070.3742
+2025-03,97030000,Bank deposits,BancoEstado,279.9698
+2025-03,97036000,Bank bonds,Santander,2125.9772
+2025-03,97036000,Bank deposits,Santander,3560.1523
+2025-03,97053000,Bank bonds,Security,1025.3083
+2025-03,97053000,Bank deposits,Security,1192.6972
+2025-03,97080000,Bank bonds,BICE,582.6093
+2025-03,97080000,Bank deposits,BICE,1955.4574
+2025-03,97947000,Bank bonds,RPL,70.8714
+2025-03,97947000,Bank deposits,RPL,262.9947
+2025-03,97951000,Bank deposits,HSB,99.8992
+2025-03,99500410,Bank bonds,Consorcio,996.287
+2025-03,99500410,Bank deposits,Consorcio,1404.098
+2025-04,59203500,Bank deposits,CCB,0.0849
+2025-04,76362099,Bank bonds,BTG Pactual,362.925
+2025-04,76362099,Bank deposits,BTG Pactual,690.859
+2025-04,82878900,Bank bonds,Coopeuch,60.9899
+2025-04,82878900,Bank deposits,Coopeuch,866.5895
+2025-04,96509660,Bank bonds,Banco Falabella,62.4487
+2025-04,96509660,Bank deposits,Banco Falabella,117.5422
+2025-04,96947020,Bank deposits,,0.1965
+2025-04,97004000,Bank bonds,Banco de Chile,2724.6731
+2025-04,97004000,Bank deposits,Banco de Chile,2116.0651
+2025-04,97006000,Bank bonds,BCI,1667.2227
+2025-04,97006000,Bank deposits,BCI,2331.064
+2025-04,97011000,Bank bonds,Internacional,672.1376
+2025-04,97011000,Bank deposits,Internacional,244.5204
+2025-04,97018000,Bank bonds,Scotiabank,2193.5419
+2025-04,97018000,Bank deposits,Scotiabank,2115.159
+2025-04,97023000,Bank bonds,Itaú,2144.3952
+2025-04,97023000,Bank deposits,Itaú,1577.7601
+2025-04,97030000,Bank bonds,BancoEstado,1072.8578
+2025-04,97030000,Bank deposits,BancoEstado,259.1535
+2025-04,97036000,Bank bonds,Santander,2186.0527
+2025-04,97036000,Bank deposits,Santander,3370.5693
+2025-04,97053000,Bank bonds,Security,1044.5067
+2025-04,97053000,Bank deposits,Security,1276.609
+2025-04,97080000,Bank bonds,BICE,575.0808
+2025-04,97080000,Bank deposits,BICE,1891.006
+2025-04,97947000,Bank bonds,RPL,72.0908
+2025-04,97947000,Bank deposits,RPL,288.1818
+2025-04,97951000,Bank deposits,HSB,100.3749
+2025-04,99500410,Bank bonds,Consorcio,1012.8098
+2025-04,99500410,Bank deposits,Consorcio,1421.3252
+2025-05,59203500,Bank deposits,CCB,0.0898
+2025-05,76362099,Bank bonds,BTG Pactual,313.9472
+2025-05,76362099,Bank deposits,BTG Pactual,768.1113
+2025-05,82878900,Bank bonds,Coopeuch,59.3174
+2025-05,82878900,Bank deposits,Coopeuch,876.1981
+2025-05,93930000,Bank deposits,,0.7974
+2025-05,96509660,Bank bonds,Banco Falabella,74.7594
+2025-05,96509660,Bank deposits,Banco Falabella,129.7216
+2025-05,97004000,Bank bonds,Banco de Chile,2682.2855
+2025-05,97004000,Bank deposits,Banco de Chile,2524.4447
+2025-05,97006000,Bank bonds,BCI,1738.4729
+2025-05,97006000,Bank deposits,BCI,2612.948
+2025-05,97011000,Bank bonds,Internacional,676.3916
+2025-05,97011000,Bank deposits,Internacional,241.8562
+2025-05,97018000,Bank bonds,Scotiabank,2144.833
+2025-05,97018000,Bank deposits,Scotiabank,2009.6651
+2025-05,97023000,Bank bonds,Itaú,2193.6779
+2025-05,97023000,Bank deposits,Itaú,1673.3025
+2025-05,97030000,Bank bonds,BancoEstado,1104.7971
+2025-05,97030000,Bank deposits,BancoEstado,269.8496
+2025-05,97036000,Bank bonds,Santander,2309.4061
+2025-05,97036000,Bank deposits,Santander,3104.8435
+2025-05,97053000,Bank bonds,Security,1048.6787
+2025-05,97053000,Bank deposits,Security,1431.6594
+2025-05,97080000,Bank bonds,BICE,615.1149
+2025-05,97080000,Bank deposits,BICE,1813.289
+2025-05,97947000,Bank bonds,RPL,77.5785
+2025-05,97947000,Bank deposits,RPL,307.8568
+2025-05,97951000,Bank deposits,HSB,101.0648
+2025-05,99500410,Bank bonds,Consorcio,1066.1535
+2025-05,99500410,Bank deposits,Consorcio,1495.2737
+2025-06,59203500,Bank deposits,CCB,0.0751
+2025-06,76362099,Bank bonds,BTG Pactual,329.4832
+2025-06,76362099,Bank deposits,BTG Pactual,751.1869
+2025-06,82878900,Bank bonds,Coopeuch,61.7639
+2025-06,82878900,Bank deposits,Coopeuch,930.4672
+2025-06,96509660,Bank bonds,Banco Falabella,77.1637
+2025-06,96509660,Bank deposits,Banco Falabella,136.9085
+2025-06,97004000,Bank bonds,Banco de Chile,2657.5713
+2025-06,97004000,Bank deposits,Banco de Chile,2349.7539
+2025-06,97006000,Bank bonds,BCI,1672.2873
+2025-06,97006000,Bank deposits,BCI,3006.855
+2025-06,97011000,Bank bonds,Internacional,637.2658
+2025-06,97011000,Bank deposits,Internacional,318.1551
+2025-06,97018000,Bank bonds,Scotiabank,2226.536
+2025-06,97018000,Bank deposits,Scotiabank,2007.2031
+2025-06,97023000,Bank bonds,Itaú,2237.3014
+2025-06,97023000,Bank deposits,Itaú,1499.3928
+2025-06,97030000,Bank bonds,BancoEstado,1040.4481
+2025-06,97030000,Bank deposits,BancoEstado,251.7562
+2025-06,97036000,Bank bonds,Santander,2265.8198
+2025-06,97036000,Bank deposits,Santander,2889.7692
+2025-06,97053000,Bank bonds,Security,1069.1898
+2025-06,97053000,Bank deposits,Security,1425.1192
+2025-06,97080000,Bank bonds,BICE,641.8425
+2025-06,97080000,Bank deposits,BICE,1956.6322
+2025-06,97947000,Bank bonds,RPL,103.6184
+2025-06,97947000,Bank deposits,RPL,294.1495
+2025-06,97951000,Bank deposits,HSB,100.8337
+2025-06,99500410,Bank bonds,Consorcio,1084.9803
+2025-06,99500410,Bank deposits,Consorcio,1354.0185
+2025-07,59203500,Bank deposits,CCB,0.0754
+2025-07,76362099,Bank bonds,BTG Pactual,345.5951
+2025-07,76362099,Bank deposits,BTG Pactual,640.1373
+2025-07,82878900,Bank bonds,Coopeuch,84.1637
+2025-07,82878900,Bank deposits,Coopeuch,923.1659
+2025-07,92051000,Bank deposits,,0.0939
+2025-07,96509660,Bank bonds,Banco Falabella,75.6106
+2025-07,96509660,Bank deposits,Banco Falabella,108.5568
+2025-07,97004000,Bank bonds,Banco de Chile,2809.1992
+2025-07,97004000,Bank deposits,Banco de Chile,2189.6478
+2025-07,97006000,Bank bonds,BCI,1693.5455
+2025-07,97006000,Bank deposits,BCI,2478.476
+2025-07,97011000,Bank bonds,Internacional,670.9414
+2025-07,97011000,Bank deposits,Internacional,335.5799
+2025-07,97018000,Bank bonds,Scotiabank,2261.9556
+2025-07,97018000,Bank deposits,Scotiabank,1899.3723
+2025-07,97023000,Bank bonds,Itaú,1979.0104
+2025-07,97023000,Bank deposits,Itaú,1445.7705
+2025-07,97030000,Bank bonds,BancoEstado,1063.9358
+2025-07,97030000,Bank deposits,BancoEstado,186.6315
+2025-07,97036000,Bank bonds,Santander,2296.5278
+2025-07,97036000,Bank deposits,Santander,2696.3402
+2025-07,97053000,Bank bonds,Security,1114.6292
+2025-07,97053000,Bank deposits,Security,1451.4515
+2025-07,97080000,Bank bonds,BICE,693.4028
+2025-07,97080000,Bank deposits,BICE,1879.7268
+2025-07,97947000,Bank bonds,RPL,104.4753
+2025-07,97947000,Bank deposits,RPL,286.5841
+2025-07,97951000,Bank deposits,HSB,82.1128
+2025-07,99500410,Bank bonds,Consorcio,1062.7352
+2025-07,99500410,Bank deposits,Consorcio,1528.3902
+2025-08,59203500,Bank deposits,CCB,0.0805
+2025-08,76362099,Bank bonds,BTG Pactual,380.2914
+2025-08,76362099,Bank deposits,BTG Pactual,734.3688
+2025-08,82878900,Bank bonds,Coopeuch,84.3119
+2025-08,82878900,Bank deposits,Coopeuch,934.952
+2025-08,96509660,Bank bonds,Banco Falabella,77.8131
+2025-08,96509660,Bank deposits,Banco Falabella,108.7248
+2025-08,96529340,Bank deposits,,0.0233
+2025-08,96532830,Bank deposits,,0.1198
+2025-08,97004000,Bank bonds,Banco de Chile,2833.864
+2025-08,97004000,Bank deposits,Banco de Chile,1969.0409
+2025-08,97006000,Bank bonds,BCI,1721.0073
+2025-08,97006000,Bank deposits,BCI,2519.3688
+2025-08,97011000,Bank bonds,Internacional,671.1941
+2025-08,97011000,Bank deposits,Internacional,316.0761
+2025-08,97018000,Bank bonds,Scotiabank,2394.9278
+2025-08,97018000,Bank deposits,Scotiabank,1621.944
+2025-08,97023000,Bank bonds,Itaú,2124.5681
+2025-08,97023000,Bank deposits,Itaú,1327.9192
+2025-08,97030000,Bank bonds,BancoEstado,1075.1726
+2025-08,97030000,Bank deposits,BancoEstado,130.3312
+2025-08,97036000,Bank bonds,Santander,2212.3446
+2025-08,97036000,Bank deposits,Santander,2512.6476
+2025-08,97053000,Bank bonds,Security,1134.2472
+2025-08,97053000,Bank deposits,Security,1367.1444
+2025-08,97080000,Bank bonds,BICE,713.3092
+2025-08,97080000,Bank deposits,BICE,1819.5765
+2025-08,97947000,Bank bonds,RPL,111.4653
+2025-08,97947000,Bank deposits,RPL,243.4988
+2025-08,97951000,Bank deposits,HSB,133.5416
+2025-08,99500410,Bank bonds,Consorcio,974.4876
+2025-08,99500410,Bank deposits,Consorcio,1537.0083
+2025-09,59203500,Bank deposits,CCB,0.0704
+2025-09,76362099,Bank bonds,BTG Pactual,389.5652
+2025-09,76362099,Bank deposits,BTG Pactual,741.1937
+2025-09,82878900,Bank bonds,Coopeuch,84.753
+2025-09,82878900,Bank deposits,Coopeuch,940.8762
+2025-09,92051000,Bank deposits,,0.0041
+2025-09,92770000,Bank deposits,,0.1014
+2025-09,96509660,Bank bonds,Banco Falabella,78.3115
+2025-09,96509660,Bank deposits,Banco Falabella,109.6402
+2025-09,96529340,Bank deposits,,0.0156
+2025-09,96532830,Bank deposits,,0.001
+2025-09,97004000,Bank bonds,Banco de Chile,3030.6329
+2025-09,97004000,Bank deposits,Banco de Chile,1853.4122
+2025-09,97006000,Bank bonds,BCI,1767.9739
+2025-09,97006000,Bank deposits,BCI,1842.0385
+2025-09,97011000,Bank bonds,Internacional,674.9261
+2025-09,97011000,Bank deposits,Internacional,268.3399
+2025-09,97018000,Bank bonds,Scotiabank,2528.1806
+2025-09,97018000,Bank deposits,Scotiabank,1747.0737
+2025-09,97023000,Bank bonds,Itaú,2152.988
+2025-09,97023000,Bank deposits,Itaú,1279.4609
+2025-09,97030000,Bank bonds,BancoEstado,1100.4608
+2025-09,97030000,Bank deposits,BancoEstado,141.1906
+2025-09,97036000,Bank bonds,Santander,2131.6822
+2025-09,97036000,Bank deposits,Santander,2439.0491
+2025-09,97053000,Bank bonds,Security,1009.5166
+2025-09,97053000,Bank deposits,Security,1274.4244
+2025-09,97080000,Bank bonds,BICE,740.2798
+2025-09,97080000,Bank deposits,BICE,1627.2701
+2025-09,97947000,Bank bonds,RPL,108.4299
+2025-09,97947000,Bank deposits,RPL,225.6402
+2025-09,97951000,Bank deposits,HSB,144.1973
+2025-09,99500410,Bank bonds,Consorcio,963.0908
+2025-09,99500410,Bank deposits,Consorcio,1537.062
+2025-10,59203500,Bank deposits,CCB,0.0742
+2025-10,76362099,Bank bonds,BTG Pactual,351.6924
+2025-10,76362099,Bank deposits,BTG Pactual,735.4936
+2025-10,77844703,Bank deposits,TBD,110.1548
+2025-10,82878900,Bank bonds,Coopeuch,118.5644
+2025-10,82878900,Bank deposits,Coopeuch,928.5098
+2025-10,96509660,Bank bonds,Banco Falabella,78.7672
+2025-10,96509660,Bank deposits,Banco Falabella,75.5467
+2025-10,96529340,Bank deposits,,0.0001
+2025-10,97004000,Bank bonds,Banco de Chile,3033.0062
+2025-10,97004000,Bank deposits,Banco de Chile,1646.4201
+2025-10,97006000,Bank bonds,BCI,1805.5034
+2025-10,97006000,Bank deposits,BCI,2078.8984
+2025-10,97011000,Bank bonds,Internacional,681.1967
+2025-10,97011000,Bank deposits,Internacional,221.175
+2025-10,97018000,Bank bonds,Scotiabank,2345.1404
+2025-10,97018000,Bank deposits,Scotiabank,1843.2306
+2025-10,97023000,Bank bonds,Itaú,2109.0575
+2025-10,97023000,Bank deposits,Itaú,1405.4939
+2025-10,97030000,Bank bonds,BancoEstado,1091.9389
+2025-10,97030000,Bank deposits,BancoEstado,97.9048
+2025-10,97036000,Bank bonds,Santander,2225.3718
+2025-10,97036000,Bank deposits,Santander,2380.2172
+2025-10,97053000,Bank bonds,Security,998.9454
+2025-10,97053000,Bank deposits,Security,1391.8512
+2025-10,97080000,Bank bonds,BICE,808.2655
+2025-10,97080000,Bank deposits,BICE,1659.4859
+2025-10,97947000,Bank bonds,RPL,115.3231
+2025-10,97947000,Bank deposits,RPL,208.6701
+2025-10,97951000,Bank deposits,HSB,106.7724
+2025-10,99500410,Bank bonds,Consorcio,939.9137
+2025-10,99500410,Bank deposits,Consorcio,1272.1335
+2025-11,59203500,Bank deposits,CCB,0.0741
+2025-11,76362099,Bank bonds,BTG Pactual,352.2281
+2025-11,76362099,Bank deposits,BTG Pactual,683.6247
+2025-11,77844703,Bank deposits,TBD,88.9089
+2025-11,82878900,Bank bonds,Coopeuch,131.4758
+2025-11,82878900,Bank deposits,Coopeuch,903.6786
+2025-11,96509660,Bank bonds,Banco Falabella,79.1511
+2025-11,96509660,Bank deposits,Banco Falabella,76.6986
+2025-11,97004000,Bank bonds,Banco de Chile,3105.2578
+2025-11,97004000,Bank deposits,Banco de Chile,1420.6427
+2025-11,97006000,Bank bonds,BCI,1878.8515
+2025-11,97006000,Bank deposits,BCI,2016.6954
+2025-11,97011000,Bank bonds,Internacional,721.5506
+2025-11,97011000,Bank deposits,Internacional,197.1023
+2025-11,97018000,Bank bonds,Scotiabank,2429.0076
+2025-11,97018000,Bank deposits,Scotiabank,2020.082
+2025-11,97023000,Bank bonds,Itaú,2219.3338
+2025-11,97023000,Bank deposits,Itaú,1366.6635
+2025-11,97030000,Bank bonds,BancoEstado,1123.4047
+2025-11,97030000,Bank deposits,BancoEstado,77.9426
+2025-11,97036000,Bank bonds,Santander,2233.0796
+2025-11,97036000,Bank deposits,Santander,2806.6231
+2025-11,97053000,Bank bonds,Security,513.9665
+2025-11,97053000,Bank deposits,Security,835.2267
+2025-11,97080000,Bank bonds,BICE,1267.4435
+2025-11,97080000,Bank deposits,BICE,2206.6907
+2025-11,97947000,Bank bonds,RPL,125.6481
+2025-11,97947000,Bank deposits,RPL,195.3922
+2025-11,97951000,Bank deposits,HSB,72.7147
+2025-11,99500410,Bank bonds,Consorcio,967.0391
+2025-11,99500410,Bank deposits,Consorcio,1180.085
+2025-12,59203500,Bank deposits,CCB,0.0643
+2025-12,76362099,Bank bonds,BTG Pactual,349.2353
+2025-12,76362099,Bank deposits,BTG Pactual,675.2831
+2025-12,77844703,Bank deposits,TBD,135.6095
+2025-12,82878900,Bank bonds,Coopeuch,133.0618
+2025-12,82878900,Bank deposits,Coopeuch,918.0893
+2025-12,96509660,Bank bonds,Banco Falabella,76.4057
+2025-12,96509660,Bank deposits,Banco Falabella,73.353
+2025-12,96874030,Bank deposits,,0.0691
+2025-12,97004000,Bank bonds,Banco de Chile,3078.0589
+2025-12,97004000,Bank deposits,Banco de Chile,1398.053
+2025-12,97006000,Bank bonds,BCI,1848.5812
+2025-12,97006000,Bank deposits,BCI,2025.7686
+2025-12,97011000,Bank bonds,Internacional,658.2879
+2025-12,97011000,Bank deposits,Internacional,191.3064
+2025-12,97018000,Bank bonds,Scotiabank,2518.2664
+2025-12,97018000,Bank deposits,Scotiabank,1962.6851
+2025-12,97023000,Bank bonds,Itaú,2321.1721
+2025-12,97023000,Bank deposits,Itaú,1822.416
+2025-12,97030000,Bank bonds,BancoEstado,1028.8679
+2025-12,97030000,Bank deposits,BancoEstado,100.1488
+2025-12,97036000,Bank bonds,Santander,2234.4927
+2025-12,97036000,Bank deposits,Santander,3158.7034
+2025-12,97053000,Bank bonds,Security,497.0991
+2025-12,97053000,Bank deposits,Security,799.559
+2025-12,97080000,Bank bonds,BICE,1297.1441
+2025-12,97080000,Bank deposits,BICE,2309.0219
+2025-12,97947000,Bank bonds,RPL,123.6488
+2025-12,97947000,Bank deposits,RPL,174.9593
+2025-12,97951000,Bank deposits,HSB,0.437
+2025-12,99500410,Bank bonds,Consorcio,992.0453
+2025-12,99500410,Bank deposits,Consorcio,1278.5694
+2026-01,59203500,Bank deposits,CCB,5.0551
+2026-01,76362099,Bank bonds,BTG Pactual,372.8407
+2026-01,76362099,Bank deposits,BTG Pactual,635.9508
+2026-01,77844703,Bank deposits,TBD,176.2547
+2026-01,82878900,Bank bonds,Coopeuch,136.258
+2026-01,82878900,Bank deposits,Coopeuch,903.9814
+2026-01,96509660,Bank bonds,Banco Falabella,77.7136
+2026-01,96509660,Bank deposits,Banco Falabella,103.3811
+2026-01,97004000,Bank bonds,Banco de Chile,3216.3179
+2026-01,97004000,Bank deposits,Banco de Chile,1904.5736
+2026-01,97006000,Bank bonds,BCI,1983.0169
+2026-01,97006000,Bank deposits,BCI,2071.628
+2026-01,97011000,Bank bonds,Internacional,704.0515
+2026-01,97011000,Bank deposits,Internacional,295.3829
+2026-01,97018000,Bank bonds,Scotiabank,2660.7665
+2026-01,97018000,Bank deposits,Scotiabank,1844.2716
+2026-01,97023000,Bank bonds,Itaú,2414.6809
+2026-01,97023000,Bank deposits,Itaú,1792.2524
+2026-01,97030000,Bank bonds,BancoEstado,1063.9118
+2026-01,97030000,Bank deposits,BancoEstado,28.2294
+2026-01,97036000,Bank bonds,Santander,2253.0305
+2026-01,97036000,Bank deposits,Santander,2980.1978
+2026-01,97053000,Bank bonds,Security,513.7358
+2026-01,97053000,Bank deposits,Security,770.9623
+2026-01,97080000,Bank bonds,BICE,1410.779
+2026-01,97080000,Bank deposits,BICE,2704.5479
+2026-01,97947000,Bank bonds,RPL,114.9295
+2026-01,97947000,Bank deposits,RPL,179.1694
+2026-01,97951000,Bank deposits,HSB,0.2645
+2026-01,99500410,Bank bonds,Consorcio,1027.7187
+2026-01,99500410,Bank deposits,Consorcio,1396.3813
+2026-02,59203500,Bank deposits,CCB,0.0548
+2026-02,76362099,Bank bonds,BTG Pactual,376.4598
+2026-02,76362099,Bank deposits,BTG Pactual,708.5849
+2026-02,77844703,Bank deposits,TBD,226.3511
+2026-02,82878900,Bank bonds,Coopeuch,176.1601
+2026-02,82878900,Bank deposits,Coopeuch,857.4447
+2026-02,96509660,Bank bonds,Banco Falabella,77.5954
+2026-02,96509660,Bank deposits,Banco Falabella,129.6726
+2026-02,97004000,Bank bonds,Banco de Chile,3240.5277
+2026-02,97004000,Bank deposits,Banco de Chile,1698.8452
+2026-02,97006000,Bank bonds,BCI,2089.7106
+2026-02,97006000,Bank deposits,BCI,2157.4166
+2026-02,97011000,Bank bonds,Internacional,719.7637
+2026-02,97011000,Bank deposits,Internacional,274.4052
+2026-02,97018000,Bank bonds,Scotiabank,2746.5256
+2026-02,97018000,Bank deposits,Scotiabank,1716.386
+2026-02,97023000,Bank bonds,Itaú,2574.1578
+2026-02,97023000,Bank deposits,Itaú,1740.1109
+2026-02,97030000,Bank bonds,BancoEstado,1120.1622
+2026-02,97030000,Bank deposits,BancoEstado,140.9957
+2026-02,97036000,Bank bonds,Santander,2262.7298
+2026-02,97036000,Bank deposits,Santander,2839.7107
+2026-02,97053000,Bank bonds,Security,48.3594
+2026-02,97053000,Bank deposits,Security,35.4718
+2026-02,97080000,Bank bonds,BICE,1908.1905
+2026-02,97080000,Bank deposits,BICE,3360.5421
+2026-02,97947000,Bank bonds,RPL,115.5902
+2026-02,97947000,Bank deposits,RPL,227.842
+2026-02,97951000,Bank deposits,HSB,0.4753
+2026-02,99500410,Bank bonds,Consorcio,1040.8952
+2026-02,99500410,Bank deposits,Consorcio,1347.9929
+2026-03,59203500,Bank deposits,CCB,0.0349
+2026-03,76362099,Bank bonds,BTG Pactual,382.6581
+2026-03,76362099,Bank deposits,BTG Pactual,777.9474
+2026-03,77844703,Bank deposits,TBD,247.0107
+2026-03,82878900,Bank bonds,Coopeuch,228.4419
+2026-03,82878900,Bank deposits,Coopeuch,900.9419
+2026-03,96509660,Bank bonds,Banco Falabella,86.9958
+2026-03,96509660,Bank deposits,Banco Falabella,242.9555
+2026-03,97004000,Bank bonds,Banco de Chile,3278.6993
+2026-03,97004000,Bank deposits,Banco de Chile,1999.1565
+2026-03,97006000,Bank bonds,BCI,2190.821
+2026-03,97006000,Bank deposits,BCI,2302.6128
+2026-03,97011000,Bank bonds,Internacional,657.0905
+2026-03,97011000,Bank deposits,Internacional,292.919
+2026-03,97018000,Bank bonds,Scotiabank,2733.2963
+2026-03,97018000,Bank deposits,Scotiabank,1749.9927
+2026-03,97023000,Bank bonds,Itaú,2712.2667
+2026-03,97023000,Bank deposits,Itaú,2059.3332
+2026-03,97030000,Bank bonds,BancoEstado,1034.5645
+2026-03,97030000,Bank deposits,BancoEstado,156.1228
+2026-03,97036000,Bank bonds,Santander,2085.4801
+2026-03,97036000,Bank deposits,Santander,2709.6815
+2026-03,97053000,Bank bonds,Security,27.6394
+2026-03,97053000,Bank deposits,Security,16.5377
+2026-03,97080000,Bank bonds,BICE,1858.7938
+2026-03,97080000,Bank deposits,BICE,3383.559
+2026-03,97947000,Bank bonds,RPL,120.509
+2026-03,97947000,Bank deposits,RPL,216.0747
+2026-03,97951000,Bank deposits,HSB,0.5123
+2026-03,99500410,Bank bonds,Consorcio,1030.6983
+2026-03,99500410,Bank deposits,Consorcio,1158.5973
+2026-04,59203500,Bank deposits,CCB,0.0642
+2026-04,76362099,Bank bonds,BTG Pactual,405.8819
+2026-04,76362099,Bank deposits,BTG Pactual,794.0958
+2026-04,77844703,Bank bonds,TBD,27.8737
+2026-04,77844703,Bank deposits,TBD,253.3022
+2026-04,82878900,Bank bonds,Coopeuch,233.8494
+2026-04,82878900,Bank deposits,Coopeuch,800.5826
+2026-04,94627000,Bank deposits,,0.0
+2026-04,96509660,Bank bonds,Banco Falabella,88.7213
+2026-04,96509660,Bank deposits,Banco Falabella,274.2556
+2026-04,97004000,Bank bonds,Banco de Chile,3357.002
+2026-04,97004000,Bank deposits,Banco de Chile,2073.8658
+2026-04,97006000,Bank bonds,BCI,2340.9544
+2026-04,97006000,Bank deposits,BCI,2345.0574
+2026-04,97011000,Bank bonds,Internacional,677.0403
+2026-04,97011000,Bank deposits,Internacional,331.8488
+2026-04,97018000,Bank bonds,Scotiabank,2785.4952
+2026-04,97018000,Bank deposits,Scotiabank,1707.0647
+2026-04,97023000,Bank bonds,Itaú,2786.7302
+2026-04,97023000,Bank deposits,Itaú,2017.085
+2026-04,97030000,Bank bonds,BancoEstado,1075.8163
+2026-04,97030000,Bank deposits,BancoEstado,183.3466
+2026-04,97036000,Bank bonds,Santander,2069.9978
+2026-04,97036000,Bank deposits,Santander,2795.8517
+2026-04,97053000,Bank bonds,Security,42.1664
+2026-04,97053000,Bank deposits,Security,33.9407
+2026-04,97080000,Bank bonds,BICE,1894.3982
+2026-04,97080000,Bank deposits,BICE,3472.7909
+2026-04,97947000,Bank bonds,RPL,119.8297
+2026-04,97947000,Bank deposits,RPL,257.6664
+2026-04,97951000,Bank deposits,HSB,0.3857
+2026-04,99500410,Bank bonds,Consorcio,1005.629
+2026-04,99500410,Bank deposits,Consorcio,1181.1914
+2026-05,59203500,Bank deposits,CCB,0.0643
+2026-05,76362099,Bank bonds,BTG Pactual,407.905
+2026-05,76362099,Bank deposits,BTG Pactual,787.1984
+2026-05,77844703,Bank bonds,TBD,27.8996
+2026-05,77844703,Bank deposits,TBD,331.6922
+2026-05,82878900,Bank bonds,Coopeuch,246.0265
+2026-05,82878900,Bank deposits,Coopeuch,856.7464
+2026-05,93930000,Bank deposits,,0.0646
+2026-05,94627000,Bank deposits,,0.645
+2026-05,96509660,Bank bonds,Banco Falabella,90.6649
+2026-05,96509660,Bank deposits,Banco Falabella,255.0196
+2026-05,97004000,Bank bonds,Banco de Chile,3254.2899
+2026-05,97004000,Bank deposits,Banco de Chile,1847.2655
+2026-05,97006000,Bank bonds,BCI,2345.733
+2026-05,97006000,Bank deposits,BCI,2372.7372
+2026-05,97011000,Bank bonds,Internacional,710.4388
+2026-05,97011000,Bank deposits,Internacional,320.6136
+2026-05,97018000,Bank bonds,Scotiabank,2868.5324
+2026-05,97018000,Bank deposits,Scotiabank,2009.0678
+2026-05,97023000,Bank bonds,Itaú,2846.1068
+2026-05,97023000,Bank deposits,Itaú,1956.674
+2026-05,97030000,Bank bonds,BancoEstado,1089.2941
+2026-05,97030000,Bank deposits,BancoEstado,191.4672
+2026-05,97036000,Bank bonds,Santander,2244.5951
+2026-05,97036000,Bank deposits,Santander,2977.2574
+2026-05,97053000,Bank bonds,Security,27.8701
+2026-05,97053000,Bank deposits,Security,24.7096
+2026-05,97080000,Bank bonds,BICE,1926.6148
+2026-05,97080000,Bank deposits,BICE,3277.6303
+2026-05,97947000,Bank bonds,RPL,106.5105
+2026-05,97947000,Bank deposits,RPL,264.635
+2026-05,97951000,Bank deposits,HSB,0.4062
+2026-05,99500410,Bank bonds,Consorcio,976.8312
+2026-05,99500410,Bank deposits,Consorcio,1118.6242
+2026-06,59203500,Bank deposits,CCB,0.0692
+2026-06,76362099,Bank bonds,BTG Pactual,415.6838
+2026-06,76362099,Bank deposits,BTG Pactual,872.6414
+2026-06,77844703,Bank bonds,TBD,27.3035
+2026-06,77844703,Bank deposits,TBD,371.8507
+2026-06,82878900,Bank bonds,Coopeuch,241.9619
+2026-06,82878900,Bank deposits,Coopeuch,900.3116
+2026-06,93930000,Bank deposits,,0.0127
+2026-06,96509660,Bank bonds,Banco Falabella,86.7827
+2026-06,96509660,Bank deposits,Banco Falabella,222.0373
+2026-06,97004000,Bank bonds,Banco de Chile,3144.2642
+2026-06,97004000,Bank deposits,Banco de Chile,1950.0541
+2026-06,97006000,Bank bonds,BCI,2289.3114
+2026-06,97006000,Bank deposits,BCI,2467.7139
+2026-06,97011000,Bank bonds,Internacional,703.0488
+2026-06,97011000,Bank deposits,Internacional,416.3426
+2026-06,97018000,Bank bonds,Scotiabank,2754.2211
+2026-06,97018000,Bank deposits,Scotiabank,1992.8451
+2026-06,97023000,Bank bonds,Itaú,2776.6477
+2026-06,97023000,Bank deposits,Itaú,2192.28
+2026-06,97030000,Bank bonds,BancoEstado,1077.5663
+2026-06,97030000,Bank deposits,BancoEstado,188.0085
+2026-06,97036000,Bank bonds,Santander,1966.5818
+2026-06,97036000,Bank deposits,Santander,3463.5687
+2026-06,97053000,Bank bonds,Security,27.1941
+2026-06,97053000,Bank deposits,Security,20.6972
+2026-06,97080000,Bank bonds,BICE,1902.7704
+2026-06,97080000,Bank deposits,BICE,3181.2966
+2026-06,97947000,Bank bonds,RPL,113.4995
+2026-06,97947000,Bank deposits,RPL,284.4713
+2026-06,97951000,Bank deposits,HSB,0.3662
+2026-06,99500410,Bank bonds,Consorcio,942.3013
+2026-06,99500410,Bank deposits,Consorcio,1272.4274
+2026-07,59203500,Bank deposits,CCB,0.0595
+2026-07,76362099,Bank bonds,BTG Pactual,419.9261
+2026-07,76362099,Bank deposits,BTG Pactual,771.2597
+2026-07,77844703,Bank bonds,TBD,27.4691
+2026-07,77844703,Bank deposits,TBD,392.5948
+2026-07,82878900,Bank bonds,Coopeuch,253.3987
+2026-07,82878900,Bank deposits,Coopeuch,891.9226
+2026-07,83628100,Bank deposits,,0.2057
+2026-07,96509660,Bank bonds,Banco Falabella,90.9691
+2026-07,96509660,Bank deposits,Banco Falabella,133.7865
+2026-07,97004000,Bank bonds,Banco de Chile,3149.8337
+2026-07,97004000,Bank deposits,Banco de Chile,1888.4247
+2026-07,97006000,Bank bonds,BCI,2228.6604
+2026-07,97006000,Bank deposits,BCI,2508.5292
+2026-07,97011000,Bank bonds,Internacional,768.331
+2026-07,97011000,Bank deposits,Internacional,461.3846
+2026-07,97018000,Bank bonds,Scotiabank,2744.3337
+2026-07,97018000,Bank deposits,Scotiabank,2080.5755
+2026-07,97023000,Bank bonds,Itaú,2544.2771
+2026-07,97023000,Bank deposits,Itaú,2308.3471
+2026-07,97030000,Bank bonds,BancoEstado,1148.5545
+2026-07,97030000,Bank deposits,BancoEstado,151.4308
+2026-07,97036000,Bank bonds,Santander,1974.7891
+2026-07,97036000,Bank deposits,Santander,3542.6327
+2026-07,97053000,Bank bonds,Security,25.9468
+2026-07,97053000,Bank deposits,Security,20.4802
+2026-07,97080000,Bank bonds,BICE,1833.8497
+2026-07,97080000,Bank deposits,BICE,3150.9602
+2026-07,97947000,Bank bonds,RPL,115.1805
+2026-07,97947000,Bank deposits,RPL,242.7357
+2026-07,97951000,Bank deposits,HSB,0.2194
+2026-07,99500410,Bank bonds,Consorcio,887.3157
+2026-07,99500410,Bank deposits,Consorcio,1458.6823
+2026-08,59203500,Bank deposits,CCB,0.0597
+2026-08,76362099,Bank bonds,BTG Pactual,420.8845
+2026-08,76362099,Bank deposits,BTG Pactual,745.4067
+2026-08,77844703,Bank bonds,TBD,27.6365
+2026-08,77844703,Bank deposits,TBD,446.3649
+2026-08,82878900,Bank bonds,Coopeuch,257.8228
+2026-08,82878900,Bank deposits,Coopeuch,910.3812
+2026-08,96509660,Bank bonds,Banco Falabella,90.4071
+2026-08,96509660,Bank deposits,Banco Falabella,121.5752
+2026-08,97004000,Bank bonds,Banco de Chile,3169.2272
+2026-08,97004000,Bank deposits,Banco de Chile,1914.2774
+2026-08,97006000,Bank bonds,BCI,2283.6249
+2026-08,97006000,Bank deposits,BCI,2440.2478
+2026-08,97011000,Bank bonds,Internacional,806.5457
+2026-08,97011000,Bank deposits,Internacional,489.7686
+2026-08,97018000,Bank bonds,Scotiabank,2834.3278
+2026-08,97018000,Bank deposits,Scotiabank,2243.4861
+2026-08,97023000,Bank bonds,Itaú,2574.2434
+2026-08,97023000,Bank deposits,Itaú,2168.6974
+2026-08,97030000,Bank bonds,BancoEstado,1101.4749
+2026-08,97030000,Bank deposits,BancoEstado,136.9728
+2026-08,97036000,Bank bonds,Santander,1946.0628
+2026-08,97036000,Bank deposits,Santander,3575.4742
+2026-08,97053000,Bank bonds,Security,51.7825
+2026-08,97053000,Bank deposits,Security,19.3685
+2026-08,97080000,Bank bonds,BICE,1853.6141
+2026-08,97080000,Bank deposits,BICE,3479.0407
+2026-08,97947000,Bank bonds,RPL,118.3079
+2026-08,97947000,Bank deposits,RPL,236.4263
+2026-08,97951000,Bank deposits,HSB,0.3226
+2026-08,99500410,Bank bonds,Consorcio,899.0731
+2026-08,99500410,Bank deposits,Consorcio,1425.0887
+2026-09,59203500,Bank deposits,CCB,0.0399
+2026-09,76362099,Bank bonds,BTG Pactual,443.636
+2026-09,76362099,Bank deposits,BTG Pactual,797.3651
+2026-09,77844703,Bank bonds,TBD,47.4825
+2026-09,77844703,Bank deposits,TBD,428.3938
+2026-09,82878900,Bank bonds,Coopeuch,258.2042
+2026-09,82878900,Bank deposits,Coopeuch,922.1948
+2026-09,92051000,Bank deposits,,0.0009
+2026-09,96509660,Bank bonds,Banco Falabella,95.4071
+2026-09,96509660,Bank deposits,Banco Falabella,141.038
+2026-09,97004000,Bank bonds,Banco de Chile,3200.5925
+2026-09,97004000,Bank deposits,Banco de Chile,1642.2055
+2026-09,97006000,Bank bonds,BCI,2333.2815
+2026-09,97006000,Bank deposits,BCI,2340.2136
+2026-09,97011000,Bank bonds,Internacional,835.3451
+2026-09,97011000,Bank deposits,Internacional,391.9871
+2026-09,97018000,Bank bonds,Scotiabank,2812.9742
+2026-09,97018000,Bank deposits,Scotiabank,1991.3761
+2026-09,97023000,Bank bonds,Itaú,2509.976
+2026-09,97023000,Bank deposits,Itaú,2131.9439
+2026-09,97030000,Bank bonds,BancoEstado,1142.0583
+2026-09,97030000,Bank deposits,BancoEstado,140.6731
+2026-09,97036000,Bank bonds,Santander,1911.5478
+2026-09,97036000,Bank deposits,Santander,3422.2664
+2026-09,97041000,Bank bonds,Itaú,211.4274
+2026-09,97041000,Bank deposits,Itaú,382.7339
+2026-09,97053000,Bank bonds,Security,46.065
+2026-09,97053000,Bank deposits,Security,16.0857
+2026-09,97080000,Bank bonds,BICE,1870.1889
+2026-09,97080000,Bank deposits,BICE,3335.4981
+2026-09,97947000,Bank bonds,RPL,118.961
+2026-09,97947000,Bank deposits,RPL,231.3187
+2026-09,97951000,Bank deposits,HSB,0.3823
+2026-09,99500410,Bank bonds,Consorcio,895.787
+2026-09,99500410,Bank deposits,Consorcio,1459.0909
