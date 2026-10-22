@@ -1,0 +1,37 @@
+name: Model
+
+# Deposit behaviour and the out-of-sample forecast evaluation (about half an hour of
+# model fits). Runs after the monthly data update and on demand; commits the tables.
+on:
+  workflow_run:
+    workflows: [Data]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: model
+  cancel-in-progress: false
+
+jobs:
+  model:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install --no-cache-dir .
+      - run: liquidity deposits
+      - run: liquidity forecast
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull -q --rebase
+          git add data/processed
+          git diff --cached --quiet || (git commit -qm "Model: deposits and forecasts" && git push)

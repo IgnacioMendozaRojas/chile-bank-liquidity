@@ -58,6 +58,33 @@ def cmd_deposits(out: Path) -> int:
     return 0
 
 
+def cmd_forecast(out: Path) -> int:
+    import pandas as pd
+
+    from . import deposits, forecast
+
+    raw = data.read(out / "bank_balances.csv")
+    pf = data.read(out / "bank_balances_pro_forma.csv")
+    tpm = forecast.monthly_rate(pd.read_csv(out / "bcch_rates_daily.csv", index_col=0))
+    errors, fits, outlooks = [], [], []
+    for bank, df in deposits.balances_by_bank(pf, raw).items():
+        for kind in ("demand", "term"):
+            e, fit = forecast.evaluate(df[kind], tpm)
+            errors.append(e.assign(bank=bank, deposits=kind))
+            fits.append({"bank": bank, "deposits": kind, **fit})
+            outlooks.append(
+                forecast.outlook(df[kind], tpm, fit["order"]).reset_index().assign(bank=bank, deposits=kind)
+            )
+            print(f"{bank} {kind}: {fit['order']} beta={fit['tpm_semi_elasticity']:.4f}")
+    errors = pd.concat(errors)
+    errors.round(5).to_csv(out / "forecast_errors.csv", index=False)
+    summary = errors.groupby(["deposits", "window", "model", "horizon_months"])["ape"].median().unstack()
+    summary.round(4).to_csv(out / "forecast_mape_summary.csv")
+    pd.DataFrame(fits).round(5).to_csv(out / "forecast_fit.csv", index=False)
+    pd.concat(outlooks).round(3).to_csv(out / "forecast_outlook.csv", index=False)
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="liquidity")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -65,8 +92,10 @@ def main(argv=None) -> int:
     d.add_argument("--out", type=Path, default=Path("data/processed"))
     dep = sub.add_parser("deposits", help="outflows, stable core and decay from the downloaded balances")
     dep.add_argument("--out", type=Path, default=Path("data/processed"))
+    f = sub.add_parser("forecast", help="SARIMAX with the policy rate vs benchmarks, out of sample")
+    f.add_argument("--out", type=Path, default=Path("data/processed"))
     a = p.parse_args(argv)
-    return cmd_data(a.out) if a.cmd == "data" else cmd_deposits(a.out)
+    return {"data": cmd_data, "deposits": cmd_deposits, "forecast": cmd_forecast}[a.cmd](a.out)
 
 
 if __name__ == "__main__":
