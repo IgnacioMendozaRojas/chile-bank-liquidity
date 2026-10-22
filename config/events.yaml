@@ -1,0 +1,17 @@
+# Dated events used to label outflows and figures. Month granularity, matching the data.
+# kind: crisis | policy | household_transfer | monetary
+# Amounts are only given where an official figure was found.
+events:
+  - {month: "2008-09", kind: crisis, name: "Global financial crisis (Lehman Brothers)", source: "Public record"}
+  - {month: "2019-10", kind: crisis, name: "Social unrest (estallido social)", source: "Public record"}
+  - {month: "2020-03", kind: crisis, name: "COVID-19: state of catastrophe", source: "Decreto 104, 18 March 2020"}
+  - {month: "2020-03", kind: monetary, name: "Banco Central emergency rate cuts and FCIC credit facility", source: "Banco Central de Chile, monetary policy statements, March 2020"}
+  - {month: "2020-05", kind: household_transfer, name: "Ingreso Familiar de Emergencia (IFE)", source: "Ley 21.230"}
+  - {month: "2020-08", kind: household_transfer, name: "1st pension-fund withdrawal (10%)", source: "Ley 21.248 (Diario Oficial 30 July 2020); US$20,383m paid in total per the Superintendencia de Pensiones", amount_usd_m: 20383}
+  - {month: "2020-12", kind: household_transfer, name: "2nd pension-fund withdrawal (10%)", source: "Ley 21.295 (Diario Oficial 10 December 2020)"}
+  - {month: "2021-05", kind: household_transfer, name: "3rd pension-fund withdrawal (10%)", source: "Ley 21.330 (Diario Oficial 28 April 2021)"}
+  - {month: "2021-06", kind: household_transfer, name: "IFE Universal (to November 2021)", source: "Ley 21.352"}
+  - {month: "2021-07", kind: monetary, name: "First policy-rate hike of the cycle", source: "Banco Central de Chile, July 2021 meeting"}
+
+# The window treated as a structural break: pandemic, transfers and withdrawals.
+pandemic_window: ["2020-03", "2021-12"]
