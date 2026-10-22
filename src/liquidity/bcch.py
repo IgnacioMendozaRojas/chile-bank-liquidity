@@ -11,7 +11,8 @@ URL = "https://si3.bcentral.cl/SieteRestWS/SieteRestWS.ashx"
 
 # System-wide monetary aggregates (stocks, CLP billion), used to check the bank-level data.
 SERIES = {
-    "system_demand_deposits": "F021.DA.STO.N.CLP.5.M",
+    "system_demand_deposits": "F021.DA.STO.N.CLP.5.M",  # demand and savings deposits other than checking
+    "system_checking_accounts": "F021.DCC.STO.N.CLP.5.M",  # checking accounts (D1)
     "system_term_deposits": "F021.DP.STO.N.CLP.5.M",
 }
 

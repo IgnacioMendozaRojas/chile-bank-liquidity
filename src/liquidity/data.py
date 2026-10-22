@@ -63,7 +63,13 @@ def download(path: Path, api: CmfApi, start=START, end=None, log=print) -> list[
 
 def system_aggregates(path: Path, start: str = "2008-01-01") -> pd.DataFrame:
     """Banco Central monthly deposit aggregates, for the cross-check."""
-    out = pd.DataFrame({name: bcch.series(code, start) for name, code in bcch.SERIES.items()})
+    got = {}
+    for name, code in bcch.SERIES.items():
+        try:
+            got[name] = bcch.series(code, start)
+        except Exception as exc:  # noqa: BLE001 - a missing series must not stop the update
+            print(f"::warning title=BCCh {name}::{exc}")
+    out = pd.DataFrame(got)
     out.index = out.index.to_period("M").astype(str)
     out.index.name = "period"
     out.to_csv(path)

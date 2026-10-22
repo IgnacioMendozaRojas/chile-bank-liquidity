@@ -4,20 +4,46 @@ from __future__ import annotations
 
 import pandas as pd
 
+AGGREGATES = {
+    "999": "System total",
+    "900": "System aggregate 900",
+    "970": "System aggregate 970",
+    "980": "System aggregate 980",
+}
+
+
+def is_bank(code) -> bool:
+    """Codes 900 and above are system totals and groupings published with the banks."""
+    return int(str(code)) < 900
+
+
+def banks_only(balances: pd.DataFrame) -> pd.DataFrame:
+    return balances[balances["code"].map(is_bank)]
+
 
 def wide(balances: pd.DataFrame, item: str) -> pd.DataFrame:
     """period x bank code table of one item."""
     return balances[balances["item"] == item].pivot_table(index="period", columns="code", values="clp_bn").sort_index()
 
 
+def system_total(balances: pd.DataFrame) -> pd.DataFrame:
+    """Sum over banks against the CMF's own system total (code 999), item by item."""
+    banks = banks_only(balances).groupby(["period", "item"])["clp_bn"].sum().unstack()
+    total = balances[balances["code"] == "999"].pivot_table(index="period", columns="item", values="clp_bn")
+    return (banks / total - 1).round(4)
+
+
 def system_vs_bcch(balances: pd.DataFrame, bcch: pd.DataFrame) -> pd.DataFrame:
     """Bank-level sums against the monetary aggregates, level ratio and monthly-change gap."""
+    b = banks_only(balances)
     out = pd.DataFrame(
         {
-            "cmf_demand": wide(balances, "demand_deposits").sum(axis=1),
-            "cmf_term": wide(balances, "term_deposits").sum(axis=1),
+            "cmf_demand": wide(b, "demand_deposits").sum(axis=1),
+            "cmf_term": wide(b, "term_deposits").sum(axis=1),
         }
     ).join(bcch, how="inner")
+    if "system_checking_accounts" in out:
+        out["system_demand_deposits"] = out["system_demand_deposits"] + out["system_checking_accounts"]
     out["ratio_demand"] = out["cmf_demand"] / out["system_demand_deposits"]
     out["ratio_term"] = out["cmf_term"] / out["system_term_deposits"]
     for k in ("demand", "term"):
@@ -27,13 +53,15 @@ def system_vs_bcch(balances: pd.DataFrame, bcch: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def mergers(balances: pd.DataFrame, tolerance: float = 0.35) -> pd.DataFrame:
+def mergers(balances: pd.DataFrame, tolerance: float = 0.25, min_share: float = 0.02) -> pd.DataFrame:
     """Banks that stop reporting, matched to the bank whose assets jump by about their size.
 
     A bank leaving at month t (last report t-1) with assets A is matched to the surviving
     bank whose total assets rise most between t-1 and t, if that rise is within
-    `tolerance` of A. Unmatched exits (licence returned, very small banks) are kept as such.
+    `tolerance` of A and A is at least `min_share` of the acquirer (smaller exits cannot be
+    told apart from ordinary monthly moves). Unmatched exits are kept as such.
     """
+    balances = banks_only(balances)
     assets = wide(balances, "total_assets")
     names = balances.drop_duplicates("code", keep="last").set_index("code")["name"]
     periods = list(assets.index)
@@ -45,7 +73,11 @@ def mergers(balances: pd.DataFrame, tolerance: float = 0.35) -> pd.DataFrame:
         for code in gone:
             a = assets.loc[prev, code]
             target = jumps.idxmax() if len(jumps) else None
-            matched = target is not None and abs(jumps[target] - a) <= tolerance * a
+            matched = (
+                target is not None
+                and abs(jumps[target] - a) <= tolerance * a
+                and a >= min_share * assets.loc[prev, target]
+            )
             rows.append(
                 {
                     "last_report": prev,
@@ -62,7 +94,7 @@ def mergers(balances: pd.DataFrame, tolerance: float = 0.35) -> pd.DataFrame:
 
 def pro_forma(balances: pd.DataFrame, merges: pd.DataFrame) -> pd.DataFrame:
     """Re-label each absorbed bank's history with its acquirer's code, so a merger is not an inflow."""
-    out = balances.copy()
+    out = banks_only(balances).copy()
     mapping = dict(
         zip(
             merges.loc[merges["absorbed_by"] != "", "code"],

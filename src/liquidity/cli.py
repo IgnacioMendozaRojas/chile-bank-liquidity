@@ -30,6 +30,7 @@ def cmd_data(out: Path) -> int:
     bc = data.system_aggregates(out / "bcch_aggregates.csv")
     cmp_ = checks.system_vs_bcch(bal, bc)
     cmp_.round(4).to_csv(out / "check_system_vs_bcch.csv")
+    checks.system_total(bal).to_csv(out / "check_banks_vs_system_total.csv")
     m = checks.mergers(bal)
     m.to_csv(out / "mergers.csv", index=False)
     checks.pro_forma(bal, m).to_csv(out / "bank_balances_pro_forma.csv", index=False)
