@@ -74,3 +74,23 @@ def system_aggregates(path: Path, start: str = "2008-01-01") -> pd.DataFrame:
     out.index.name = "period"
     out.to_csv(path)
     return out
+
+
+def rates(path: Path, start: str = "2002-01-01") -> pd.DataFrame:
+    """Policy rate and secondary-market yields of Central Bank bonds, daily, in percent."""
+    catalogue = {"DAILY": bcch.search("DAILY")}
+    codes = bcch.find_codes(catalogue)
+    got = {}
+    for name, (code, title) in codes.items():
+        try:
+            got[name] = bcch.series(code, start)
+            print(f"::notice title=BCCh {name}::{code} {title[:90]}")
+        except Exception as exc:  # noqa: BLE001
+            print(f"::warning title=BCCh {name}::{exc}")
+    missing = set(bcch.FIND) - set(codes)
+    if missing:
+        print(f"::warning title=BCCh not found::{sorted(missing)}")
+    out = pd.DataFrame(got).sort_index()
+    out.index.name = "date"
+    out.to_csv(path)
+    return out

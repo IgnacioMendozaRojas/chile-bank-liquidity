@@ -36,3 +36,45 @@ def series(code: str, start: str = "2008-01-01", end: str | None = None, session
         name=code,
     )
     return s.dropna()
+
+
+def search(frequency: str, session=None) -> list[dict]:
+    """Catalogue of series at a frequency (DAILY, MONTHLY...)."""
+    params = {
+        "user": (os.getenv("BCCH_USER") or "").strip(),
+        "pass": (os.getenv("BCCH_PASS") or "").strip(),
+        "function": "SearchSeries",
+        "frequency": frequency,
+    }
+    js = (session or requests).get(URL, params=params, timeout=120).json()
+    return js.get("SeriesInfos") or []
+
+
+# Series found in the catalogue by title, so a renamed code does not break the update.
+FIND = {
+    "tpm": ("DAILY", r"(?i)tasa de pol[ií]tica monetaria"),
+    "bcp_2y": ("DAILY", r"(?i)mercado secundario.*\(BCP\) a 2 a"),
+    "bcp_5y": ("DAILY", r"(?i)mercado secundario.*\(BCP\) a 5 a"),
+    "bcp_10y": ("DAILY", r"(?i)mercado secundario.*\(BCP\) a 10 a"),
+    "bcu_5y": ("DAILY", r"(?i)mercado secundario.*\(BCU\) a 5 a"),
+    "bcu_10y": ("DAILY", r"(?i)mercado secundario.*\(BCU\) a 10 a"),
+}
+
+
+def find_codes(catalogue: dict[str, list[dict]]) -> dict[str, tuple[str, str]]:
+    """name -> (code, title): the matching series with the longest history."""
+    import re
+
+    out = {}
+    for name, (freq, pattern) in FIND.items():
+        hits = [s for s in catalogue.get(freq, []) if re.search(pattern, s.get("spanishTitle") or "")]
+        if hits:
+            best = max(
+                hits,
+                key=lambda s: (
+                    pd.to_datetime(s.get("lastObservation"), dayfirst=True)
+                    - pd.to_datetime(s.get("firstObservation"), dayfirst=True)
+                ),
+            )
+            out[name] = (best["seriesId"], best["spanishTitle"])
+    return out

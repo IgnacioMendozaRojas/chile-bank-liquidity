@@ -28,6 +28,7 @@ def cmd_data(out: Path) -> int:
         _notice("error", "No data", "nothing downloaded; see the CMF notice above")
         return 1
     bc = data.system_aggregates(out / "bcch_aggregates.csv")
+    data.rates(out / "bcch_rates_daily.csv")
     cmp_ = checks.system_vs_bcch(bal, bc)
     cmp_.round(4).to_csv(out / "check_system_vs_bcch.csv")
     checks.system_total(bal).to_csv(out / "check_banks_vs_system_total.csv")

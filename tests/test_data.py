@@ -58,3 +58,25 @@ def test_institution_fields_vary_by_year():
     api = CmfApi(key="k")
     api._get = lambda path: [{"CodigoInstitucion": "001", "NombreBanco": "BANCO DE CHILE "}]
     assert api.institutions(2008, 1) == {"001": "BANCO DE CHILE"}
+
+
+def test_series_found_by_title_prefers_longest_history():
+    from liquidity import bcch
+
+    cat = {
+        "DAILY": [
+            {
+                "seriesId": "A",
+                "spanishTitle": "Tasa de política monetaria (TPM)",
+                "firstObservation": "01-01-2010",
+                "lastObservation": "01-01-2020",
+            },
+            {
+                "seriesId": "B",
+                "spanishTitle": "Tasa de Política Monetaria",
+                "firstObservation": "01-01-1997",
+                "lastObservation": "01-10-2026",
+            },
+        ]
+    }
+    assert bcch.find_codes(cat)["tpm"][0] == "B"
