@@ -85,6 +85,37 @@ def cmd_forecast(out: Path) -> int:
     return 0
 
 
+def cmd_funding(out: Path) -> int:
+    import pandas as pd
+
+    from . import funding
+
+    holdings = funding.fetch(out / "fund_holdings_by_bank.csv")
+    pf = data.read(out / "bank_balances_pro_forma.csv")
+    sh = funding.shares(funding.by_bank(holdings), pf)
+    sh.round(5).to_csv(out / "funding_fund_shares.csv", index=False)
+    latest = sh[sh["period"] == sh["period"].max()]
+    rates = funding.fund_outflows(holdings)
+    ro = funding.run_off(latest, rates)
+    # does dependence on funds go with a more volatile term-deposit base? (stress outflows from deposits step)
+    dep = pd.read_csv(out / "deposits_outflows.csv")
+    names = pf.drop_duplicates("code", keep="last").set_index("name")["code"]
+    t12 = dep[(dep["deposits"] == "term") & (dep["horizon_months"] == 12)].assign(code=lambda d: d["bank"].map(names))
+    avg_share = sh.groupby("code")["fund_share_of_term"].mean().rename("avg_fund_share_of_term")
+    ro = ro.merge(avg_share, on="code").merge(t12[["code", "stress_outflow"]], on="code", how="left")
+    ro.round(5).to_csv(out / "funding_run_off.csv", index=False)
+    pd.Series(rates, name="fund_deposit_outflow").rename_axis("horizon_months").to_csv(
+        out / "funding_fund_outflows.csv"
+    )
+    _notice(
+        "notice",
+        "Funding",
+        f"fund outflows {rates}; corr(avg fund share, term stress outflow) = "
+        f"{ro['avg_fund_share_of_term'].corr(ro['stress_outflow']):.2f}",
+    )
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="liquidity")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -94,8 +125,10 @@ def main(argv=None) -> int:
     dep.add_argument("--out", type=Path, default=Path("data/processed"))
     f = sub.add_parser("forecast", help="SARIMAX with the policy rate vs benchmarks, out of sample")
     f.add_argument("--out", type=Path, default=Path("data/processed"))
+    fu = sub.add_parser("funding", help="share of each bank's term deposits held by mutual funds, and run-off")
+    fu.add_argument("--out", type=Path, default=Path("data/processed"))
     a = p.parse_args(argv)
-    return {"data": cmd_data, "deposits": cmd_deposits, "forecast": cmd_forecast}[a.cmd](a.out)
+    return {"data": cmd_data, "deposits": cmd_deposits, "forecast": cmd_forecast, "funding": cmd_funding}[a.cmd](a.out)
 
 
 if __name__ == "__main__":

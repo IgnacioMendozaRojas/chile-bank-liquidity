@@ -1,0 +1,14 @@
+# Bank labels in chile-mutual-funds-analytics (read from deposit tickers) -> CMF bank code.
+# Security merged into BICE in 2025, so its history is folded into BICE (pro forma).
+Santander: "037"
+Banco de Chile: "001"
+BCI: "016"
+Scotiabank: "014"
+Itaú: "039"
+BICE: "028"
+Security: "028"
+BancoEstado: "012"
+Consorcio: "055"
+Internacional: "009"
+BTG Pactual: "059"
+Banco Falabella: "051"

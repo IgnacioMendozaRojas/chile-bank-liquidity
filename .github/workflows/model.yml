@@ -27,6 +27,7 @@ jobs:
           python-version: "3.12"
       - run: pip install --no-cache-dir .
       - run: liquidity deposits
+      - run: liquidity funding
       - run: liquidity forecast
       - name: Commit if changed
         run: |
