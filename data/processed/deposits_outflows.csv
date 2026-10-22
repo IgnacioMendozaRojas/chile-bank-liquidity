@@ -1,0 +1,100 @@
+horizon_months,worst_outflow,worst_ended,worst_episode,p99_outflow,stress_outflow,observations,bank,deposits
+1,0.0946,2022-05,Rate hikes,0.0525,0.0946,223,System,demand
+3,0.1081,2022-07,Rate hikes,0.0702,0.1081,221,System,demand
+12,0.1966,2022-12,Rate hikes,0.1843,0.1966,212,System,demand
+1,0.0643,2020-07,COVID and pension withdrawals,0.0351,0.0643,223,System,term
+3,0.1166,2020-09,COVID and pension withdrawals,0.0925,0.1166,221,System,term
+12,0.2636,2021-03,COVID and pension withdrawals,0.2245,0.2636,212,System,term
+1,0.0443,2020-07,COVID and pension withdrawals,0.0252,0.0443,223,System,total
+3,0.0477,2020-07,COVID and pension withdrawals,0.0274,0.0477,221,System,total
+12,0.0723,2009-11,Global financial crisis,0.0395,0.0723,212,System,total
+1,0.0766,2022-05,Rate hikes,0.0632,0.0766,223,BANCO DE CRÉDITO E INVERSIONES,demand
+3,0.1137,2022-12,Rate hikes,0.0863,0.1137,221,BANCO DE CRÉDITO E INVERSIONES,demand
+12,0.2064,2023-06,Rate hikes,0.136,0.2064,212,BANCO DE CRÉDITO E INVERSIONES,demand
+1,0.1386,2020-07,COVID and pension withdrawals,0.0992,0.1386,223,BANCO DE CRÉDITO E INVERSIONES,term
+3,0.2751,2020-09,COVID and pension withdrawals,0.1643,0.2751,221,BANCO DE CRÉDITO E INVERSIONES,term
+12,0.3697,2021-06,COVID and pension withdrawals,0.331,0.3697,212,BANCO DE CRÉDITO E INVERSIONES,term
+1,0.0854,2020-07,COVID and pension withdrawals,0.0382,0.0854,223,BANCO DE CRÉDITO E INVERSIONES,total
+3,0.0862,2020-09,COVID and pension withdrawals,0.0628,0.0862,221,BANCO DE CRÉDITO E INVERSIONES,total
+12,0.1,2009-11,Global financial crisis,0.0362,0.1,212,BANCO DE CRÉDITO E INVERSIONES,total
+1,0.1553,2022-05,Rate hikes,0.0979,0.1553,223,BANCO SANTANDER-CHILE,demand
+3,0.1985,2022-07,Rate hikes,0.1071,0.1985,221,BANCO SANTANDER-CHILE,demand
+12,0.2172,2023-04,Rate hikes,0.1967,0.2172,212,BANCO SANTANDER-CHILE,demand
+1,0.0862,2014-12,Outside crisis windows,0.0808,0.0862,223,BANCO SANTANDER-CHILE,term
+3,0.1889,2021-12,COVID and pension withdrawals,0.1622,0.1889,221,BANCO SANTANDER-CHILE,term
+12,0.2645,2009-12,Global financial crisis,0.2536,0.2645,212,BANCO SANTANDER-CHILE,term
+1,0.0791,2025-05,Outside crisis windows,0.0493,0.0791,223,BANCO SANTANDER-CHILE,total
+3,0.111,2009-07,Global financial crisis,0.0832,0.111,221,BANCO SANTANDER-CHILE,total
+12,0.1659,2009-11,Global financial crisis,0.1353,0.1659,212,BANCO SANTANDER-CHILE,total
+1,0.2167,2013-01,Outside crisis windows,0.1614,0.2167,223,BANCO DEL ESTADO DE CHILE,demand
+3,0.2304,2013-03,Outside crisis windows,0.2095,0.2304,221,BANCO DEL ESTADO DE CHILE,demand
+12,0.2412,2022-05,Rate hikes,0.2181,0.2412,212,BANCO DEL ESTADO DE CHILE,demand
+1,0.1143,2012-11,Outside crisis windows,0.0849,0.1143,223,BANCO DEL ESTADO DE CHILE,term
+3,0.1399,2011-11,Outside crisis windows,0.1287,0.1399,221,BANCO DEL ESTADO DE CHILE,term
+12,0.2133,2021-03,COVID and pension withdrawals,0.1484,0.2133,212,BANCO DEL ESTADO DE CHILE,term
+1,0.0792,2021-01,COVID and pension withdrawals,0.0681,0.0792,223,BANCO DEL ESTADO DE CHILE,total
+3,0.1232,2021-03,COVID and pension withdrawals,0.079,0.1232,221,BANCO DEL ESTADO DE CHILE,total
+12,0.0509,2022-09,Rate hikes,0.0301,0.0509,212,BANCO DEL ESTADO DE CHILE,total
+1,0.123,2022-05,Rate hikes,0.0792,0.123,223,BANCO DE CHILE,demand
+3,0.1771,2022-07,Rate hikes,0.1079,0.1771,221,BANCO DE CHILE,demand
+12,0.2783,2022-12,Rate hikes,0.2417,0.2783,212,BANCO DE CHILE,demand
+1,0.0694,2020-07,COVID and pension withdrawals,0.0578,0.0694,223,BANCO DE CHILE,term
+3,0.1677,2020-07,COVID and pension withdrawals,0.1323,0.1677,221,BANCO DE CHILE,term
+12,0.2785,2021-03,COVID and pension withdrawals,0.222,0.2785,212,BANCO DE CHILE,term
+1,0.0613,2022-01,Rate hikes,0.0435,0.0613,223,BANCO DE CHILE,total
+3,0.0694,2009-06,Global financial crisis,0.0605,0.0694,221,BANCO DE CHILE,total
+12,0.1007,2009-10,Global financial crisis,0.0283,0.1007,212,BANCO DE CHILE,total
+1,0.1489,2026-08,Outside crisis windows,0.0873,0.1489,223,ITAÚ CHILE,demand
+3,0.1521,2016-09,Outside crisis windows,0.1154,0.1521,221,ITAÚ CHILE,demand
+12,0.2767,2023-02,Rate hikes,0.262,0.2767,212,ITAÚ CHILE,demand
+1,0.086,2017-01,Outside crisis windows,0.0684,0.086,223,ITAÚ CHILE,term
+3,0.1087,2017-01,Outside crisis windows,0.0997,0.1087,221,ITAÚ CHILE,term
+12,0.199,2021-07,COVID and pension withdrawals,0.1795,0.199,212,ITAÚ CHILE,term
+1,0.0909,2026-08,Outside crisis windows,0.0522,0.0909,223,ITAÚ CHILE,total
+3,0.0721,2025-02,Outside crisis windows,0.0684,0.0721,221,ITAÚ CHILE,total
+12,0.1654,2017-06,Outside crisis windows,0.1369,0.1654,212,ITAÚ CHILE,total
+1,0.1337,2015-06,Outside crisis windows,0.1275,0.1337,223,SCOTIABANK CHILE,demand
+3,0.171,2022-05,Rate hikes,0.1289,0.171,221,SCOTIABANK CHILE,demand
+12,0.3498,2023-01,Rate hikes,0.2995,0.3498,212,SCOTIABANK CHILE,demand
+1,0.1095,2010-07,Outside crisis windows,0.0799,0.1095,223,SCOTIABANK CHILE,term
+3,0.1468,2020-08,COVID and pension withdrawals,0.1277,0.1468,221,SCOTIABANK CHILE,term
+12,0.2637,2021-03,COVID and pension withdrawals,0.2514,0.2637,212,SCOTIABANK CHILE,term
+1,0.0998,2010-07,Outside crisis windows,0.0606,0.0998,223,SCOTIABANK CHILE,total
+3,0.1033,2020-08,COVID and pension withdrawals,0.0915,0.1033,221,SCOTIABANK CHILE,total
+12,0.1821,2009-12,Global financial crisis,0.1494,0.1821,212,SCOTIABANK CHILE,total
+1,0.2575,2019-07,Outside crisis windows,0.207,0.2575,223,BANCO BICE,demand
+3,0.2688,2010-08,Outside crisis windows,0.2318,0.2688,221,BANCO BICE,demand
+12,0.3367,2023-02,Rate hikes,0.3309,0.3367,212,BANCO BICE,demand
+1,0.0851,2020-06,COVID and pension withdrawals,0.0749,0.0851,223,BANCO BICE,term
+3,0.2077,2020-06,COVID and pension withdrawals,0.1607,0.2077,221,BANCO BICE,term
+12,0.3323,2021-03,COVID and pension withdrawals,0.3254,0.3323,212,BANCO BICE,term
+1,0.0812,2010-06,Outside crisis windows,0.065,0.0812,223,BANCO BICE,total
+3,0.1677,2020-06,COVID and pension withdrawals,0.1044,0.1677,221,BANCO BICE,total
+12,0.2118,2021-03,COVID and pension withdrawals,0.146,0.2118,212,BANCO BICE,total
+1,0.5467,2017-11,Outside crisis windows,0.4441,0.5467,223,BANCO CONSORCIO,demand
+3,0.5799,2009-02,Global financial crisis,0.4606,0.5799,221,BANCO CONSORCIO,demand
+12,0.527,2009-11,Global financial crisis,0.5121,0.527,212,BANCO CONSORCIO,demand
+1,0.3168,2008-12,Global financial crisis,0.1726,0.3168,223,BANCO CONSORCIO,term
+3,0.4718,2009-02,Global financial crisis,0.261,0.4718,221,BANCO CONSORCIO,term
+12,0.5965,2009-02,Global financial crisis,0.4986,0.5965,212,BANCO CONSORCIO,term
+1,0.3487,2008-12,Global financial crisis,0.1392,0.3487,223,BANCO CONSORCIO,total
+3,0.4874,2009-02,Global financial crisis,0.242,0.4874,221,BANCO CONSORCIO,total
+12,0.5582,2009-02,Global financial crisis,0.4888,0.5582,212,BANCO CONSORCIO,total
+1,0.6216,2018-08,Outside crisis windows,0.4695,0.6216,137,BANCO BTG PACTUAL CHILE,demand
+3,0.7076,2018-10,Outside crisis windows,0.5352,0.7076,135,BANCO BTG PACTUAL CHILE,demand
+12,0.648,2016-11,Outside crisis windows,0.5831,0.648,126,BANCO BTG PACTUAL CHILE,demand
+1,0.8049,2016-10,Outside crisis windows,0.7111,0.8049,137,BANCO BTG PACTUAL CHILE,term
+3,0.8235,2016-10,Outside crisis windows,0.6884,0.8235,135,BANCO BTG PACTUAL CHILE,term
+12,0.9566,2016-10,Outside crisis windows,0.795,0.9566,126,BANCO BTG PACTUAL CHILE,term
+1,0.7729,2018-04,Outside crisis windows,0.3458,0.7729,138,BANCO BTG PACTUAL CHILE,total
+3,0.6917,2018-06,Outside crisis windows,0.4724,0.6917,136,BANCO BTG PACTUAL CHILE,total
+12,0.7222,2016-11,Outside crisis windows,0.6263,0.7222,127,BANCO BTG PACTUAL CHILE,total
+1,0.1427,2008-03,Outside crisis windows,0.0617,0.1427,223,BANCO FALABELLA,demand
+3,0.1548,2008-05,Outside crisis windows,0.0989,0.1548,221,BANCO FALABELLA,demand
+12,0.2702,2023-01,Rate hikes,0.2598,0.2702,212,BANCO FALABELLA,demand
+1,0.1542,2021-07,COVID and pension withdrawals,0.0904,0.1542,223,BANCO FALABELLA,term
+3,0.2039,2020-09,COVID and pension withdrawals,0.1876,0.2039,221,BANCO FALABELLA,term
+12,0.4743,2021-03,COVID and pension withdrawals,0.4582,0.4743,212,BANCO FALABELLA,term
+1,0.088,2009-08,Global financial crisis,0.0719,0.088,223,BANCO FALABELLA,total
+3,0.1729,2009-04,Global financial crisis,0.0998,0.1729,221,BANCO FALABELLA,total
+12,0.153,2009-11,Global financial crisis,0.1451,0.153,212,BANCO FALABELLA,total

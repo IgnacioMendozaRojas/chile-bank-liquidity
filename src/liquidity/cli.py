@@ -47,13 +47,25 @@ def cmd_data(out: Path) -> int:
     return 0
 
 
+def cmd_deposits(out: Path) -> int:
+    from . import deposits
+
+    raw = data.read(out / "bank_balances.csv")
+    pf = data.read(out / "bank_balances_pro_forma.csv")
+    for name, table in deposits.run(pf, raw).items():
+        table.round(4).to_csv(out / f"deposits_{name}.csv", index=False)
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="liquidity")
     sub = p.add_subparsers(dest="cmd", required=True)
     d = sub.add_parser("data", help="download new months and run the data checks")
     d.add_argument("--out", type=Path, default=Path("data/processed"))
+    dep = sub.add_parser("deposits", help="outflows, stable core and decay from the downloaded balances")
+    dep.add_argument("--out", type=Path, default=Path("data/processed"))
     a = p.parse_args(argv)
-    return cmd_data(a.out)
+    return cmd_data(a.out) if a.cmd == "data" else cmd_deposits(a.out)
 
 
 if __name__ == "__main__":
