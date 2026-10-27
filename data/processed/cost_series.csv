@@ -46,7 +46,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,5.4418,,,0.1771,,,interest+readjustment,5.4418,System
 2012-01,5.6436,,,0.1965,,,interest+readjustment,5.6436,System
 2012-02,5.3762,,,0.1763,,,interest+readjustment,5.3762,System
-2012-03,5.371,0.9124,4.4586,0.1619,0.0599,0.102,interest,4.4586,System
+2012-03,5.371,,,0.1619,,,interest+readjustment,5.371,System
 2012-04,5.0857,0.7056,4.3801,0.1386,0.0443,0.0943,interest,4.3801,System
 2012-05,5.1002,0.602,4.4982,0.131,0.0356,0.0954,interest,4.4982,System
 2012-06,4.8906,0.3509,4.5397,0.1259,0.0225,0.1034,interest,4.5397,System
@@ -183,8 +183,8 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2023-05,9.0616,0.7452,8.3164,0.8093,0.0794,0.7299,interest,8.3164,System
 2023-06,9.0531,0.7278,8.3254,0.8316,0.0738,0.7577,interest,8.3254,System
 2023-07,8.606,0.2814,8.3246,1.0013,0.0392,0.9621,interest,8.3246,System
-2023-08,8.4308,0.1167,8.314,1.0399,0.0278,1.0121,interest,8.314,System
-2023-09,8.2351,0.1234,8.1117,1.0747,0.0157,1.059,interest,8.1117,System
+2023-08,8.5659,0.1209,8.445,0.8788,0.0303,0.8485,interest,8.445,System
+2023-09,8.3445,0.1269,8.2176,0.9087,0.0203,0.8884,interest,8.2176,System
 2023-10,8.2295,0.5482,7.6814,0.783,0.0635,0.7195,interest,7.6814,System
 2008-04,6.5763,,,0.0362,,,interest+readjustment,6.5763,BANCO DE CRÉDITO E INVERSIONES
 2008-05,7.3108,,,0.033,,,interest+readjustment,7.3108,BANCO DE CRÉDITO E INVERSIONES
@@ -233,7 +233,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,5.6301,,,0.0705,,,interest+readjustment,5.6301,BANCO DE CRÉDITO E INVERSIONES
 2012-01,5.8535,,,0.0657,,,interest+readjustment,5.8535,BANCO DE CRÉDITO E INVERSIONES
 2012-02,5.5422,,,0.0605,,,interest+readjustment,5.5422,BANCO DE CRÉDITO E INVERSIONES
-2012-03,5.4967,0.7223,4.7744,0.0624,0.0162,0.0462,interest,4.7744,BANCO DE CRÉDITO E INVERSIONES
+2012-03,5.4967,,,0.0624,,,interest+readjustment,5.4967,BANCO DE CRÉDITO E INVERSIONES
 2012-04,5.3219,0.5521,4.7698,0.0567,0.0115,0.0452,interest,4.7698,BANCO DE CRÉDITO E INVERSIONES
 2012-05,5.3473,0.4693,4.878,0.0583,0.0101,0.0483,interest,4.878,BANCO DE CRÉDITO E INVERSIONES
 2012-06,5.2022,0.2755,4.9267,0.0525,0.0057,0.0467,interest,4.9267,BANCO DE CRÉDITO E INVERSIONES
@@ -419,7 +419,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,5.4792,,,0.0608,,,interest+readjustment,5.4792,BANCO SANTANDER-CHILE
 2012-01,5.6314,,,0.0691,,,interest+readjustment,5.6314,BANCO SANTANDER-CHILE
 2012-02,5.3564,,,0.0812,,,interest+readjustment,5.3564,BANCO SANTANDER-CHILE
-2012-03,5.6126,0.97,4.6426,0.0831,0.0225,0.0606,interest,4.6426,BANCO SANTANDER-CHILE
+2012-03,5.6126,,,0.0831,,,interest+readjustment,5.6126,BANCO SANTANDER-CHILE
 2012-04,5.2554,0.7299,4.5255,0.0767,0.0169,0.0598,interest,4.5255,BANCO SANTANDER-CHILE
 2012-05,5.3513,0.6258,4.7255,0.0647,0.0147,0.05,interest,4.7255,BANCO SANTANDER-CHILE
 2012-06,5.1629,0.3615,4.8014,0.0587,0.0087,0.05,interest,4.8014,BANCO SANTANDER-CHILE
@@ -606,7 +606,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,4.1483,,,0.1435,,,interest+readjustment,4.1483,BANCO DEL ESTADO DE CHILE
 2012-01,4.5104,,,0.1988,,,interest+readjustment,4.5104,BANCO DEL ESTADO DE CHILE
 2012-02,4.2709,,,0.1873,,,interest+readjustment,4.2709,BANCO DEL ESTADO DE CHILE
-2012-03,4.2877,1.3567,2.931,0.1601,0.003,0.1571,interest,2.931,BANCO DEL ESTADO DE CHILE
+2012-03,4.2877,,,0.1601,,,interest+readjustment,4.2877,BANCO DEL ESTADO DE CHILE
 2012-04,3.9258,1.0878,2.838,0.1396,0.0015,0.1381,interest,2.838,BANCO DEL ESTADO DE CHILE
 2012-05,3.8291,0.9624,2.8667,0.1627,0.0011,0.1617,interest,2.8667,BANCO DEL ESTADO DE CHILE
 2012-06,3.3714,0.5671,2.8044,0.1943,0.0007,0.1936,interest,2.8044,BANCO DEL ESTADO DE CHILE
@@ -793,7 +793,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,5.9076,,,0.1736,,,interest+readjustment,5.9076,BANCO DE CHILE
 2012-01,6.1217,,,0.1981,,,interest+readjustment,6.1217,BANCO DE CHILE
 2012-02,5.8037,,,0.17,,,interest+readjustment,5.8037,BANCO DE CHILE
-2012-03,5.7089,1.103,4.6059,0.1532,0.1516,0.0016,interest,4.6059,BANCO DE CHILE
+2012-03,5.7089,,,0.1532,,,interest+readjustment,5.7089,BANCO DE CHILE
 2012-04,5.3564,0.8598,4.4966,0.1123,0.1111,0.0012,interest,4.4966,BANCO DE CHILE
 2012-05,5.3759,0.7493,4.6266,0.0866,0.0853,0.0013,interest,4.6266,BANCO DE CHILE
 2012-06,5.0477,0.4448,4.6029,0.0512,0.0497,0.0015,interest,4.6029,BANCO DE CHILE
@@ -929,6 +929,8 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2023-04,10.1566,0.9215,9.2351,0.1667,0.1575,0.0092,interest,9.2351,BANCO DE CHILE
 2023-05,10.347,0.8244,9.5226,0.1522,0.1456,0.0066,interest,9.5226,BANCO DE CHILE
 2023-06,10.1498,0.7936,9.3562,0.167,0.1602,0.0068,interest,9.3562,BANCO DE CHILE
+2023-08,9.4464,0.1479,9.2985,0.0507,0.0432,0.0075,interest,9.2985,BANCO DE CHILE
+2023-09,9.0598,0.15,8.9098,0.0512,0.0442,0.007,interest,8.9098,BANCO DE CHILE
 2008-04,6.4763,,,0.0,,,interest+readjustment,6.4763,ITAÚ CHILE
 2008-05,7.0313,,,0.0,,,interest+readjustment,7.0313,ITAÚ CHILE
 2008-06,7.6,,,0.0,,,interest+readjustment,7.6,ITAÚ CHILE
@@ -976,7 +978,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,5.4665,,,0.0,,,interest+readjustment,5.4665,ITAÚ CHILE
 2012-01,5.5835,,,0.0,,,interest+readjustment,5.5835,ITAÚ CHILE
 2012-02,5.2925,,,0.0,,,interest+readjustment,5.2925,ITAÚ CHILE
-2012-03,5.1159,1.0049,4.1111,0.0,0.0,0.0,interest,4.1111,ITAÚ CHILE
+2012-03,5.1159,,,0.0,,,interest+readjustment,5.1159,ITAÚ CHILE
 2012-04,4.9105,0.8149,4.0955,0.0,0.0,0.0,interest,4.0955,ITAÚ CHILE
 2012-05,4.9031,0.7079,4.1953,0.0,0.0,0.0,interest,4.1953,ITAÚ CHILE
 2012-06,4.5666,0.4172,4.1494,0.0,0.0,0.0,interest,4.1494,ITAÚ CHILE
@@ -1163,7 +1165,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,5.9134,,,0.0203,,,interest+readjustment,5.9134,SCOTIABANK CHILE
 2012-01,5.9438,,,0.0201,,,interest+readjustment,5.9438,SCOTIABANK CHILE
 2012-02,5.6466,,,0.0184,,,interest+readjustment,5.6466,SCOTIABANK CHILE
-2012-03,5.4504,0.5399,4.9105,0.018,0.0,0.018,interest,4.9105,SCOTIABANK CHILE
+2012-03,5.4504,,,0.018,,,interest+readjustment,5.4504,SCOTIABANK CHILE
 2012-04,5.2018,0.3552,4.8466,0.0176,0.0,0.0176,interest,4.8466,SCOTIABANK CHILE
 2012-05,5.385,0.2802,5.1048,0.0173,0.0,0.0173,interest,5.1048,SCOTIABANK CHILE
 2012-06,5.3338,0.1597,5.1741,0.0156,0.0,0.0156,interest,5.1741,SCOTIABANK CHILE
@@ -1349,7 +1351,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,6.0309,,,0.1684,,,interest+readjustment,6.0309,BANCO BICE
 2012-01,6.2506,,,0.1645,,,interest+readjustment,6.2506,BANCO BICE
 2012-02,6.0001,,,0.1316,,,interest+readjustment,6.0001,BANCO BICE
-2012-03,5.9461,1.1654,4.7806,0.1092,0.1092,0.0,interest,4.7806,BANCO BICE
+2012-03,5.9461,,,0.1092,,,interest+readjustment,5.9461,BANCO BICE
 2012-04,5.6055,0.9203,4.6852,0.0922,0.0922,0.0,interest,4.6852,BANCO BICE
 2012-05,5.5981,0.7824,4.8157,0.0835,0.0835,0.0,interest,4.8157,BANCO BICE
 2012-06,5.2916,0.4559,4.8357,0.0645,0.0645,0.0,interest,4.8357,BANCO BICE
@@ -1536,7 +1538,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,5.0063,,,0.0,,,interest+readjustment,5.0063,BANCO CONSORCIO
 2012-01,5.3159,,,0.0,,,interest+readjustment,5.3159,BANCO CONSORCIO
 2012-02,5.3542,,,0.0,,,interest+readjustment,5.3542,BANCO CONSORCIO
-2012-03,5.2044,0.0205,5.184,0.0193,0.0,0.0193,interest,5.184,BANCO CONSORCIO
+2012-03,5.2044,,,0.0193,,,interest+readjustment,5.2044,BANCO CONSORCIO
 2012-04,4.9926,0.0149,4.9777,0.0202,0.0,0.0202,interest,4.9777,BANCO CONSORCIO
 2012-05,5.2086,0.0134,5.1952,0.042,0.0,0.042,interest,5.1952,BANCO CONSORCIO
 2012-06,5.367,0.008,5.359,0.0214,0.0,0.0214,interest,5.359,BANCO CONSORCIO
@@ -1826,7 +1828,7 @@ period,term_expense,term_readjust,term_cost,demand_expense,demand_readjust,deman
 2011-12,5.5762,,,0.0,,,interest+readjustment,5.5762,BANCO FALABELLA
 2012-01,5.7236,,,0.0,,,interest+readjustment,5.7236,BANCO FALABELLA
 2012-02,5.6479,,,0.0,,,interest+readjustment,5.6479,BANCO FALABELLA
-2012-03,5.6749,0.211,5.4638,0.0,0.0,0.0,interest,5.4638,BANCO FALABELLA
+2012-03,5.6749,,,0.0,,,interest+readjustment,5.6749,BANCO FALABELLA
 2012-04,5.5561,0.1322,5.4239,0.0,0.0,0.0,interest,5.4239,BANCO FALABELLA
 2012-05,5.6123,0.1,5.5123,0.0,0.0,0.0,interest,5.5123,BANCO FALABELLA
 2012-06,5.5657,0.0516,5.5141,0.0,0.0,0.0,interest,5.5141,BANCO FALABELLA
