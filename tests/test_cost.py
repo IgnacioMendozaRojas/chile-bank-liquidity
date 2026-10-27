@@ -18,20 +18,21 @@ def test_income_items_keep_missing_accounts_as_nan():
     assert got["term_expense"] == pytest.approx(4.0) and got["term_readjust"] == pytest.approx(1.0)
 
 
-def test_year_to_date_becomes_monthly_and_resets_in_january():
+def test_three_months_from_year_to_date_across_january_and_gaps():
     ytd = pd.DataFrame(
         {
-            "period": ["2021-11", "2021-12", "2022-01", "2022-02"],
+            "period": ["2021-09", "2021-10", "2021-12", "2022-01", "2022-03"],  # Nov and Feb missing
             "code": "001",
             "name": "A",
             "item": "term_expense",
-            "clp_bn": [11.0, 12.0, 2.0, 3.5],
+            "clp_bn": [9.0, 10.0, 12.0, 1.0, 3.0],  # one a month
         }
     )
-    f = cost.monthly_flows(ytd).set_index("period")["clp_bn"]
-    assert f["2021-12"] == pytest.approx(1.0)
-    assert f["2022-01"] == pytest.approx(2.0)
-    assert f["2022-02"] == pytest.approx(1.5)
+    f = cost.window_sums(ytd).set_index("period")["clp_bn"]
+    assert f["2021-12"] == pytest.approx(3.0)  # Oct-Dec: 12 - 9
+    assert f["2022-01"] == pytest.approx(3.0)  # Nov-Jan: 1 + 12 - 10
+    assert f["2022-03"] == pytest.approx(3.0)  # Jan-Mar: year to date
+    assert "2022-02" not in f.index
 
 
 def test_cycles_group_moves_and_skip_small_ones():
@@ -71,7 +72,7 @@ def test_cost_is_annualised_interest_over_average_balance():
         rows += [(p, "001", "A", "term_expense", 6.0 * i), (p, "001", "A", "term_readjust", 1.0 * i)]
         rows += [(p, "001", "A", "demand_expense", 0.0), (p, "001", "A", "demand_readjust", 0.0)]
     inc = pd.DataFrame(rows, columns=["period", "code", "name", "item", "clp_bn"])
-    c = cost.cost_series(cost.monthly_flows(inc), bal, {"001": "A"}).set_index(["bank", "period"])
+    c = cost.cost_series(cost.window_sums(inc), bal, {"001": "A"}).set_index(["bank", "period"])
     assert c.loc[("A", "2022-06"), "term_expense"] == pytest.approx(6.0)  # 6 x 12 / 1200 = 6%
     assert c.loc[("A", "2022-06"), "term_cost"] == pytest.approx(5.0)
     assert c.loc[("System", "2022-06"), "term_cost_best"] == pytest.approx(5.0)

@@ -1,7 +1,7 @@
 """Cost of deposit funding and the deposit beta: how much of a policy-rate move reaches deposits.
 
 Interest expense comes from the CMF income statements (year to date, so each month is the
-difference with the previous one). The cost of term deposits is the interest paid over the
+difference of two statements). The cost of term deposits is the interest paid over the
 last three months, annualised, over the average term-deposit balance of the same entity
 (balances as reported, not pro forma, so numerator and denominator cover the same bank).
 
@@ -26,19 +26,26 @@ WINDOW = 3  # months of interest expense in the cost
 LAGS = (0, 3, 6)
 
 
-def monthly_flows(income: pd.DataFrame) -> pd.DataFrame:
-    """Year-to-date amounts -> amount of each month; long table period, code, item, clp_bn."""
+def window_sums(income: pd.DataFrame, window: int = WINDOW) -> pd.DataFrame:
+    """Amounts over the last `window` months from year-to-date figures (long table).
+
+    Only the statements of month t, of month t - window and of the previous December are
+    needed, so a month the CMF fails to serve in between does not leave a gap.
+    """
     w = income.pivot_table(index="period", columns=["code", "item"], values="clp_bn", dropna=False)
     w = w.reindex(pd.period_range(w.index.min(), w.index.max(), freq="M").astype(str))
     per = pd.PeriodIndex(w.index, freq="M")
-    prev = w.shift(1)
-    prev.loc[np.asarray(per.month == 1)] = 0.0  # year to date: January is its own month
-    flows = w - prev
-    flows.index.name = "period"
-    return flows.stack(["code", "item"], future_stack=True).rename("clp_bn").reset_index().dropna()
+    before = w.shift(window)
+    dec = w.reindex([f"{y - 1}-12" for y in per.year])
+    dec.index = w.index
+    across = np.asarray((per - window).year != per.year)
+    sums = w - before
+    sums.loc[across] = (w + dec - before).loc[across]
+    sums.index.name = "period"
+    return sums.stack(["code", "item"], future_stack=True).rename("clp_bn").reset_index().dropna()
 
 
-def cost_series(flows: pd.DataFrame, balances: pd.DataFrame, codes: dict[str, str]) -> pd.DataFrame:
+def cost_series(sums: pd.DataFrame, balances: pd.DataFrame, codes: dict[str, str]) -> pd.DataFrame:
     """Annualised cost of term and demand deposits (%), by bank and for all banks together.
 
     For all banks together, a bank enters a month only if its three months of interest and
@@ -46,7 +53,7 @@ def cost_series(flows: pd.DataFrame, balances: pd.DataFrame, codes: dict[str, st
     """
     out = []
     banks = checks.banks_only(balances)
-    fl = flows[flows["code"].map(checks.is_bank)]
+    fl = sums[sums["code"].map(checks.is_bank)]
     per_bank = {}
     for k in ("term", "demand"):
         avg = checks.wide(banks, f"{k}_deposits").rolling(WINDOW + 1).mean()
@@ -54,8 +61,6 @@ def cost_series(flows: pd.DataFrame, balances: pd.DataFrame, codes: dict[str, st
             part: fl[fl["item"] == f"{k}_{part}"]
             .pivot_table(index="period", columns="code", values="clp_bn")
             .reindex(index=avg.index, columns=avg.columns)
-            .rolling(WINDOW)
-            .sum()
             for part in ("expense", "readjust")
         }
         per_bank[k] = (avg, sums["expense"], sums["readjust"])

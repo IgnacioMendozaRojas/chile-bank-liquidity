@@ -80,3 +80,23 @@ def test_series_found_by_title_prefers_longest_history():
         ]
     }
     assert bcch.find_codes(cat)["tpm"][0] == "B"
+
+
+def test_a_bank_that_failed_is_retried_on_the_next_run(tmp_path):
+    class FlakyApi:
+        broken = True
+
+        def institutions(self, y, m, kind="balances"):
+            return {"001": "A", "016": "B"}
+
+        def balance(self, y, m, code):
+            if code == "016" and FlakyApi.broken:
+                raise RuntimeError("500")
+            return [{"CodigoCuenta": "2100000", "MonedaTotal": "1000,00"}]
+
+    path = tmp_path / "b.csv"
+    data.download(path, FlakyApi(), (2008, 1), (2008, 1), log=lambda *_: None)
+    assert set(data.read(path)["code"]) == {"001"}
+    FlakyApi.broken = False
+    assert data.download(path, FlakyApi(), (2008, 1), (2008, 1), log=lambda *_: None) == ["2008-01"]
+    assert set(data.read(path)["code"]) == {"001", "016"}

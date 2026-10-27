@@ -143,7 +143,7 @@ def cmd_cost(out: Path) -> int:
     pf = data.read(out / "bank_balances_pro_forma.csv")
     names = pf.drop_duplicates("code", keep="last").set_index("code")["name"]
     top = {c: names[c] for c in checks.wide(pf, "total_assets").iloc[-1].nlargest(deposits.TOP_BANKS).index}
-    costs = cost.cost_series(cost.monthly_flows(income), raw, top)
+    costs = cost.cost_series(cost.window_sums(income), raw, top)
     costs.round(4).to_csv(out / "cost_series.csv", index=False)
     tpm = cost.month_end_rate(pd.read_csv(out / "bcch_rates_daily.csv", index_col=0))
     tpm = tpm[tpm.index >= costs["period"].min()]

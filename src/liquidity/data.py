@@ -38,24 +38,32 @@ def read(path: Path) -> pd.DataFrame:
 
 
 def download(path: Path, api: CmfApi, start=START, end=None, log=print, kind: str = "balances") -> list[str]:
-    """Add every missing month between start and end; returns the months added.
+    """Add every missing bank-month between start and end; returns the months with new rows.
 
-    kind "balances" stores balance-sheet items; "resultados" income-statement items.
+    kind "balances" stores balance-sheet items; "resultados" income-statement items. A month
+    the CMF has not published (404) ends the run; a server error on a month or a bank is
+    logged and skipped, and the next run tries it again.
     """
     fetch, extract = (api.balance, accounts.extract) if kind == "balances" else (api.results, accounts.extract_income)
-    done = set(read(path)["period"])
+    have = read(path)
+    done = set(zip(have["period"], have["code"], strict=True))
+    per_row = len(accounts.ITEMS if kind == "balances" else accounts.INCOME)
     added = []
     for y, m in months(start, end or last_month()):
         label = f"{y}-{m:02d}"
-        if label in done:
-            continue
         try:
             banks = api.institutions(y, m, kind)
-        except Exception as exc:  # noqa: BLE001 - a month not yet published ends the run
-            log(f"{label}: not available ({exc!r})"[:400])
-            break
+        except Exception as exc:  # noqa: BLE001
+            if getattr(getattr(exc, "response", None), "status_code", None) == 404:
+                log(f"{label}: not available ({exc!r})"[:400])
+                break
+            log(f"{label}: no data for the bank list after retries (skipped) {exc!r}"[:400])
+            continue
+        todo = {c: n for c, n in banks.items() if (label, c) not in done}
+        if not todo:
+            continue
         rows, failed = [], []
-        for code, name in banks.items():
+        for code, name in todo.items():
             try:
                 values = extract(fetch(y, m, code), y, m)
             except Exception:  # noqa: BLE001 - one bank's server error must not stop the history
@@ -64,10 +72,10 @@ def download(path: Path, api: CmfApi, start=START, end=None, log=print, kind: st
             rows += [(label, code, name, item, round(v, 4)) for item, v in values.items()]
         if failed:
             log(f"{label}: no data for {failed} after retries (left out)")
-        new = pd.DataFrame(rows, columns=COLUMNS)
-        new.to_csv(path, mode="a", header=not Path(path).exists(), index=False)
-        added.append(label)
-        log(f"{label}: {len(banks)} banks")
+        if rows:
+            pd.DataFrame(rows, columns=COLUMNS).to_csv(path, mode="a", header=not Path(path).exists(), index=False)
+            added.append(label)
+            log(f"{label}: {len(rows) // per_row} banks")
     return added
 
 
