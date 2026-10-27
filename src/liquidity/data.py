@@ -54,10 +54,16 @@ def download(path: Path, api: CmfApi, start=START, end=None, log=print, kind: st
         except Exception as exc:  # noqa: BLE001 - a month not yet published ends the run
             log(f"{label}: not available ({exc!r})"[:400])
             break
-        rows = []
+        rows, failed = [], []
         for code, name in banks.items():
-            values = extract(fetch(y, m, code), y, m)
+            try:
+                values = extract(fetch(y, m, code), y, m)
+            except Exception:  # noqa: BLE001 - one bank's server error must not stop the history
+                failed.append(code)
+                continue
             rows += [(label, code, name, item, round(v, 4)) for item, v in values.items()]
+        if failed:
+            log(f"{label}: no data for {failed} after retries (left out)")
         new = pd.DataFrame(rows, columns=COLUMNS)
         new.to_csv(path, mode="a", header=not Path(path).exists(), index=False)
         added.append(label)

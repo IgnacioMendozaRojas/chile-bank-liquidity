@@ -39,29 +39,36 @@ def monthly_flows(income: pd.DataFrame) -> pd.DataFrame:
 
 
 def cost_series(flows: pd.DataFrame, balances: pd.DataFrame, codes: dict[str, str]) -> pd.DataFrame:
-    """Annualised cost of term and demand deposits (%), by bank and for all banks together."""
+    """Annualised cost of term and demand deposits (%), by bank and for all banks together.
 
-    def wide(df, item):
-        x = df[df["item"] == item].pivot_table(index="period", columns="code", values="clp_bn")
-        return x
-
+    For all banks together, a bank enters a month only if its three months of interest and
+    its balances are all reported, so a missing statement does not understate the cost.
+    """
     out = []
-    bal = {k: checks.wide(checks.banks_only(balances), f"{k}_deposits") for k in ("term", "demand")}
-    fl = {i: wide(flows[flows["code"].map(checks.is_bank)], i) for i in flows["item"].unique()}
+    banks = checks.banks_only(balances)
+    fl = flows[flows["code"].map(checks.is_bank)]
+    per_bank = {}
+    for k in ("term", "demand"):
+        avg = checks.wide(banks, f"{k}_deposits").rolling(WINDOW + 1).mean()
+        sums = {
+            part: fl[fl["item"] == f"{k}_{part}"]
+            .pivot_table(index="period", columns="code", values="clp_bn")
+            .reindex(index=avg.index, columns=avg.columns)
+            .rolling(WINDOW)
+            .sum()
+            for part in ("expense", "readjust")
+        }
+        per_bank[k] = (avg, sums["expense"], sums["readjust"])
     for name, sel in [("System", None), *[(n, c) for c, n in codes.items()]]:
         cols = {}
-        for k in ("term", "demand"):
-            b = bal[k] if sel is None else bal[k][[sel]]
-            avg = b.sum(axis=1, min_count=1).rolling(WINDOW + 1).mean()
-            exp, adj = (
-                fl[f"{k}_{part}"] if sel is None else fl[f"{k}_{part}"].reindex(columns=[sel])
-                for part in ("expense", "readjust")
-            )
-            adj = adj.reindex_like(exp)
-            # the readjustment split counts only when every bank reporting interest reports it
-            split = adj.notna().sum(axis=1) == exp.notna().sum(axis=1)
-            for part, f in (("expense", exp.sum(axis=1, min_count=1)), ("readjust", adj.sum(axis=1).where(split))):
-                cols[f"{k}_{part}"] = f.rolling(WINDOW).sum().reindex(avg.index) * 12 / WINDOW / avg * 100
+        for k, (avg, exp, adj) in per_bank.items():
+            if sel is not None:
+                avg, exp, adj = avg[[sel]], exp[[sel]], adj[[sel]]
+            ok = exp.notna() & avg.notna()
+            base = avg.where(ok).sum(axis=1, min_count=1)
+            split = (adj.notna() | ~ok).all(axis=1)  # every bank in the sum reports the readjustment
+            cols[f"{k}_expense"] = exp.where(ok).sum(axis=1, min_count=1) * 12 / WINDOW / base * 100
+            cols[f"{k}_readjust"] = (adj.where(ok).sum(axis=1) * 12 / WINDOW / base * 100).where(split & ok.any(axis=1))
             cols[f"{k}_cost"] = cols[f"{k}_expense"] - cols[f"{k}_readjust"]
         df = pd.DataFrame(cols).dropna(how="all")
         df["term_cost_measure"] = np.where(df["term_readjust"].notna(), "interest", "interest+readjustment")

@@ -34,6 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull -q --rebase
           git add data/processed
-          git diff --cached --quiet || (git commit -qm "Model: deposits and forecasts" && git push)
+          git diff --cached --quiet && exit 0
+          git commit -qm "Model: deposits, funding, cost and forecasts"
+          git pull -q --rebase && git push

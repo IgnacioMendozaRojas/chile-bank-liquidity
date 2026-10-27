@@ -15,16 +15,28 @@ def _notice(level: str, title: str, msg: str) -> None:
     print(f"::{level} title={title}::{msg}" if os.getenv("GITHUB_ACTIONS") else f"{level}: {title}: {msg}")
 
 
+def _log(title: str):
+    def log(msg: str) -> None:
+        if "no data for" in msg:
+            _notice("warning", title, msg)
+        elif "not available" in msg:
+            _notice("notice", title, msg)
+        else:
+            print(msg)
+
+    return log
+
+
 def cmd_data(out: Path) -> int:
     out.mkdir(parents=True, exist_ok=True)
     added = data.download(
         out / "bank_balances.csv",
         CmfApi(),
-        log=lambda m: _notice("notice", "CMF", m) if "not available" in m else print(m),
+        log=_log("CMF"),
     )
     _notice("notice", "CMF", f"{len(added)} months added" + (f" ({added[0]} to {added[-1]})" if added else ""))
     try:
-        inc = data.download(out / "bank_income.csv", CmfApi(), kind="resultados", log=print)
+        inc = data.download(out / "bank_income.csv", CmfApi(), kind="resultados", log=_log("CMF income"))
         _notice("notice", "CMF income", f"{len(inc)} months added" + (f" ({inc[0]} to {inc[-1]})" if inc else ""))
     except Exception as exc:  # noqa: BLE001 - income statements must not stop the balance-sheet update
         _notice("warning", "CMF income", repr(exc)[:300])
