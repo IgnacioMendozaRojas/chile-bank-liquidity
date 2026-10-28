@@ -94,12 +94,12 @@
 - Banco del Desarrollo (2009) leaves the data without a matched acquirer and is not folded into any bank.
 - The beta-funds correlation uses 10 banks: a signal, not an estimate.
 - Before 2012 the CMF reports interest and UF readjustment together; betas of those cycles are flagged and not compared with later ones.
-- The CMF API limits the number of requests per key; income statements after October 2023 are being completed, so the 2023-25 cutting cycle is not in the betas yet.
+- The CMF API allows 10,000 requests a month per key and the full history used up a month's allowance; income statements after October 2023 are being completed, so the 2023-25 cutting cycle is not in the betas yet.
 
 ## Data and automation
 
 - Sources: CMF API (SBIF v3) balance sheets and income statements by bank; Banco Central de Chile (SIETE API) policy rate, Central Bank bond yields and monetary aggregates; mutual-fund holdings from [chile-mutual-funds-analytics](https://github.com/IgnacioMendozaRojas/chile-mutual-funds-analytics). Events and the pandemic window are listed with their sources in [`config/events.yaml`](config/events.yaml).
-- [`data.yml`](.github/workflows/data.yml) runs monthly and adds the new month; it resumes where it stopped, re-requests any bank-month that failed, and stops at the API's request limit instead of retrying.
+- [`data.yml`](.github/workflows/data.yml) runs monthly and adds the new month; it resumes where it stopped, re-requests any bank-month that failed, and stops at the API's request limit instead of retrying. A normal month uses about 60 of the CMF's 10,000 monthly requests; each run is capped at 3,000.
 - [`model.yml`](.github/workflows/model.yml) then recomputes deposits, funding, cost and forecasts, redraws the figures and rewrites `latest.json` and the table above.
 - Results are in [`data/processed`](data/processed) as CSV.
 

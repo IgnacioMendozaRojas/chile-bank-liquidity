@@ -10,21 +10,32 @@ import requests
 BASE = "https://api.cmfchile.cl/api-sbifv3/recursos_api"
 
 
+# The CMF allows 10,000 requests a month per key (HTTP 420 beyond that, until the month ends).
+MONTHLY_QUOTA = 10_000
+RUN_BUDGET = 3_000  # per workflow run, so one run can never use up the month
+
+
 class QuotaExceeded(RuntimeError):
-    """HTTP 420: the API key has used its request allowance; retrying only wastes the run."""
+    """HTTP 420, or this run's own budget spent: stop instead of retrying."""
 
 
 class CmfApi:
-    def __init__(self, key: str | None = None, pause: float = 0.3, retries: int = 4, session=None):
+    def __init__(
+        self, key: str | None = None, pause: float = 0.3, retries: int = 4, session=None, budget: int = RUN_BUDGET
+    ):
         # the key is stripped: a pasted secret often carries a trailing newline
         self.key = (key or os.getenv("CMF_API_KEY") or "").strip()
         if not self.key:
             raise RuntimeError("CMF_API_KEY is not set")
         self.pause, self.retries = pause, retries
+        self.budget, self.used = budget, 0
         self.session = session or requests.Session()
 
     def _get(self, path: str):
         for attempt in range(1, self.retries + 1):
+            if self.used >= self.budget:
+                raise QuotaExceeded(f"run budget of {self.budget} requests spent")
+            self.used += 1
             try:
                 r = self.session.get(f"{BASE}/{path}", params={"apikey": self.key, "formato": "json"}, timeout=60)
                 if r.status_code == 420:

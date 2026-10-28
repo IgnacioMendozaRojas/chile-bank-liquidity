@@ -2,7 +2,8 @@ name: Data
 
 # Adds new months of bank balance sheets and income statements from the CMF and refreshes the Banco Central
 # aggregates and the data checks. The first run builds the history from 2008 (a few hours);
-# progress is committed even if a run stops, and the next run resumes.
+# progress is committed even if a run stops, and the next run resumes. The CMF allows 10,000
+# requests a month per key: a normal month uses about 60, and each run stops at 3,000.
 on:
   schedule:
     - cron: "37 7 20 * *"

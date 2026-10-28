@@ -29,20 +29,22 @@ def _log(title: str):
 
 def cmd_data(out: Path, max_months: int | None = None) -> int:
     out.mkdir(parents=True, exist_ok=True)
+    api = CmfApi()  # one budget shared by both downloads
     added = data.download(
         out / "bank_balances.csv",
-        CmfApi(),
+        api,
         log=_log("CMF"),
         max_months=max_months,
     )
     _notice("notice", "CMF", f"{len(added)} months added" + (f" ({added[0]} to {added[-1]})" if added else ""))
     try:
         inc = data.download(
-            out / "bank_income.csv", CmfApi(), kind="resultados", log=_log("CMF income"), max_months=max_months
+            out / "bank_income.csv", api, kind="resultados", log=_log("CMF income"), max_months=max_months
         )
         _notice("notice", "CMF income", f"{len(inc)} months added" + (f" ({inc[0]} to {inc[-1]})" if inc else ""))
     except Exception as exc:  # noqa: BLE001 - income statements must not stop the balance-sheet update
         _notice("warning", "CMF income", repr(exc)[:300])
+    _notice("notice", "CMF requests", f"{api.used} used this run (monthly quota 10,000 per key)")
     bal = data.read(out / "bank_balances.csv")
     if bal.empty:
         _notice("error", "No data", "nothing downloaded; see the CMF notice above")

@@ -139,3 +139,29 @@ def test_max_months_limits_a_run(tmp_path):
         "2008-02",
         "2008-03",
     ]
+
+
+def test_run_budget_stops_requests():
+    from liquidity.cmf import CmfApi, QuotaExceeded
+
+    class Session:
+        def get(self, *a, **k):
+            class R:
+                status_code = 200
+
+                def raise_for_status(self):
+                    pass
+
+                def json(self):
+                    return {"x": []}
+
+            return R()
+
+    api = CmfApi(key="k", pause=0, session=Session(), budget=2)
+    api.balance(2008, 1, "001")
+    api.balance(2008, 2, "001")
+    try:
+        api.balance(2008, 3, "001")
+        raise AssertionError("budget not enforced")
+    except QuotaExceeded:
+        assert api.used == 2
