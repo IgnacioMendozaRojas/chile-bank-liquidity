@@ -12,7 +12,7 @@
 
 - **The pandemic surge was not stable money.** Demand deposits peaked 43% above their pre-2020 trend in May 2021 (CLP 29 trillion of excess), helped by the pension-fund withdrawals. The worst 12-month outflow on record came after it, in 2022, when rate hikes pulled money into term deposits: 20% for the system and 21% to 65% by bank.
 - **Simple beats complex for forecasting.** Out of sample since 2014, damped seasonal exponential smoothing misses demand deposits by a median 6.9% at 12 months, against 9.1% for SARIMAX with the policy rate and 10.2% for a random walk. No model anticipated 2020-21: errors reach 23-25% in windows that touch it.
-- **Funding from mutual funds is concentrated and rate-sensitive.** Mutual funds hold 15% of the term deposits of the banks shown (37% at BICE) and withdrew 63% of their bank deposits in 12 months in 2021-22. Banks passed 69% of the 2021-22 rate hikes on to the cost of their term deposits, and banks that rely more on funds passed on more (correlation 0.45 across 10 banks).
+- **Funding from mutual funds is concentrated and rate-sensitive.** Mutual funds hold 15% of the term deposits of the banks shown (37% at BICE) and withdrew 63% of their bank deposits in 12 months in 2021-22. Banks passed 69% of the 2021-22 rate hikes on to the cost of their term deposits but only 62% of the 2023-25 cuts, and banks that rely more on funds passed on more of the hikes (correlation 0.45 across 10 banks).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/figures/surge-dark.png">
@@ -36,7 +36,7 @@
 ## Latest reading
 
 <!-- latest:start -->
-**Latest reading: August 2026.** Banks held CLP 91.5 trillion of demand and CLP 130.7 trillion of term deposits in August 2026; mutual funds held 15% of the term deposits, and banks passed 69% of the last rate-hiking cycle on to their cost.
+**Latest reading: August 2026.** Banks held CLP 91.5 trillion of demand and CLP 130.7 trillion of term deposits in August 2026; mutual funds held 15% of the term deposits, and banks passed 69% of the last rate hikes on to their cost.
 
 | Indicator | Latest | Month before | Change | Note |
 |---|---:|---:|---:|---|
@@ -46,7 +46,7 @@
 | Cost of term deposits, all banks | 4.3% | 4.2% | +0.0 pp |  |
 | Policy rate (TPM), month end | 4.5% | 4.5% | +0.0 pp |  |
 
-*Updated automatically on 2026-10-28 from the CMF and Banco Central. CLP tn = CLP trillion (10^12). A note gives the month when an indicator lags the others.*
+*Updated automatically on 2026-10-29 from the CMF and Banco Central. CLP tn = CLP trillion (10^12). A note gives the month when an indicator lags the others.*
 <!-- latest:end -->
 
 ## Findings
@@ -74,11 +74,11 @@
   <img alt="Share of each bank's term deposits held by mutual funds, August 2026" src="docs/figures/fund-share-light.png">
 </picture>
 
-**5. The cost of funding.** The cost of term deposits is the interest paid over the last three months, annualised, over the average balance, without the UF readjustment (which follows inflation, not the policy rate). Rate cycles are found in the month-end TPM. In the 2021-22 hikes (TPM +10.75 points) the system's cost rose 0.69 points per point of TPM three months after the last hike; in the cuts of 2013-14, 2016-17 and 2019-20 the beta was 0.49 to 0.66. BancoEstado, with almost no fund money, passed on the least (0.49); BICE the most (0.83).
+**5. The cost of funding.** The cost of term deposits is the interest paid over the last three months, annualised, over the average balance, without the UF readjustment (which follows inflation, not the policy rate). Rate cycles are found in the month-end TPM. In the 2021-22 hikes (TPM +10.75 points) the system's cost rose 0.69 points per point of TPM three months after the last hike; in the 2023-25 cuts (TPM -6.75 points) it fell only 0.62 per point, so funding stayed dearer relative to the policy rate on the way down; earlier cuts (2013-14, 2016-17, 2019-20) had betas of 0.49 to 0.66. The asymmetry holds at eight of the ten banks; Falabella passed on more of the cuts (0.83) than of the hikes (0.77). BancoEstado, with almost no fund money, passed on the least in both directions (0.49 and 0.42); BICE the most of the hikes (0.83). Fund reliance goes with pass-through on the way up (correlation 0.45) much more than on the way down (0.23).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/figures/cost-dark.png">
-  <img alt="Cost of term deposits and the policy rate, 2012-2023: the cost followed the 2021-22 hikes with a beta of 0.69" src="docs/figures/cost-light.png">
+  <img alt="Cost of term deposits and the policy rate, 2012-2026: beta of 0.69 in the 2021-22 hikes and 0.62 in the 2023-25 cuts" src="docs/figures/cost-light.png">
 </picture>
 
 <picture>
@@ -94,7 +94,7 @@
 - Banco del Desarrollo (2009) leaves the data without a matched acquirer and is not folded into any bank.
 - The beta-funds correlation uses 10 banks: a signal, not an estimate.
 - Before 2012 the CMF reports interest and UF readjustment together; betas of those cycles are flagged and not compared with later ones.
-- The CMF API allows 10,000 requests a month per key and the full history used up a month's allowance; income statements after October 2023 are being completed, so the 2023-25 cutting cycle is not in the betas yet.
+- The CMF API allows 10,000 requests a month per key. A few bank-months of income statements failed to download (listed in [`bank_income_gaps.csv`](data/processed/bank_income_gaps.csv)) and are retried every month; the 3-month cost only needs the statements of its first and last month, so a single gap barely affects it.
 
 ## Data and automation
 

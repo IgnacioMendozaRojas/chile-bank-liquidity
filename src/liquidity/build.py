@@ -72,9 +72,9 @@ def _system_fund_share(sh: pd.DataFrame) -> pd.Series:
     return g["fund_deposits"] / g["term_deposits"]
 
 
-def _latest_beta(b: pd.DataFrame, lag: int = 3) -> pd.DataFrame:
-    """Betas of the most recent cycle that can be measured `lag` months after its end, interest only."""
-    x = b[(b["lag_months"] == lag) & (b["measure"] == "interest")]
+def _latest_beta(b: pd.DataFrame, direction: str = "hike", lag: int = 3) -> pd.DataFrame:
+    """Betas of the most recent hike (or cut) measurable `lag` months after its end, interest only."""
+    x = b[(b["lag_months"] == lag) & (b["measure"] == "interest") & (b["direction"] == direction)]
     return x[x["start"] == x["start"].max()]
 
 
@@ -186,28 +186,37 @@ def figures(t: dict[str, pd.DataFrame], figs: Path) -> None:
     sc = sc[sc["term_cost_measure"] == "interest"]["term_cost"]
     tpm = t["tpm"].reindex(sc.index)
     bt = t["cost_betas"]
-    hike = bt[(bt["bank"] == "System") & (bt["lag_months"] == 3) & (bt["direction"] == "hike")]
-    hike = hike[hike["measure"] == "interest"].iloc[-1]
+    hike = _latest_beta(bt, "hike").set_index("bank").loc["System"]
+    cut = _latest_beta(bt, "cut").set_index("bank")
+    cut = cut.loc["System"] if "System" in cut.index and cut.loc["System", "start"] > hike["start"] else None
+    title = f"Banks passed on {hike['beta']:.0%} of the {hike['start'][:4]}-{hike['end'][2:4]} hikes" + (
+        " to term deposits"
+        if cut is None
+        else f" but {cut['beta']:.0%} of the {cut['start'][:4]}-{cut['end'][2:4]} cuts"
+    )
     for c in charts(
-        f"Banks passed {hike['beta']:.0%} of the {hike['start'][:4]}-{hike['end'][2:4]} rate hikes "
-        "on to the cost of term deposits",
+        title,
         "Interest paid on term deposits, all banks, 3 months annualised, without UF readjustment; policy rate, %",
         f"Source: CMF income statements and balance sheets, Banco Central de Chile; {_month(sc.index[0])} to "
         f"{_month(sc.index[-1])}. Beta: change in cost over change in TPM, 3 months after the cycle. {SITE}",
     ):
         x = _x(sc.index)
-        c.line(x, tpm.values, 1, "Policy rate")
-        c.line(x, sc.values, 0, "Cost of term deposits")
-        c.span(pd.Timestamp(hike["start"]), pd.Timestamp(hike["end"]), "Hiking cycle")
-        end3 = str(pd.Period(hike["end"], "M") + 3)
-        if end3 in sc.index:
-            c.note((pd.Timestamp(end3), sc[end3]), f"beta {hike['beta']:.2f}", (25, -25))
+        above = tpm.iloc[-1] >= sc.iloc[-1]
+        c.line(x, tpm.values, 1, "Policy rate", dy=7 if above else -7)
+        c.line(x, sc.values, 0, "Cost of term deposits", dy=-7 if above else 7)
+        for cyc, label, off in ((hike, "Hikes", (25, -25)), (cut, "Cuts", (-70, -45))):
+            if cyc is None:
+                continue
+            c.span(pd.Timestamp(cyc["start"]), pd.Timestamp(cyc["end"]), label)
+            end3 = str(pd.Period(cyc["end"], "M") + 3)
+            if end3 in sc.index:
+                c.note((pd.Timestamp(end3), sc[end3]), f"beta {cyc['beta']:.2f}", off)
         c.ax.set_ylim(bottom=0)
         c.yaxis("% per year")
         c.save(figs, "cost")
 
     # 6. Pass-through against dependence on funds
-    lb = _latest_beta(bt)
+    lb = _latest_beta(bt, "hike")
     lb = lb[lb["bank"] != "System"].dropna(subset=["avg_fund_share_of_term"])
     if len(lb) > 2:
         r = lb["beta"].corr(lb["avg_fund_share_of_term"])
@@ -299,7 +308,7 @@ def latest(t: dict[str, pd.DataFrame], updated: dt.date | None = None) -> dict:
             f"Banks held CLP {m['demand_deposits_tn']['value']:.1f} trillion of demand and "
             f"CLP {m['term_deposits_tn']['value']:.1f} trillion of term deposits in {_month_name(as_of)}; mutual "
             f"funds held {m['fund_share_of_term']['value']:.0%} of the term deposits, and banks passed "
-            f"{hike['beta']:.0%} of the last rate-hiking cycle on to their cost."
+            f"{hike['beta']:.0%} of the last rate hikes on to their cost."
         ),
         "metrics": metrics,
         "figure": "docs/figures/surge-light.png",

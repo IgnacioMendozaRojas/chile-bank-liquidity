@@ -6,9 +6,9 @@
   "question": "How stable are Chilean banks' deposits, how much could leave under stress, and how fast do rate moves reach their funding cost?",
   "as_of": "2026-08",
   "frequency": "monthly",
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "source": "CMF bank balance sheets and income statements; Banco Central de Chile; CMF fund portfolios",
-  "headline": "Banks held CLP 91.5 trillion of demand and CLP 130.7 trillion of term deposits in August 2026; mutual funds held 15% of the term deposits, and banks passed 69% of the last rate-hiking cycle on to their cost.",
+  "headline": "Banks held CLP 91.5 trillion of demand and CLP 130.7 trillion of term deposits in August 2026; mutual funds held 15% of the term deposits, and banks passed 69% of the last rate hikes on to their cost.",
   "metrics": [
     {
       "id": "demand_deposits_tn",
