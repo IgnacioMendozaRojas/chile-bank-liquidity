@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "id": "bank-deposit-liquidity",
+  "repo": "chile-bank-liquidity",
+  "title": "Deposit stability and funding cost of Chilean banks",
+  "question": "How stable are Chilean banks' deposits, how much could leave under stress, and how fast do rate moves reach their funding cost?",
+  "as_of": "2026-08",
+  "frequency": "monthly",
+  "updated": "2026-10-28",
+  "source": "CMF bank balance sheets and income statements; Banco Central de Chile; CMF fund portfolios",
+  "headline": "Banks held CLP 91.5 trillion of demand and CLP 130.7 trillion of term deposits in August 2026; mutual funds held 15% of the term deposits, and banks passed 69% of the last rate-hiking cycle on to their cost.",
+  "metrics": [
+    {
+      "id": "demand_deposits_tn",
+      "label": "Demand deposits, all banks",
+      "value": 91.501,
+      "unit": "CLP tn",
+      "period": "2026-08",
+      "previous": 93.1896,
+      "change": -0.0181,
+      "change_type": "relative"
+    },
+    {
+      "id": "term_deposits_tn",
+      "label": "Term deposits, all banks",
+      "value": 130.7269,
+      "unit": "CLP tn",
+      "period": "2026-08",
+      "previous": 130.2584,
+      "change": 0.0036,
+      "change_type": "relative"
+    },
+    {
+      "id": "fund_share_of_term",
+      "label": "Share of term deposits held by mutual funds",
+      "value": 0.1459,
+      "unit": "share",
+      "period": "2026-08",
+      "previous": 0.1455,
+      "change": 0.0004,
+      "change_type": "points"
+    },
+    {
+      "id": "term_deposit_cost",
+      "label": "Cost of term deposits, all banks",
+      "value": 0.0768,
+      "unit": "share",
+      "period": "2023-10",
+      "previous": 0.0822,
+      "change": -0.0054,
+      "change_type": "points"
+    },
+    {
+      "id": "policy_rate",
+      "label": "Policy rate (TPM), month end",
+      "value": 0.045,
+      "unit": "share",
+      "period": "2026-08",
+      "previous": 0.045,
+      "change": 0.0,
+      "change_type": "points"
+    }
+  ],
+  "figure": "docs/figures/surge-light.png"
+}

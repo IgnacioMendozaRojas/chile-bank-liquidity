@@ -168,6 +168,14 @@ def cmd_cost(out: Path) -> int:
     return 0
 
 
+def cmd_build(out: Path) -> int:
+    from . import build
+
+    data = build.run(out)
+    _notice("notice", "Build", data["headline"])
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="liquidity")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -182,11 +190,13 @@ def main(argv=None) -> int:
     fu.add_argument("--out", type=Path, default=Path("data/processed"))
     c = sub.add_parser("cost", help="cost of deposits and deposit beta by rate cycle")
     c.add_argument("--out", type=Path, default=Path("data/processed"))
+    b = sub.add_parser("build", help="figures, latest.json and the README table")
+    b.add_argument("--out", type=Path, default=Path("data/processed"))
     a = p.parse_args(argv)
     cmds = {"data": cmd_data, "deposits": cmd_deposits, "forecast": cmd_forecast, "funding": cmd_funding}
     if a.cmd == "data":
         return cmd_data(a.out, a.max_months)
-    return {**cmds, "cost": cmd_cost}[a.cmd](a.out)
+    return {**cmds, "cost": cmd_cost, "build": cmd_build}[a.cmd](a.out)
 
 
 if __name__ == "__main__":
