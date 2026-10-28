@@ -10,6 +10,10 @@ import requests
 BASE = "https://api.cmfchile.cl/api-sbifv3/recursos_api"
 
 
+class QuotaExceeded(RuntimeError):
+    """HTTP 420: the API key has used its request allowance; retrying only wastes the run."""
+
+
 class CmfApi:
     def __init__(self, key: str | None = None, pause: float = 0.3, retries: int = 4, session=None):
         # the key is stripped: a pasted secret often carries a trailing newline
@@ -23,6 +27,8 @@ class CmfApi:
         for attempt in range(1, self.retries + 1):
             try:
                 r = self.session.get(f"{BASE}/{path}", params={"apikey": self.key, "formato": "json"}, timeout=60)
+                if r.status_code == 420:
+                    raise QuotaExceeded(f"CMF request limit reached at {path}")
                 r.raise_for_status()
                 js = r.json()  # an HTML error page raises here
                 time.sleep(self.pause)

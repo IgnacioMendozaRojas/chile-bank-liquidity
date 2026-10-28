@@ -100,3 +100,26 @@ def test_a_bank_that_failed_is_retried_on_the_next_run(tmp_path):
     FlakyApi.broken = False
     assert data.download(path, FlakyApi(), (2008, 1), (2008, 1), log=lambda *_: None) == ["2008-01"]
     assert set(data.read(path)["code"]) == {"001", "016"}
+
+
+def test_request_limit_stops_the_run_and_keeps_the_month_pending(tmp_path):
+    from liquidity.cmf import QuotaExceeded
+
+    class LimitedApi:
+        left = 3
+
+        def institutions(self, y, m, kind="balances"):
+            return {"001": "A", "016": "B"}
+
+        def balance(self, y, m, code):
+            LimitedApi.left -= 1
+            if LimitedApi.left < 0:
+                raise QuotaExceeded("420")
+            return [{"CodigoCuenta": "2100000", "MonedaTotal": "1000,00"}]
+
+    path = tmp_path / "b.csv"
+    assert data.download(path, LimitedApi(), (2008, 1), (2008, 3), log=lambda *_: None) == ["2008-01", "2008-02"]
+    assert (tmp_path / "b_gaps.csv").read_text().split() == ["period", "2008-02"]
+    LimitedApi.left = 10
+    assert data.download(path, LimitedApi(), (2008, 1), (2008, 3), log=lambda *_: None) == ["2008-02", "2008-03"]
+    assert len(data.read(path).query("item == 'demand_deposits'")) == 6
