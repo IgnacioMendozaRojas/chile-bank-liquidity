@@ -37,7 +37,9 @@ def read(path: Path) -> pd.DataFrame:
     return pd.read_csv(path, dtype={"code": str, "period": str})
 
 
-def download(path: Path, api: CmfApi, start=START, end=None, log=print, kind: str = "balances") -> list[str]:
+def download(
+    path: Path, api: CmfApi, start=START, end=None, log=print, kind: str = "balances", max_months: int | None = None
+) -> list[str]:
     """Add every missing bank-month between start and end; returns the months with new rows.
 
     kind "balances" stores balance-sheet items; "resultados" income-statement items.
@@ -57,6 +59,9 @@ def download(path: Path, api: CmfApi, start=START, end=None, log=print, kind: st
         label = f"{y}-{m:02d}"
         if label in complete:
             continue
+        if max_months is not None and len(added) >= max_months:
+            missing |= {g for g in gaps if g >= label}
+            break
         quota = False
         rows, failed = [], []
         try:

@@ -27,16 +27,19 @@ def _log(title: str):
     return log
 
 
-def cmd_data(out: Path) -> int:
+def cmd_data(out: Path, max_months: int | None = None) -> int:
     out.mkdir(parents=True, exist_ok=True)
     added = data.download(
         out / "bank_balances.csv",
         CmfApi(),
         log=_log("CMF"),
+        max_months=max_months,
     )
     _notice("notice", "CMF", f"{len(added)} months added" + (f" ({added[0]} to {added[-1]})" if added else ""))
     try:
-        inc = data.download(out / "bank_income.csv", CmfApi(), kind="resultados", log=_log("CMF income"))
+        inc = data.download(
+            out / "bank_income.csv", CmfApi(), kind="resultados", log=_log("CMF income"), max_months=max_months
+        )
         _notice("notice", "CMF income", f"{len(inc)} months added" + (f" ({inc[0]} to {inc[-1]})" if inc else ""))
     except Exception as exc:  # noqa: BLE001 - income statements must not stop the balance-sheet update
         _notice("warning", "CMF income", repr(exc)[:300])
@@ -170,6 +173,7 @@ def main(argv=None) -> int:
     sub = p.add_subparsers(dest="cmd", required=True)
     d = sub.add_parser("data", help="download new months and run the data checks")
     d.add_argument("--out", type=Path, default=Path("data/processed"))
+    d.add_argument("--max-months", type=int, default=None, help="add at most this many months per file")
     dep = sub.add_parser("deposits", help="outflows, stable core and decay from the downloaded balances")
     dep.add_argument("--out", type=Path, default=Path("data/processed"))
     f = sub.add_parser("forecast", help="SARIMAX with the policy rate vs benchmarks, out of sample")
@@ -180,6 +184,8 @@ def main(argv=None) -> int:
     c.add_argument("--out", type=Path, default=Path("data/processed"))
     a = p.parse_args(argv)
     cmds = {"data": cmd_data, "deposits": cmd_deposits, "forecast": cmd_forecast, "funding": cmd_funding}
+    if a.cmd == "data":
+        return cmd_data(a.out, a.max_months)
     return {**cmds, "cost": cmd_cost}[a.cmd](a.out)
 
 

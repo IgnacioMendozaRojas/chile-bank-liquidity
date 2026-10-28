@@ -123,3 +123,19 @@ def test_request_limit_stops_the_run_and_keeps_the_month_pending(tmp_path):
     LimitedApi.left = 10
     assert data.download(path, LimitedApi(), (2008, 1), (2008, 3), log=lambda *_: None) == ["2008-02", "2008-03"]
     assert len(data.read(path).query("item == 'demand_deposits'")) == 6
+
+
+def test_max_months_limits_a_run(tmp_path):
+    class Api:
+        def institutions(self, y, m, kind="balances"):
+            return {"001": "A"}
+
+        def balance(self, y, m, code):
+            return [{"CodigoCuenta": "2100000", "MonedaTotal": "1000,00"}]
+
+    path = tmp_path / "b.csv"
+    assert data.download(path, Api(), (2008, 1), (2008, 6), log=lambda *_: None, max_months=3) == [
+        "2008-01",
+        "2008-02",
+        "2008-03",
+    ]

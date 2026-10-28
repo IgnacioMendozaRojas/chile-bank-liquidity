@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: "37 7 20 * *"
   workflow_dispatch:
+    inputs:
+      max_months:
+        description: "Add at most this many months per file (empty = all)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -30,7 +35,8 @@ jobs:
           CMF_API_KEY: ${{ secrets.CMF_API_KEY }}
           BCCH_USER: ${{ secrets.BCCH_USER }}
           BCCH_PASS: ${{ secrets.BCCH_PASS }}
-        run: timeout 320m liquidity data
+          MAX: ${{ inputs.max_months }}
+        run: timeout 320m liquidity data ${MAX:+--max-months $MAX}
       - name: Commit progress
         if: always()
         run: |
