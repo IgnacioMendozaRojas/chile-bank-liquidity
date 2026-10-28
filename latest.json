@@ -43,11 +43,11 @@
     {
       "id": "term_deposit_cost",
       "label": "Cost of term deposits, all banks",
-      "value": 0.0768,
+      "value": 0.0427,
       "unit": "share",
-      "period": "2023-10",
-      "previous": 0.0822,
-      "change": -0.0054,
+      "period": "2026-08",
+      "previous": 0.0424,
+      "change": 0.0002,
       "change_type": "points"
     },
     {

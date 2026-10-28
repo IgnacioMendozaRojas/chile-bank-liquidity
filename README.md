@@ -43,7 +43,7 @@
 | Demand deposits, all banks | CLP 91.5 tn | CLP 93.2 tn | -1.8% |  |
 | Term deposits, all banks | CLP 130.7 tn | CLP 130.3 tn | +0.4% |  |
 | Share of term deposits held by mutual funds | 14.6% | 14.5% | +0.0 pp |  |
-| Cost of term deposits, all banks | 7.7% | 8.2% | -0.5 pp | latest is October 2023 |
+| Cost of term deposits, all banks | 4.3% | 4.2% | +0.0 pp |  |
 | Policy rate (TPM), month end | 4.5% | 4.5% | +0.0 pp |  |
 
 *Updated automatically on 2026-10-28 from the CMF and Banco Central. CLP tn = CLP trillion (10^12). A note gives the month when an indicator lags the others.*
