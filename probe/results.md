@@ -1,76 +1,36 @@
-# CMF monthly text files probe
+# listing probe: HTTP 200, 1296130 chars
+297 zip links; first ['articles-113894_recurso_1.zip?ts=1790773409', 'articles-113067_recurso_1.zip?ts=1787944720', 'articles-112240_recurso_1.zip?ts=1785448346']; last ['articles-43071_recurso_1.zip?ts=1608668888', 'articles-43070_recurso_1.zip?ts=1608668888', 'articles-43069_recurso_1.zip?ts=1608668887']
 
-## 2023-07: HTTP 200, 308347 bytes, application/zip
-100 files, e.g. ['202307/', '202307/b1202307001.txt', '202307/b1202307009.txt', '202307/b1202307012.txt', '202307/b1202307014.txt', '202307/b1202307016.txt', '202307/b1202307028.txt', '202307/b1202307031.txt', '202307/b1202307037.txt', '202307/b1202307039.txt', '202307/b1202307041.txt', '202307/b1202307049.txt']
-- 202307/b1202307001.txt: 710 lines; first: ['001\tBANCO DE CHILE', '100000000\t 27754939447421,00\t 20227903147655,00\t 0137359849797,00\t 6218375157310,00']
-- 202307/b1202307039.txt: 710 lines; first: ['039\tBANCO ITAÚ CHILE', '100000000\t 16756308573990,00\t 11984693574893,00\t 0000520100842,00\t 13507105028088,00']
-- 202307/b2202307001.txt: 8 lines; first: ['001\tBANCO DE CHILE', '143100100\t 0000000000000,00\t 0000000000000,00\t 0000000000000,00\t 0000000000000,00']
-- 202307/b2202307039.txt: 8 lines; first: ['039\tBANCO ITAÚ CHILE', '143100100\t 0000000000000,00\t 0000000000000,00\t 0000000000000,00\t 0000000000000,00']
-- 202307/c1202307001.txt: 451 lines; first: ['001\tBANCO DE CHILE', '811000000\t 1091732082669,00\t']
-- 202307/c1202307039.txt: 451 lines; first: ['039\tBANCO ITAÚ CHILE', '811000000\t 1738719898181,00\t']
-- 202307/c2202307001.txt: 8 lines; first: ['001\tBANCO DE CHILE', '857000000\t 0497352453092,00\t']
-- 202307/c2202307039.txt: 8 lines; first: ['039\tBANCO ITAÚ CHILE', '857000000\t 0417369880179,00\t']
-- 202307/r1202307001.txt: 1230 lines; first: ['001\tBANCO DE CHILE', '411000000\t 1840706231135,00\t']
-    412000000	-0979014326659,00
-    412150000	-0000823918707,00
-    412180000	-0798472059599,00
-    416000000	-0283419661642,00
-    416150000	-0007520318444,00
-    416180000	-0057219127760,00
-- 202307/r1202307039.txt: 1230 lines; first: ['039\tBANCO ITAÚ CHILE', '411000000\t 1661655793646,00\t']
-    412000000	-1063349517343,00
-    412150000	-0066612217991,00
-    412180000	-0692635394938,00
-    416000000	-0222103397316,00
-    416150000	-0000725454570,00
-    416180000	-0028140271682,00
+## 'julio 2023' at 193773
+```
+gar'--><!--template subtemplate::  #subject='1'--><!--template subtemplate::  #pvids='0'--><!--template subtemplate::  #todos='0'--><!-- bid = 7631--><!-- xml = file:///home/static/www/cache/binaries/boxes-7631_template.xml--><!-- xsl = file:///home/engine/data/boxes/525/76/7631.xsl--><!-- template abierta = true--><!-- template bloqueada = false--><article class="card ntg-recuadro-documento articulo cid-528 aid-72974" data-permalink="w4-article-72974.html"><div class="card-body articulo cid-528 aid-72974"><!-- propertyvalue atribute pnid=912-->
+          <a href="articles-72974_recurso_1.zip?ts=1693491504" class="card-img stretched-link" target="_blank" rel="noopener" aria-label="Descargar Julio 2023 (zip, se abre en nueva ventana)"><span class="bi bi-filetype-zip" aria-hidden="true"></span></a>
+        <div class="w-100 articulo cid-528 aid-72974"><h3 class="h5 card-title aid-72974 cid-528 ntg-texto-subrayado articulo cid-528 aid-72974"><a href="w4-article-72974.html" class=" articulo cid-528 aid-72974"> Balance y Estado de Situación Bancos julio 2023 </a></h3><!-- propertyvalue atribute pnid=582--><time class="fecha small property-value cid-525 pnid-582  iso8601-20230731T0000000400" datetime="2023-07-31T00:00:00-0400">  31/07/2023 </time><!--elemento_bloque_condicional--><!--len = 0-->
+          <p class="card-text small text-secondary binary-article cid-528 aid-72974 binary
+```
 
-## 2025-11: HTTP 200, 453012 bytes, application/zip
-99 files, e.g. ['b1202511001.txt', 'b1202511009.txt', 'b1202511012.txt', 'b1202511014.txt', 'b1202511016.txt', 'b1202511028.txt', 'b1202511031.txt', 'b1202511037.txt', 'b1202511039.txt', 'b1202511041.txt', 'b1202511051.txt', 'b1202511053.txt']
-- b1202511001.txt: 710 lines; first: ['001\tBANCO DE CHILE', '100000000\t025978264895297\t022822980854133\t000185228681378\t004842800799625']
-- b1202511039.txt: 710 lines; first: ['039\tBANCO ITAU CHILE', '100000000\t015950512557828\t012552152508726\t000008533573433\t015149115546505']
-- b2202511001.txt: 9 lines; first: ['001\tBANCO DE CHILE', '143000000\t000000000000000\t000000000000000\t000000000000000\t000332490571519']
-- b2202511039.txt: 9 lines; first: ['039\tBANCO ITAU CHILE', '143000000\t000000000000000\t000000000000000\t000000000000000\t000114359130665']
-- c1202511001.txt: 452 lines; first: ['001\tBANCO DE CHILE', '811000000\t001409525217651']
-- c1202511039.txt: 452 lines; first: ['039\tBANCO ITAU CHILE', '811000000\t001987949029322']
-- c2202511001.txt: 8 lines; first: ['001\tBANCO DE CHILE', '857000000\t000645130595737']
-- c2202511039.txt: 8 lines; first: ['039\tBANCO ITAU CHILE', '857000000\t000499979735560']
-- r1202511001.txt: 1230 lines; first: ['001\tBANCO DE CHILE', '411000000\t002483222134949']
-    412000000	-00889047917302
-    412150000	-00000948738392
-    412180000	-00580606880971
-    416000000	-00345649499918
-    416150000	-00015532739851
-    416180000	-00052677870159
-- r1202511039.txt: 1230 lines; first: ['039\tBANCO ITAU CHILE', '411000000\t002282395410343']
-    412000000	-01254853716284
-    412150000	-00096359412158
-    412180000	-00711676193816
-    416000000	-00266914267224
-    416150000	-00001756617409
-    416180000	-00015528758236
+## 'noviembre 2025' at 124276
+```
+--><!--template subtemplate::  #subject='1'--><!--template subtemplate::  #pvids='0'--><!--template subtemplate::  #todos='0'--><!-- bid = 7631--><!-- xml = file:///home/static/www/cache/binaries/boxes-7631_template.xml--><!-- xsl = file:///home/engine/data/boxes/525/76/7631.xsl--><!-- template abierta = true--><!-- template bloqueada = false--><article class="card ntg-recuadro-documento articulo cid-528 aid-102413" data-permalink="w4-article-102413.html"><div class="card-body articulo cid-528 aid-102413"><!-- propertyvalue atribute pnid=912-->
+          <a href="articles-102413_recurso_1.zip?ts=1767182952" class="card-img stretched-link" target="_blank" rel="noopener" aria-label="Descargar Noviembre 2025 (zip, se abre en nueva ventana)"><span class="bi bi-filetype-zip" aria-hidden="true"></span></a>
+        <div class="w-100 articulo cid-528 aid-102413"><h3 class="h5 card-title aid-102413 cid-528 ntg-texto-subrayado articulo cid-528 aid-102413"><a href="w4-article-102413.html" class=" articulo cid-528 aid-102413"> Balance y Estado de Situación Bancos noviembre 2025 </a></h3><!-- propertyvalue atribute pnid=582--><time class="fecha small property-value cid-525 pnid-582  iso8601-20251130T0000000300" datetime="2025-11-30T00:00:00-0300">  30/11/2025 </time><!--elemento_bloque_condicional--><!--len = 0-->
+          <p class="card-text small text-secondary binary-article cid-528 aid
+```
 
-## 2026-08: HTTP 200, 454875 bytes, application/zip
-99 files, e.g. ['b1202608001.txt', 'b1202608009.txt', 'b1202608012.txt', 'b1202608014.txt', 'b1202608016.txt', 'b1202608028.txt', 'b1202608031.txt', 'b1202608037.txt', 'b1202608039.txt', 'b1202608041.txt', 'b1202608051.txt', 'b1202608053.txt']
-- b1202608001.txt: 710 lines; first: ['001\tBANCO DE CHILE', '100000000\t026797948623921\t022999592746840\t000200540068266\t005805924575839']
-- b1202608039.txt: 710 lines; first: ['039\tBANCO ITAU CHILE', '100000000\t018206064649566\t014013231198216\t000016603678154\t016987914838380']
-- b2202608001.txt: 9 lines; first: ['001\tBANCO DE CHILE', '143000000\t000199928000619\t000000000000000\t000000000000000\t000329367923279']
-- b2202608039.txt: 9 lines; first: ['039\tBANCO ITAU CHILE', '143000000\t000000000000000\t000000000000000\t000000000000000\t000118160621576']
-- c1202608001.txt: 459 lines; first: ['001\tBANCO DE CHILE', '811000000\t001513224771421']
-- c1202608039.txt: 459 lines; first: ['039\tBANCO ITAU CHILE', '811000000\t001850559812349']
-- c2202608001.txt: 8 lines; first: ['001\tBANCO DE CHILE', '857000000\t000673991206290']
-- c2202608039.txt: 8 lines; first: ['039\tBANCO ITAU CHILE', '857000000\t000471463439362']
-- r1202608001.txt: 1230 lines; first: ['001\tBANCO DE CHILE', '411000000\t001850110655859']
-    412000000	-00629377011995
-    412150000	-00000863949192
-    412180000	-00392340662478
-    416000000	-00320056111144
-    416150000	-00011583334792
-    416180000	-00040557779462
-- r1202608039.txt: 1230 lines; first: ['039\tBANCO ITAU CHILE', '411000000\t001798639536137']
-    412000000	-01035320378679
-    412150000	-00091519621548
-    412180000	-00552126941835
-    416000000	-00240227233128
-    416150000	-00001528167517
-    416180000	-00020391492278
+## 'abril 2016' at 409487
+```
+gar'--><!--template subtemplate::  #subject='1'--><!--template subtemplate::  #pvids='0'--><!--template subtemplate::  #todos='0'--><!-- bid = 7631--><!-- xml = file:///home/static/www/cache/binaries/boxes-7631_template.xml--><!-- xsl = file:///home/engine/data/boxes/525/76/7631.xsl--><!-- template abierta = true--><!-- template bloqueada = false--><article class="card ntg-recuadro-documento articulo cid-528 aid-43021" data-permalink="w4-article-43021.html"><div class="card-body articulo cid-528 aid-43021"><!-- propertyvalue atribute pnid=912-->
+          <a href="articles-43021_recurso_1.zip?ts=1608668862" class="card-img stretched-link" target="_blank" rel="noopener" aria-label="Descargar abril 2016 (zip, se abre en nueva ventana)"><span class="bi bi-filetype-zip" aria-hidden="true"></span></a>
+        <div class="w-100 articulo cid-528 aid-43021"><h3 class="h5 card-title aid-43021 cid-528 ntg-texto-subrayado articulo cid-528 aid-43021"><a href="w4-article-43021.html" class=" articulo cid-528 aid-43021"> Balance y Estado de Situación Bancos abril 2016 </a></h3><!-- propertyvalue atribute pnid=582--><time class="fecha small property-value cid-525 pnid-582  iso8601-20160430T0000000300" datetime="2016-04-30T00:00:00-0300">  30/04/2016 </time><!--elemento_bloque_condicional--><!--len = 0-->
+          <p class="card-text small text-secondary binary-article cid-528 aid-43021 binary
+```
+
+## 'diciembre 2008' at 627699
+```
+gar'--><!--template subtemplate::  #subject='1'--><!--template subtemplate::  #pvids='0'--><!--template subtemplate::  #todos='0'--><!-- bid = 7631--><!-- xml = file:///home/static/www/cache/binaries/boxes-7631_template.xml--><!-- xsl = file:///home/engine/data/boxes/525/76/7631.xsl--><!-- template abierta = true--><!-- template bloqueada = false--><article class="card ntg-recuadro-documento articulo cid-528 aid-42933" data-permalink="w4-article-42933.html"><div class="card-body articulo cid-528 aid-42933"><!-- propertyvalue atribute pnid=912-->
+          <a href="articles-42933_recurso_1.zip?ts=1608668816" class="card-img stretched-link" target="_blank" rel="noopener" aria-label="Descargar diciembre 2008 (zip, se abre en nueva ventana)"><span class="bi bi-filetype-zip" aria-hidden="true"></span></a>
+        <div class="w-100 articulo cid-528 aid-42933"><h3 class="h5 card-title aid-42933 cid-528 ntg-texto-subrayado articulo cid-528 aid-42933"><a href="w4-article-42933.html" class=" articulo cid-528 aid-42933"> Estados de Situación Mensual - Nueva versión diciembre 2008 </a></h3><!-- propertyvalue atribute pnid=582--><time class="fecha small property-value cid-525 pnid-582  iso8601-20081231T0000000300" datetime="2008-12-31T00:00:00-0300">  31/12/2008 </time><!--elemento_bloque_condicional--><!--len = 0-->
+          <p class="card-text small text-secondary binary-article cid-528 
+```
+
+pagination-like links: []
