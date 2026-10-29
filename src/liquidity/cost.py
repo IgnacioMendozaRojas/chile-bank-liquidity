@@ -23,6 +23,7 @@ import pandas as pd
 from . import checks
 
 WINDOW = 3  # months of interest expense in the cost
+COVERAGE = 0.98  # share of deposits that must be reported for an all-banks figure
 LAGS = (0, 3, 6)
 
 
@@ -71,6 +72,8 @@ def cost_series(sums: pd.DataFrame, balances: pd.DataFrame, codes: dict[str, str
                 avg, exp, adj = avg[[sel]], exp[[sel]], adj[[sel]]
             ok = exp.notna() & avg.notna()
             base = avg.where(ok).sum(axis=1, min_count=1)
+            # all banks together: left blank when banks without a statement hold over 2% of deposits
+            base = base.where(base >= COVERAGE * avg.sum(axis=1, min_count=1))
             split = (adj.notna() | ~ok).all(axis=1)  # every bank in the sum reports the readjustment
             cols[f"{k}_expense"] = exp.where(ok).sum(axis=1, min_count=1) * 12 / WINDOW / base * 100
             cols[f"{k}_readjust"] = (adj.where(ok).sum(axis=1) * 12 / WINDOW / base * 100).where(split & ok.any(axis=1))

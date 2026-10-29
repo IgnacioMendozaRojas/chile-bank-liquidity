@@ -38,7 +38,14 @@ def read(path: Path) -> pd.DataFrame:
 
 
 def download(
-    path: Path, api: CmfApi, start=START, end=None, log=print, kind: str = "balances", max_months: int | None = None
+    path: Path,
+    api: CmfApi,
+    start=START,
+    end=None,
+    log=print,
+    kind: str = "balances",
+    max_months: int | None = None,
+    fallback=None,
 ) -> list[str]:
     """Add every missing bank-month between start and end; returns the months with new rows.
 
@@ -46,6 +53,9 @@ def download(
     Months with a bank left out are listed in <file>_gaps.csv and asked again on the next
     run; complete months are not requested again. A month not yet published (404) or the
     API request limit (420) ends the run; other server errors skip that month or bank.
+    `fallback(period, code)`, if given, is tried for a bank the API fails to serve (the CMF
+    monthly text files, for income statements). System aggregates (codes 900+) are not needed
+    and are never retried.
     """
     fetch, extract = (api.balance, accounts.extract) if kind == "balances" else (api.results, accounts.extract_income)
     have = read(path)
@@ -86,8 +96,15 @@ def download(
                 quota = True
                 break
             except Exception:  # noqa: BLE001 - one bank's server error must not stop the history
-                failed.append(code)
-                continue
+                if fallback is None:
+                    failed.append(code)
+                    continue
+                try:
+                    values = extract(fallback(label, code), y, m)
+                    log(f"{label}: {code} read from the CMF monthly files (API error)")
+                except Exception:  # noqa: BLE001
+                    failed.append(code)
+                    continue
             rows += [(label, code, name, item, round(v, 4)) for item, v in values.items()]
         if rows:
             pd.DataFrame(rows, columns=COLUMNS).to_csv(path, mode="a", header=not Path(path).exists(), index=False)
@@ -95,7 +112,7 @@ def download(
             log(f"{label}: {len(rows) // per_row} banks")
         if failed:
             log(f"{label}: no data for {failed} after retries (left out)")
-        if failed or quota:
+        if quota or any(int(c) < 900 for c in failed if c.isdigit()):
             missing.add(label)
         if quota:
             missing |= {g for g in gaps if g > label}

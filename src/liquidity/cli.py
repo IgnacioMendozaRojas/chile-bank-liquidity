@@ -9,6 +9,7 @@ from pathlib import Path
 
 from . import checks, data
 from .cmf import CmfApi
+from .textfiles import MonthlyFiles
 
 
 def _notice(level: str, title: str, msg: str) -> None:
@@ -17,7 +18,7 @@ def _notice(level: str, title: str, msg: str) -> None:
 
 def _log(title: str):
     def log(msg: str) -> None:
-        if "no data for" in msg:
+        if "no data for" in msg or "monthly files" in msg:
             _notice("warning", title, msg)
         elif "not available" in msg:
             _notice("notice", title, msg)
@@ -39,7 +40,12 @@ def cmd_data(out: Path, max_months: int | None = None) -> int:
     _notice("notice", "CMF", f"{len(added)} months added" + (f" ({added[0]} to {added[-1]})" if added else ""))
     try:
         inc = data.download(
-            out / "bank_income.csv", api, kind="resultados", log=_log("CMF income"), max_months=max_months
+            out / "bank_income.csv",
+            api,
+            kind="resultados",
+            log=_log("CMF income"),
+            max_months=max_months,
+            fallback=MonthlyFiles().results,
         )
         _notice("notice", "CMF income", f"{len(inc)} months added" + (f" ({inc[0]} to {inc[-1]})" if inc else ""))
     except Exception as exc:  # noqa: BLE001 - income statements must not stop the balance-sheet update
