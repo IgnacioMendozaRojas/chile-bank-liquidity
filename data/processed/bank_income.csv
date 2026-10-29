@@ -25344,3 +25344,28 @@ period,code,name,item,clp_bn
 2026-08,053,BANCO RIPLEY,demand_expense,0.0243
 2026-08,053,BANCO RIPLEY,demand_readjust,-0.0
 2026-08,053,BANCO RIPLEY,interest_expense,33.8471
+2023-07,001,BANCO DE CHILE,term_expense,855.6912
+2023-07,001,BANCO DE CHILE,term_readjust,57.2191
+2023-07,001,BANCO DE CHILE,demand_expense,8.3442
+2023-07,001,BANCO DE CHILE,demand_readjust,7.5203
+2023-07,001,BANCO DE CHILE,interest_expense,1262.434
+2023-07,999,999,term_expense,5674.6849
+2023-07,999,999,term_readjust,372.5171
+2023-07,999,999,demand_expense,362.4578
+2023-07,999,999,demand_readjust,24.4476
+2023-07,999,999,interest_expense,10170.0466
+2024-02,999,999,term_expense,1294.8353
+2024-02,999,999,term_readjust,18.6664
+2024-02,999,999,demand_expense,135.8873
+2024-02,999,999,demand_readjust,1.876
+2024-02,999,999,interest_expense,2277.1374
+2025-11,039,ITAÚ CHILE,term_expense,727.205
+2025-11,039,ITAÚ CHILE,term_readjust,15.5288
+2025-11,039,ITAÚ CHILE,demand_expense,98.116
+2025-11,039,ITAÚ CHILE,demand_readjust,1.7566
+2025-11,039,ITAÚ CHILE,interest_expense,1521.768
+2026-03,999,999,term_expense,1308.0372
+2026-03,999,999,term_readjust,30.4252
+2026-03,999,999,demand_expense,166.5311
+2026-03,999,999,demand_readjust,4.1475
+2026-03,999,999,interest_expense,2543.0445
