@@ -61,6 +61,7 @@ def load(out: Path) -> dict[str, pd.DataFrame]:
         "funding_run_off",
         "cost_series",
         "cost_betas",
+        "cost_asymmetry",
     ]
     t = {n: pd.read_csv(out / f"{n}.csv", dtype={"code": str, "period": str}) for n in names}
     t["tpm"] = month_end_rate(pd.read_csv(out / "bcch_rates_daily.csv", index_col=0))
@@ -189,11 +190,8 @@ def figures(t: dict[str, pd.DataFrame], figs: Path) -> None:
     hike = _latest_beta(bt, "hike").set_index("bank").loc["System"]
     cut = _latest_beta(bt, "cut").set_index("bank")
     cut = cut.loc["System"] if "System" in cut.index and cut.loc["System", "start"] > hike["start"] else None
-    title = f"Banks passed on {hike['beta']:.0%} of the {hike['start'][:4]}-{hike['end'][2:4]} hikes" + (
-        " to term deposits"
-        if cut is None
-        else f" but {cut['beta']:.0%} of the {cut['start'][:4]}-{cut['end'][2:4]} cuts"
-    )
+    asym = t["cost_asymmetry"].set_index("lag_months")
+    title, gap_note = asymmetry_title(asym)
     for c in charts(
         title,
         "Interest paid on term deposits, all banks, 3 months annualised, without UF readjustment; policy rate, %",
@@ -211,6 +209,8 @@ def figures(t: dict[str, pd.DataFrame], figs: Path) -> None:
             end3 = str(pd.Period(cyc["end"], "M") + 3)
             if end3 in sc.index:
                 c.note((pd.Timestamp(end3), sc[end3]), f"beta {cyc['beta']:.2f}", off)
+        if gap_note:
+            c.ax.text(0.02, 0.97, gap_note, transform=c.ax.transAxes, va="top", fontsize=8.5, color=c.t["text"])
         c.ax.set_ylim(bottom=0)
         c.yaxis("% per year")
         c.save(figs, "cost")
@@ -249,6 +249,33 @@ def figures(t: dict[str, pd.DataFrame], figs: Path) -> None:
             c.xlabel("Average share of term deposits held by mutual funds")
             c.yaxis("Deposit beta")
             c.save(figs, "beta-vs-funds")
+
+
+def _ci(r) -> str:
+    return f"{r['mean_gap']:+.2f} (95% CI {r['ci_low']:+.2f} to {r['ci_high']:+.2f})"
+
+
+def asymmetry_title(asym: pd.DataFrame) -> tuple[str, str]:
+    """Short title and an on-chart note from the bank-level hike-minus-cut gap in beta."""
+    if not {0, 3}.issubset(asym.index):
+        return "Banks passed on most of each rate cycle to term deposits", ""
+
+    def sig(r):
+        return r["ci_low"] > 0 or r["ci_high"] < 0
+
+    at_end, later = asym.loc[0], asym.loc[3]
+    if sig(later) and not sig(at_end):
+        title = "Deposit costs kept rising after the last hike but barely fell after the last cut"
+    elif sig(later):
+        title = "Banks passed on more of the rate hikes than of the cuts"
+    else:
+        title = "Banks passed on rate hikes and cuts to deposits alike"
+    note = (
+        f"Hike minus cut beta, {int(later['banks'])} banks:\n"
+        f"at the last move {_ci(at_end)}\n"
+        f"3 months later {_ci(later)}"
+    )
+    return title, note
 
 
 # ── latest.json and README ────────────────────────────────────────────────
@@ -307,10 +334,15 @@ def latest(t: dict[str, pd.DataFrame], updated: dt.date | None = None) -> dict:
         "headline": (
             f"Banks held CLP {m['demand_deposits_tn']['value']:.1f} trillion of demand and "
             f"CLP {m['term_deposits_tn']['value']:.1f} trillion of term deposits in {_month_name(as_of)}; mutual "
-            f"funds held {m['fund_share_of_term']['value']:.0%} of the term deposits, and banks passed "
-            f"{hike['beta']:.0%} of the last rate hikes on to their cost."
+            f"funds held {m['fund_share_of_term']['value']:.0%} of the term deposits. "
+            + asymmetry_title(t["cost_asymmetry"].set_index("lag_months"))[0]
+            + f" (system beta {hike['beta']:.2f} for the hikes, 3 months after)."
         ),
         "metrics": metrics,
+        "deposit_beta_asymmetry": [
+            {k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items()}
+            for r in t["cost_asymmetry"].to_dict("records")
+        ],
         "figure": "docs/figures/surge-light.png",
     }
 

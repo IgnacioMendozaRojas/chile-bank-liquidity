@@ -164,6 +164,16 @@ def cmd_cost(out: Path) -> int:
     avg = shares.groupby("code")["fund_share_of_term"].mean()
     b["avg_fund_share_of_term"] = b["bank"].map({n: avg.get(c) for c, n in top.items()})
     b.round(4).to_csv(out / "cost_betas.csv", index=False)
+    asym = cost.asymmetry(b)
+    asym.round(4).to_csv(out / "cost_asymmetry.csv", index=False)
+    for _, r in asym.iterrows():
+        _notice(
+            "notice",
+            f"Asymmetry, {int(r['lag_months'])} months after",
+            f"hike minus cut beta, mean over {int(r['banks'])} banks {r['mean_gap']:+.3f} "
+            f"(95% CI {r['ci_low']:+.3f} to {r['ci_high']:+.3f}, t-test p {r['t_p_value']:.3f}); "
+            f"{int(r['banks_hike_above_cut'])} of {int(r['banks'])} banks positive",
+        )
     sys_ = b[(b["bank"] == "System") & (b["lag_months"] == 3)]
     for _, r in sys_.iterrows():
         _notice("notice", f"Beta {r['cycle']}", f"system {r['beta']:.2f} ({r['measure']}), TPM {r['tpm_change']:+.2f}")

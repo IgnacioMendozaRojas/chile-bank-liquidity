@@ -153,3 +153,48 @@ def betas(costs: pd.DataFrame, tpm: pd.Series, cycle_list) -> pd.DataFrame:
     if not out.empty:
         out["beta"] = out["cost_change"] / out["tpm_change"]
     return out
+
+
+def asymmetry(b: pd.DataFrame, lags=LAGS, n_boot: int = 10_000, seed: int = 0) -> pd.DataFrame:
+    """Is pass-through larger in the last hikes than in the cuts that followed? Bank by bank.
+
+    For each bank the gap is beta(hikes) - beta(cuts) for the two most recent cycles measured
+    on interest only. The all-banks figure is one number per cycle and has no sampling error to
+    speak of; the question is whether banks, taken one by one, pass on hikes more than cuts.
+    Inference resamples banks (paired bootstrap of the mean gap) and adds a t-test and the
+    count of banks with a positive gap. With ten banks this is evidence across banks, not a
+    test of the system figure.
+    """
+    from scipy import stats
+
+    x = b[(b["measure"] == "interest") & (b["bank"] != "System")]
+    rows = []
+    for lag in lags:
+        y = x[x["lag_months"] == lag]
+        last = {d: y[y["direction"] == d]["start"].max() for d in ("hike", "cut")}
+        if any(pd.isna(v) for v in last.values()) or last["cut"] < last["hike"]:
+            continue
+        w = y[y["start"].isin(last.values())].pivot_table(index="bank", columns="direction", values="beta")
+        gap = (w["hike"] - w["cut"]).dropna()
+        if len(gap) < 3:
+            continue
+        rng = np.random.default_rng(seed)
+        boot = gap.to_numpy()[rng.integers(0, len(gap), (n_boot, len(gap)))].mean(axis=1)
+        system = b[(b["bank"] == "System") & (b["lag_months"] == lag) & (b["start"].isin(last.values()))]
+        sb = system.set_index("direction")["beta"]
+        rows.append(
+            {
+                "lag_months": lag,
+                "hike_cycle": f"{last['hike']}",
+                "cut_cycle": f"{last['cut']}",
+                "system_beta_hike": sb.get("hike", np.nan),
+                "system_beta_cut": sb.get("cut", np.nan),
+                "banks": len(gap),
+                "banks_hike_above_cut": int((gap > 0).sum()),
+                "mean_gap": gap.mean(),
+                "ci_low": np.percentile(boot, 2.5),
+                "ci_high": np.percentile(boot, 97.5),
+                "t_p_value": stats.ttest_1samp(gap, 0.0).pvalue,
+            }
+        )
+    return pd.DataFrame(rows)

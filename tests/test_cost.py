@@ -76,3 +76,22 @@ def test_cost_is_annualised_interest_over_average_balance():
     assert c.loc[("A", "2022-06"), "term_expense"] == pytest.approx(6.0)  # 6 x 12 / 1200 = 6%
     assert c.loc[("A", "2022-06"), "term_cost"] == pytest.approx(5.0)
     assert c.loc[("System", "2022-06"), "term_cost_best"] == pytest.approx(5.0)
+
+
+def test_asymmetry_resamples_banks_and_flags_a_consistent_gap():
+    rows = []
+    for i, bank in enumerate("ABCDEFGH"):
+        for direction, start, beta in (("hike", "2021-06", 0.70 + 0.01 * i), ("cut", "2023-06", 0.60 + 0.01 * i)):
+            rows.append(
+                {
+                    "bank": bank,
+                    "direction": direction,
+                    "start": start,
+                    "lag_months": 3,
+                    "measure": "interest",
+                    "beta": beta,
+                }
+            )
+    a = cost.asymmetry(pd.DataFrame(rows), lags=(3,), n_boot=2000).iloc[0]
+    assert a["mean_gap"] == pytest.approx(0.10)
+    assert a["banks_hike_above_cut"] == 8 and a["ci_low"] > 0
