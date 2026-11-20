@@ -36,17 +36,17 @@
 ## Latest reading
 
 <!-- latest:start -->
-**Latest reading: August 2026.** Banks held CLP 91.5 trillion of demand and CLP 130.7 trillion of term deposits in August 2026; mutual funds held 15% of the term deposits. Deposit costs kept rising after the last hike but barely fell after the last cut (system beta 0.69 for the hikes, 3 months after).
+**Latest reading: September 2026.** Banks held CLP 94.5 trillion of demand and CLP 132.2 trillion of term deposits in September 2026; mutual funds held 14% of the term deposits. Deposit costs kept rising after the last hike but barely fell after the last cut (system beta 0.69 for the hikes, 3 months after).
 
 | Indicator | Latest | Month before | Change | Note |
 |---|---:|---:|---:|---|
-| Demand deposits, all banks | CLP 91.5 tn | CLP 93.2 tn | -1.8% |  |
-| Term deposits, all banks | CLP 130.7 tn | CLP 130.3 tn | +0.4% |  |
-| Share of term deposits held by mutual funds | 14.6% | 14.5% | +0.0 pp |  |
-| Cost of term deposits, all banks | 4.3% | 4.2% | +0.0 pp |  |
+| Demand deposits, all banks | CLP 94.5 tn | CLP 91.5 tn | +3.2% |  |
+| Term deposits, all banks | CLP 132.2 tn | CLP 130.7 tn | +1.1% |  |
+| Share of term deposits held by mutual funds | 14.1% | 14.6% | -0.5 pp |  |
+| Cost of term deposits, all banks | 4.3% | 4.3% | -0.0 pp |  |
 | Policy rate (TPM), month end | 4.5% | 4.5% | +0.0 pp |  |
 
-*Updated automatically on 2026-11-01 from the CMF and Banco Central. CLP tn = CLP trillion (10^12). A note gives the month when an indicator lags the others.*
+*Updated automatically on 2026-11-20 from the CMF and Banco Central. CLP tn = CLP trillion (10^12). A note gives the month when an indicator lags the others.*
 <!-- latest:end -->
 
 ## Findings
