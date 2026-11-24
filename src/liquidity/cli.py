@@ -1,4 +1,4 @@
-"""liquidity data | deposits | forecast | funding | cost"""
+"""liquidity data | deposits | forecast | funding | cost | build | validate"""
 
 from __future__ import annotations
 
@@ -31,6 +31,7 @@ def _log(title: str):
 def cmd_data(out: Path, max_months: int | None = None) -> int:
     out.mkdir(parents=True, exist_ok=True)
     api = CmfApi()  # one budget shared by both downloads
+    income_failed = False
     added = data.download(
         out / "bank_balances.csv",
         api,
@@ -48,15 +49,40 @@ def cmd_data(out: Path, max_months: int | None = None) -> int:
             fallback=MonthlyFiles().results,
         )
         _notice("notice", "CMF income", f"{len(inc)} months added" + (f" ({inc[0]} to {inc[-1]})" if inc else ""))
-    except Exception as exc:  # noqa: BLE001 - income statements must not stop the balance-sheet update
-        _notice("warning", "CMF income", repr(exc)[:300])
+    except Exception as exc:  # noqa: BLE001 - finish the balance-sheet update, then fail the run
+        _notice("error", "CMF income", repr(exc)[:300])
+        income_failed = True
     _notice("notice", "CMF requests", f"{api.used} used this run (monthly quota 10,000 per key)")
+    import datetime as dt
+
+    from .funding import record_source
+
     bal = data.read(out / "bank_balances.csv")
+    inc_ = data.read(out / "bank_income.csv")
+    record_source(
+        out,
+        "cmf",
+        {
+            "source": "CMF API (SBIF v3), fallback CMF monthly text files",
+            "balances_last_period": str(bal["period"].max()) if not bal.empty else None,
+            "income_last_period": str(inc_["period"].max()) if not inc_.empty else None,
+            "checked_on": str(dt.date.today()),
+        },
+    )
     if bal.empty:
         _notice("error", "No data", "nothing downloaded; see the CMF notice above")
         return 1
     bc = data.system_aggregates(out / "bcch_aggregates.csv")
-    data.rates(out / "bcch_rates_daily.csv")
+    r_ = data.rates(out / "bcch_rates_daily.csv")
+    record_source(
+        out,
+        "bcch",
+        {
+            "source": "Banco Central de Chile, SIETE API",
+            "tpm_last_date": str(r_["tpm"].last_valid_index()) if "tpm" in r_ else None,
+            "checked_on": str(dt.date.today()),
+        },
+    )
     cmp_ = checks.system_vs_bcch(bal, bc)
     cmp_.round(4).to_csv(out / "check_system_vs_bcch.csv")
     checks.system_total(bal).to_csv(out / "check_banks_vs_system_total.csv")
@@ -73,6 +99,9 @@ def cmd_data(out: Path, max_months: int | None = None) -> int:
             f"monthly growth gap median {g.median():.2%}, max {g.max():.2%} ({g.idxmax()})",
         )
     _notice("notice", "Mergers", f"{(m['absorbed_by'] != '').sum()} matched, {(m['absorbed_by'] == '').sum()} exits")
+    if income_failed:
+        _notice("error", "Data", "income statements were not updated; the model step will not run on stale costs")
+        return 1
     return 0
 
 
@@ -109,6 +138,14 @@ def cmd_forecast(out: Path) -> int:
     summary = errors.groupby(["deposits", "window", "model", "horizon_months"])["ape"].median().unstack()
     summary.round(4).to_csv(out / "forecast_mape_summary.csv")
     pd.DataFrame(fits).round(5).to_csv(out / "forecast_fit.csv", index=False)
+    dm = forecast.compare(errors)
+    dm.round(5).to_csv(out / "forecast_compare.csv", index=False)
+    for _, r in dm[dm["horizon_months"] == 12].iterrows():
+        _notice(
+            "notice",
+            f"Forecast, {r['deposits']} 12 m",
+            f"{r['other']} minus {r['base']} error {r['mean_diff']:+.2%} (p {r['p_value']:.3f})",
+        )
     pd.concat(outlooks).round(3).to_csv(out / "forecast_outlook.csv", index=False)
     return 0
 
@@ -174,6 +211,23 @@ def cmd_cost(out: Path) -> int:
             f"(95% CI {r['ci_low']:+.3f} to {r['ci_high']:+.3f}, t-test p {r['t_p_value']:.3f}); "
             f"{int(r['banks_hike_above_cut'])} of {int(r['banks'])} banks positive",
         )
+    spread = cost.spread_model(costs, tpm)
+    spread.round(4).to_csv(out / "cost_spread_model.csv", index=False)
+    for _, r in spread[spread["bank"] == "System"].iterrows():
+        _notice(
+            "notice",
+            "Spread model, system",
+            f"pass-through within {cost.SPREAD_LAGS + 1} months: rises {r['pass_up']:.2f}, "
+            f"falls {r['pass_down']:.2f} (difference p {r['diff_p_value']:.2f}); "
+            f"{r['gap_closed_per_month']:.1%} of the gap to the TPM closed a month",
+        )
+    banks_ = spread[spread["bank"] != "System"]
+    _notice(
+        "notice",
+        "Spread model, banks",
+        f"{(banks_['diff_p_value'] < 0.05).sum()} of {len(banks_)} banks with a significant rise/fall difference; "
+        f"{(banks_['diff'] > 0).sum()} pass on more of the rises",
+    )
     sys_ = b[(b["bank"] == "System") & (b["lag_months"] == 3)]
     for _, r in sys_.iterrows():
         _notice("notice", f"Beta {r['cycle']}", f"system {r['beta']:.2f} ({r['measure']}), TPM {r['tpm_change']:+.2f}")
@@ -194,6 +248,20 @@ def cmd_build(out: Path) -> int:
     return 0
 
 
+def cmd_validate(out: Path) -> int:
+    from . import validate
+
+    errors, accepted = validate.run(out)
+    for e in accepted:
+        _notice("warning", "Validate", e)
+    for e in errors:
+        _notice("error", "Validate", e)
+    if errors:
+        return 1
+    _notice("notice", "Validate", "all checks passed")
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="liquidity")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -208,13 +276,15 @@ def main(argv=None) -> int:
     fu.add_argument("--out", type=Path, default=Path("data/processed"))
     c = sub.add_parser("cost", help="cost of deposits and deposit beta by rate cycle")
     c.add_argument("--out", type=Path, default=Path("data/processed"))
-    b = sub.add_parser("build", help="figures, latest.json and the README table")
+    b = sub.add_parser("build", help="figures, latest.json, results.json and the README figures")
     b.add_argument("--out", type=Path, default=Path("data/processed"))
+    v = sub.add_parser("validate", help="checks that must pass before publishing")
+    v.add_argument("--out", type=Path, default=Path("data/processed"))
     a = p.parse_args(argv)
     cmds = {"data": cmd_data, "deposits": cmd_deposits, "forecast": cmd_forecast, "funding": cmd_funding}
     if a.cmd == "data":
         return cmd_data(a.out, a.max_months)
-    return {**cmds, "cost": cmd_cost, "build": cmd_build}[a.cmd](a.out)
+    return {**cmds, "cost": cmd_cost, "build": cmd_build, "validate": cmd_validate}[a.cmd](a.out)
 
 
 if __name__ == "__main__":

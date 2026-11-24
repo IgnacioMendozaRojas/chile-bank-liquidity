@@ -18,6 +18,10 @@ from .deposits import CONFIG, pandemic_window
 from .figstyle import charts
 
 REPO = "chile-bank-liquidity"
+DISCLAIMER = (
+    "Personal analysis of public CMF and Banco Central de Chile data. Not investment advice. "
+    "The views are my own and not those of my employer."
+)
 SITE = f"github.com/IgnacioMendozaRojas/{REPO}"
 SHORT = {
     "System": "System",
@@ -62,6 +66,8 @@ def load(out: Path) -> dict[str, pd.DataFrame]:
         "cost_series",
         "cost_betas",
         "cost_asymmetry",
+        "cost_spread_model",
+        "forecast_compare",
     ]
     t = {n: pd.read_csv(out / f"{n}.csv", dtype={"code": str, "period": str}) for n in names}
     t["tpm"] = month_end_rate(pd.read_csv(out / "bcch_rates_daily.csv", index_col=0))
@@ -148,9 +154,22 @@ def figures(t: dict[str, pd.DataFrame], figs: Path) -> None:
     normal = m[(m["deposits"] == "demand") & (m["window"] == "normal")].set_index("model")[[str(h) for h in hz]]
     pand = m[(m["deposits"] == "demand") & (m["window"] == "pandemic")].set_index("model")["12"]
     best = normal["12"].idxmin()
+    names = {"ETS": "exponential smoothing", "SARIMAX": "SARIMAX", "Random walk": "a random walk"}
+    dm = t["forecast_compare"]
+    runner = normal["12"].drop(best).idxmin()
+    if best == "ETS":
+        row = dm[(dm["deposits"] == "demand") & (dm["horizon_months"] == 12) & (dm["other"] == runner)]
+        sig = bool(len(row)) and row["p_value"].iloc[0] < 0.05 and row["mean_diff"].iloc[0] > 0
+    else:
+        sig = False
+    lead = names[best][0].upper() + names[best][1:]
+    title = (
+        f"{lead} forecasts demand deposits best: {normal.loc[best, '12']:.1%} error at 12 months"
+        if sig
+        else f"{lead} errs least at 12 months ({normal.loc[best, '12']:.1%}), but not significantly"
+    )
     for c in charts(
-        f"{'Exponential smoothing' if best == 'ETS' else best} forecasts demand deposits best: "
-        f"{normal.loc[best, '12']:.1%} error at 12 months",
+        title,
         "Median absolute error, demand deposits, system and ten banks, quarterly origins since 2014, "
         "outside the pandemic",
         f"Every model's 12-month error rises to {pand.min():.0%}-{pand.max():.0%} when the window touches "
@@ -190,13 +209,13 @@ def figures(t: dict[str, pd.DataFrame], figs: Path) -> None:
     hike = _latest_beta(bt, "hike").set_index("bank").loc["System"]
     cut = _latest_beta(bt, "cut").set_index("bank")
     cut = cut.loc["System"] if "System" in cut.index and cut.loc["System", "start"] > hike["start"] else None
-    asym = t["cost_asymmetry"].set_index("lag_months")
-    title, gap_note = asymmetry_title(asym)
+    title, gap_note = cost_title(t["cost_spread_model"])
     for c in charts(
         title,
         "Interest paid on term deposits, all banks, 3 months annualised, without UF readjustment; policy rate, %",
         f"Source: CMF income statements and balance sheets, Banco Central de Chile; {_month(sc.index[0])} to "
-        f"{_month(sc.index[-1])}. Beta: change in cost over change in TPM, 3 months after the cycle. {SITE}",
+        f"{_month(sc.index[-1])}. Beta: change in cost over change in TPM, 3 months after the cycle. Pass-through: "
+        f"error-correction model of the monthly change in cost. {SITE}",
     ):
         x = _x(sc.index)
         above = tpm.iloc[-1] >= sc.iloc[-1]
@@ -251,29 +270,28 @@ def figures(t: dict[str, pd.DataFrame], figs: Path) -> None:
             c.save(figs, "beta-vs-funds")
 
 
-def _ci(r) -> str:
-    return f"{r['mean_gap']:+.2f} (95% CI {r['ci_low']:+.2f} to {r['ci_high']:+.2f})"
+def cost_title(spread: pd.DataFrame) -> tuple[str, str]:
+    """Title and on-chart note from the error-correction model of the system's cost of term deposits.
 
+    The model separates pass-through of rate rises and falls from the pull of the cost towards the
+    policy rate, which a cycle beta mixes up (see cost.spread_model).
+    """
+    from .cost import SPREAD_LAGS
 
-def asymmetry_title(asym: pd.DataFrame) -> tuple[str, str]:
-    """Short title and an on-chart note from the bank-level hike-minus-cut gap in beta."""
-    if not {0, 3}.issubset(asym.index):
+    sp = spread.set_index("bank")
+    if "System" not in sp.index:
         return "Banks passed on most of each rate cycle to term deposits", ""
-
-    def sig(r):
-        return r["ci_low"] > 0 or r["ci_high"] < 0
-
-    at_end, later = asym.loc[0], asym.loc[3]
-    if sig(later) and not sig(at_end):
-        title = "Deposit costs kept rising after the last hike but barely fell after the last cut"
-    elif sig(later):
-        title = "Banks passed on more of the rate hikes than of the cuts"
+    r = sp.loc["System"]
+    if r["diff_p_value"] >= 0.10:
+        title = "Banks pass rate hikes and cuts on to deposits alike"
+    elif r["pass_up"] > r["pass_down"]:
+        title = "Banks pass on more of the rate hikes than of the cuts"
     else:
-        title = "Banks passed on rate hikes and cuts to deposits alike"
+        title = "Banks pass on more of the rate cuts than of the hikes"
     note = (
-        f"Hike minus cut beta, {int(later['banks'])} banks:\n"
-        f"at the last move {_ci(at_end)}\n"
-        f"3 months later {_ci(later)}"
+        f"Share of a TPM move in the cost within {SPREAD_LAGS + 1} months:\n"
+        f"rises {r['pass_up']:.2f}, falls {r['pass_down']:.2f} (difference p = {r['diff_p_value']:.2f})\n"
+        f"Each month the cost closes {r['gap_closed_per_month']:.0%} of its gap to the TPM"
     )
     return title, note
 
@@ -290,7 +308,7 @@ def latest(t: dict[str, pd.DataFrame], updated: dt.date | None = None) -> dict:
         "term_deposits_tn": (term["actual"] / 1000, "Term deposits, all banks", "CLP tn", "pct"),
         "fund_share_of_term": (
             _system_fund_share(t["funding_fund_shares"]),
-            "Share of term deposits held by mutual funds",
+            "Share of term deposits held by mutual funds (banks they invest in)",
             "share",
             "pp",
         ),
@@ -317,9 +335,8 @@ def latest(t: dict[str, pd.DataFrame], updated: dt.date | None = None) -> dict:
             }
         )
     m = {x["id"]: x for x in metrics}
-    bt = t["cost_betas"]
-    hike = bt[(bt["bank"] == "System") & (bt["lag_months"] == 3) & (bt["measure"] == "interest")]
-    hike = hike[hike["direction"] == "hike"].iloc[-1]
+    sh = t["funding_fund_shares"]
+    fund_banks = sh[sh["period"] == sh["period"].max()]["code"].nunique()
     return {
         "schema": 1,
         "id": "bank-deposit-liquidity",
@@ -334,10 +351,12 @@ def latest(t: dict[str, pd.DataFrame], updated: dt.date | None = None) -> dict:
         "headline": (
             f"Banks held CLP {m['demand_deposits_tn']['value']:.1f} trillion of demand and "
             f"CLP {m['term_deposits_tn']['value']:.1f} trillion of term deposits in {_month_name(as_of)}; mutual "
-            f"funds held {m['fund_share_of_term']['value']:.0%} of the term deposits. "
-            + asymmetry_title(t["cost_asymmetry"].set_index("lag_months"))[0]
-            + f" (system beta {hike['beta']:.2f} for the hikes, 3 months after)."
+            f"funds held {m['fund_share_of_term']['value']:.0%} of the term deposits of the "
+            f"{fund_banks} banks they invest in. "
+            + cost_title(t["cost_spread_model"])[0]
+            + "; what differs is how far deposit costs are from the policy rate when a cycle ends."
         ),
+        "disclaimer": DISCLAIMER,
         "metrics": metrics,
         "deposit_beta_asymmetry": [
             {k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items()}
@@ -388,10 +407,22 @@ def write_readme(readme: Path, block: str) -> None:
 
 
 def run(out: Path = Path("data/processed"), figs: Path = Path("docs/figures"), readme: Path = Path("README.md")):
+    from . import results
+
     t = load(out)
     figures(t, figs)
     data = latest(t)
+    res = results.compute(out)
+    data["sources"] = _sources(out)
     Path("latest.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    Path("results.json").write_text(json.dumps(res, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     if readme.exists():
         write_readme(readme, readme_block(data))
+        readme.write_text(results.fill(readme.read_text(encoding="utf-8"), res["facts"]), encoding="utf-8")
     return data
+
+
+def _sources(out: Path) -> dict:
+    """What each published number was computed from: download dates and the fund file's hash."""
+    p = out / "sources.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}

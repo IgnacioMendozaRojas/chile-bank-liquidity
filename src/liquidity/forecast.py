@@ -11,8 +11,13 @@ and a box over the pandemic window (from config/events.yaml).
 
 Evaluation is out of sample, rolling the forecast origin every quarter: each model is
 re-estimated with data up to the origin and forecasts 1-12 months ahead with the realised
-policy rate (a conditional forecast). Benchmarks: random walk and damped-trend seasonal
-exponential smoothing. Errors are reported separately for windows that touch the pandemic.
+policy rate (a conditional forecast: SARIMAX is told the future TPM, which the benchmarks
+are not). The ARIMA order used in the evaluation is chosen with data up to the first
+origin. Benchmarks: random walk and damped-trend seasonal exponential smoothing. Errors are
+reported separately for windows that touch the pandemic, and `compare` tests whether one
+model's errors are smaller than another's (a Diebold-Mariano-type test on absolute %
+errors, with standard errors clustered by forecast origin, since the system and the banks
+share each origin's shocks).
 """
 
 from __future__ import annotations
@@ -65,6 +70,9 @@ def _fit(y: pd.Series, X: pd.DataFrame, order):
     return res, list(keep)
 
 
+MIN_TRAIN = 24  # months of history before the first forecast origin
+
+
 def select_order(y: pd.Series, X: pd.DataFrame):
     best = None
     for order in ORDERS:
@@ -105,10 +113,15 @@ def evaluate(
     y = np.log(balance[balance > 0].dropna())
     X = design(y.index, tpm).dropna()
     y = y.loc[X.index]
-    order = select_order(y, X)
+    origins = [p for p in y.index if p >= first_origin][: -max(HORIZONS)][::step]
+    # a bank that starts late (BTG, 2015) is evaluated from the first origin on the same
+    # quarterly grid with MIN_TRAIN months behind it
+    origins = [o for o in origins if (y.index <= o).sum() >= MIN_TRAIN]
+    # the order is chosen with data up to the first origin only, so the evaluation never
+    # uses a model picked with hindsight; the explanatory full-sample fit chooses its own
+    order = select_order(y[y.index <= origins[0]], X)
     a, b = pandemic_window()
     rows = []
-    origins = [p for p in y.index if p >= first_origin][: -max(HORIZONS)][::step]
     for o in origins:
         actual = np.exp(y[y.index > o].iloc[: max(HORIZONS)])
         try:
@@ -132,11 +145,13 @@ def evaluate(
                         "window": "pandemic" if touches else "normal",
                     }
                 )
-    res, keep = _fit(y, X, order)
+    full_order = select_order(y, X)
+    res, keep = _fit(y, X, full_order)
     params = pd.Series(res.params, index=[*keep, *res.param_names_[len(keep) :]])
     se = pd.Series(res.bse, index=params.index)
     fit = {
-        "order": str(order),
+        "order": str(full_order),
+        "evaluation_order": str(order),
         "tpm_semi_elasticity": float(params.get("tpm", np.nan)),
         "tpm_se": float(se.get("tpm", np.nan)),
         **{f"{k}_effect": float(np.expm1(params[k])) for k in keep if k.startswith("withdrawal") or k == "pandemic"},
@@ -161,3 +176,37 @@ def outlook(balance: pd.Series, tpm: pd.Series, order: str, steps: int = 12) -> 
         },
         index=pd.Index(future, name="period"),
     )
+
+
+def compare(errors: pd.DataFrame, base: str = "ETS", window: str = "normal") -> pd.DataFrame:
+    """Mean difference in absolute % error, other model minus `base`, by deposits and horizon.
+
+    Positive = `base` is more accurate. Standard errors are clustered by origin; overlapping
+    horizons within a bank are absorbed in the same cluster.
+    """
+    import statsmodels.api as sm
+
+    e = errors[errors["window"] == window]
+    w = e.pivot_table(index=["deposits", "horizon_months", "bank", "origin"], columns="model", values="ape")
+    rows = []
+    for (dep, h), g in w.groupby(level=["deposits", "horizon_months"]):
+        for other in [m for m in g.columns if m != base]:
+            d = (g[other] - g[base]).dropna()
+            if len(d) < 10:
+                continue
+            groups = pd.factorize(d.index.get_level_values("origin"))[0]
+            res = sm.OLS(d.values, np.ones(len(d))).fit(cov_type="cluster", cov_kwds={"groups": groups})
+            rows.append(
+                {
+                    "deposits": dep,
+                    "horizon_months": h,
+                    "base": base,
+                    "other": other,
+                    "pairs": len(d),
+                    "mean_diff": float(res.params[0]),
+                    "se": float(res.bse[0]),
+                    "p_value": float(res.pvalues[0]),
+                    "base_better_share": float((d > 0).mean()),
+                }
+            )
+    return pd.DataFrame(rows)

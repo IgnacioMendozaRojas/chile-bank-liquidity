@@ -1,12 +1,18 @@
 name: Model
 
 # Deposit behaviour and the out-of-sample forecast evaluation (about half an hour of
-# model fits). Runs after the monthly data update and on demand; commits the tables.
+# model fits). Runs after the monthly data update and on demand; commits the tables only
+# if `liquidity validate` passes (see the README for the checks).
 on:
   workflow_run:
     workflows: [Data]
     types: [completed]
   workflow_dispatch:
+    inputs:
+      accept_changes:
+        description: "Publish changes that need review (big monthly move, revised history, a flipped conclusion)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -31,11 +37,15 @@ jobs:
       - run: liquidity cost
       - run: liquidity forecast
       - run: liquidity build
+      - name: Validate before publishing
+        env:
+          ACCEPT_CHANGES: ${{ inputs.accept_changes && '1' || '' }}
+        run: liquidity validate
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/processed docs/figures latest.json README.md
+          git add data/processed docs/figures latest.json results.json README.md
           git diff --cached --quiet && exit 0
           git commit -qm "Model: deposits, funding, cost and forecasts"
           git pull -q --rebase && git push

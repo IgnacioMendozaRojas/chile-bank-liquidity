@@ -14,17 +14,56 @@ from pathlib import Path
 import pandas as pd
 import yaml
 
-SOURCE = (
-    "https://raw.githubusercontent.com/IgnacioMendozaRojas/chile-mutual-funds-analytics/main/"
-    "data/processed/bank_funding_by_type.csv"
-)
+UPSTREAM_PATH = "data/processed/bank_funding_by_type.csv"
+SOURCE = f"https://raw.githubusercontent.com/IgnacioMendozaRojas/chile-mutual-funds-analytics/main/{UPSTREAM_PATH}"
 MAP = Path("config/fund_bank_map.yaml")
 
 
 def fetch(path: Path, url: str = SOURCE) -> pd.DataFrame:
-    df = pd.read_csv(url, dtype={"period": str, "issuer_rut": str})
+    """Read the fund holdings and record what was read (hash, upstream commit) in sources.json.
+
+    The file is read from the other repository's main branch so new months arrive; `liquidity
+    validate` then checks that months already published did not change, so an upstream
+    revision cannot move a published figure without review.
+    """
+    import datetime as dt
+    import hashlib
+    import io
+
+    import requests
+
+    raw = requests.get(url, timeout=120)
+    raw.raise_for_status()
+    df = pd.read_csv(io.BytesIO(raw.content), dtype={"period": str, "issuer_rut": str})
     df.to_csv(path, index=False)
+    commit = None
+    try:  # best effort: the commit of the upstream file, for the record
+        api = "https://api.github.com/repos/IgnacioMendozaRojas/chile-mutual-funds-analytics/commits"
+        r = requests.get(api, params={"path": UPSTREAM_PATH, "per_page": 1}, timeout=30)
+        commit = r.json()[0]["sha"] if r.ok and r.json() else None
+    except Exception:  # noqa: BLE001
+        pass
+    record_source(
+        path.parent,
+        "mutual_fund_holdings",
+        {
+            "url": url,
+            "upstream_commit": commit,
+            "sha256": hashlib.sha256(raw.content).hexdigest(),
+            "last_period": str(df["period"].max()),
+            "read_on": str(dt.date.today()),
+        },
+    )
     return df
+
+
+def record_source(out: Path, name: str, info: dict) -> None:
+    import json
+
+    p = Path(out) / "sources.json"
+    data = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    data[name] = info
+    p.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
 def by_bank(holdings: pd.DataFrame, mapping: dict[str, str] | None = None) -> pd.DataFrame:

@@ -6,9 +6,10 @@
   "question": "How stable are Chilean banks' deposits, how much could leave under stress, and how fast do rate moves reach their funding cost?",
   "as_of": "2026-09",
   "frequency": "monthly",
-  "updated": "2026-11-20",
+  "updated": "2026-11-24",
   "source": "CMF bank balance sheets and income statements; Banco Central de Chile; CMF fund portfolios",
-  "headline": "Banks held CLP 94.5 trillion of demand and CLP 132.2 trillion of term deposits in September 2026; mutual funds held 14% of the term deposits. Deposit costs kept rising after the last hike but barely fell after the last cut (system beta 0.69 for the hikes, 3 months after).",
+  "headline": "Banks held CLP 94.5 trillion of demand and CLP 132.2 trillion of term deposits in September 2026; mutual funds held 14% of the term deposits of the 11 banks they invest in. Banks pass rate hikes and cuts on to deposits alike; what differs is how far deposit costs are from the policy rate when a cycle ends.",
+  "disclaimer": "Personal analysis of public CMF and Banco Central de Chile data. Not investment advice. The views are my own and not those of my employer.",
   "metrics": [
     {
       "id": "demand_deposits_tn",
@@ -32,7 +33,7 @@
     },
     {
       "id": "fund_share_of_term",
-      "label": "Share of term deposits held by mutual funds",
+      "label": "Share of term deposits held by mutual funds (banks they invest in)",
       "value": 0.1405,
       "unit": "share",
       "period": "2026-09",
@@ -73,7 +74,8 @@
       "mean_gap": 0.0018,
       "ci_low": -0.0315,
       "ci_high": 0.0299,
-      "t_p_value": 0.9145
+      "t_p_value": 0.9145,
+      "sign_p_value": 0.1094
     },
     {
       "lag_months": 3,
@@ -86,7 +88,8 @@
       "mean_gap": 0.0616,
       "ci_low": 0.0245,
       "ci_high": 0.0916,
-      "t_p_value": 0.008
+      "t_p_value": 0.008,
+      "sign_p_value": 0.1094
     },
     {
       "lag_months": 6,
@@ -99,8 +102,18 @@
       "mean_gap": 0.0799,
       "ci_low": 0.0406,
       "ci_high": 0.1128,
-      "t_p_value": 0.0025
+      "t_p_value": 0.0025,
+      "sign_p_value": 0.0215
     }
   ],
-  "figure": "docs/figures/surge-light.png"
+  "figure": "docs/figures/surge-light.png",
+  "sources": {
+    "mutual_fund_holdings": {
+      "last_period": "2026-10",
+      "read_on": "2026-11-24",
+      "sha256": "530984fbe8debcc76aaa7f0c2760aedcc79e89ad82024058a66585aa927cab0d",
+      "upstream_commit": "91d8170ebb0591698cec8b8d33515b3bd810679a",
+      "url": "https://raw.githubusercontent.com/IgnacioMendozaRojas/chile-mutual-funds-analytics/main/data/processed/bank_funding_by_type.csv"
+    }
+  }
 }
