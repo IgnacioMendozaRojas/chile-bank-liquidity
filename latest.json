@@ -112,7 +112,7 @@
       "last_period": "2026-10",
       "read_on": "2026-11-24",
       "sha256": "530984fbe8debcc76aaa7f0c2760aedcc79e89ad82024058a66585aa927cab0d",
-      "upstream_commit": null,
+      "upstream_commit": "91d8170ebb0591698cec8b8d33515b3bd810679a",
       "url": "https://raw.githubusercontent.com/IgnacioMendozaRojas/chile-mutual-funds-analytics/main/data/processed/bank_funding_by_type.csv"
     }
   }
