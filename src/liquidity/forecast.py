@@ -70,6 +70,9 @@ def _fit(y: pd.Series, X: pd.DataFrame, order):
     return res, list(keep)
 
 
+MIN_TRAIN = 24  # months of history before the first forecast origin
+
+
 def select_order(y: pd.Series, X: pd.DataFrame):
     best = None
     for order in ORDERS:
@@ -110,12 +113,15 @@ def evaluate(
     y = np.log(balance[balance > 0].dropna())
     X = design(y.index, tpm).dropna()
     y = y.loc[X.index]
+    origins = [p for p in y.index if p >= first_origin][: -max(HORIZONS)][::step]
+    # a bank that starts late (BTG, 2015) is evaluated from the first origin on the same
+    # quarterly grid with MIN_TRAIN months behind it
+    origins = [o for o in origins if (y.index <= o).sum() >= MIN_TRAIN]
     # the order is chosen with data up to the first origin only, so the evaluation never
     # uses a model picked with hindsight; the explanatory full-sample fit chooses its own
-    order = select_order(y[y.index <= first_origin], X)
+    order = select_order(y[y.index <= origins[0]], X)
     a, b = pandemic_window()
     rows = []
-    origins = [p for p in y.index if p >= first_origin][: -max(HORIZONS)][::step]
     for o in origins:
         actual = np.exp(y[y.index > o].iloc[: max(HORIZONS)])
         try:

@@ -109,3 +109,12 @@ def test_all_banks_cost_is_blank_when_a_large_bank_has_no_statement():
 def test_excess_needs_a_pre_trend_history():
     idx = pd.period_range("2015-01", periods=100, freq="M").astype(str)
     assert deposits.excess(pd.Series(np.linspace(100, 200, 100), index=idx)) == {}
+
+
+def test_forecast_evaluation_starts_late_banks_once_they_have_history():
+    idx = pd.period_range("2015-01", periods=60, freq="M").astype(str)
+    rng = np.random.default_rng(2)
+    bal = pd.Series(np.exp(np.cumsum(rng.normal(0.005, 0.01, 60)) + 5), index=idx)
+    tpm = pd.Series(3.0 + np.arange(60) % 7 * 0.25, index=idx)
+    e, _ = forecast.evaluate(bal, tpm)
+    assert e["origin"].min() >= "2016-12"
