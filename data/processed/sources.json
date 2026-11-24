@@ -1,0 +1,9 @@
+{
+  "mutual_fund_holdings": {
+    "last_period": "2026-10",
+    "read_on": "2026-11-24",
+    "sha256": "530984fbe8debcc76aaa7f0c2760aedcc79e89ad82024058a66585aa927cab0d",
+    "upstream_commit": null,
+    "url": "https://raw.githubusercontent.com/IgnacioMendozaRojas/chile-mutual-funds-analytics/main/data/processed/bank_funding_by_type.csv"
+  }
+}

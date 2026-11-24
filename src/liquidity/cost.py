@@ -9,10 +9,17 @@ The UF readjustment paid on indexed deposits follows inflation, not the policy r
 cost used for the beta excludes it where the chart of accounts splits it out; earlier
 months only report interest and readjustment together and are flagged.
 
-Rate cycles are found in the policy rate itself (turning points of at least 1.5 points).
+Rate cycles are found in the policy rate itself (moves of at least 1 point in total).
 The beta of a cycle is the change in the cost of deposits over the change in the TPM,
 measured at the end of the cycle and 3 and 6 months later, since term deposits reprice
 as they mature.
+
+A cycle beta mixes two things: how much of each rate move is passed on, and how far the
+cost still was from the policy rate when the cycle ended (term deposits keep repricing
+towards the rate after it stops moving). `spread_model` separates them with an error-
+correction regression of the monthly change in cost on rises and falls of the TPM and on
+last month's gap between cost and TPM, so pass-through of hikes and cuts can be compared
+on equal terms.
 """
 
 from __future__ import annotations
@@ -195,6 +202,63 @@ def asymmetry(b: pd.DataFrame, lags=LAGS, n_boot: int = 10_000, seed: int = 0) -
                 "ci_low": np.percentile(boot, 2.5),
                 "ci_high": np.percentile(boot, 97.5),
                 "t_p_value": stats.ttest_1samp(gap, 0.0).pvalue,
+                # banks share the same rate shock, so the sign count is the cautious read
+                "sign_p_value": stats.binomtest(int((gap > 0).sum()), len(gap), 0.5).pvalue,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+SPREAD_LAGS = 3  # months of rate moves allowed to reach the cost in `spread_model`
+SPREAD_FROM = "2012-04"  # first month with interest split from the UF readjustment
+
+
+def spread_model(costs: pd.DataFrame, tpm: pd.Series, lags: int = SPREAD_LAGS, start: str = SPREAD_FROM):
+    """Error-correction model of the cost of term deposits, by bank and for the system.
+
+        d cost_t = a + sum_k up_k * max(d TPM_{t-k}, 0) + sum_k down_k * min(d TPM_{t-k}, 0)
+                   + gamma * (cost - TPM)_{t-1} + rho * d cost_{t-1} + e_t
+
+    `pass_up` and `pass_down` are the sums of the rate coefficients over 0..lags months: the
+    share of a 1-point rise (fall) in the TPM that reaches the cost within `lags` months, with
+    the pull towards the rate held apart in `gamma` (share of the gap closed each month).
+    `diff_p_value` tests pass_up = pass_down with HAC standard errors.
+    """
+    import statsmodels.api as sm
+
+    rows = []
+    for bank, df in costs[costs["term_cost_measure"] == "interest"].groupby("bank"):
+        d = pd.DataFrame({"c": df.set_index("period")["term_cost"], "r": tpm}).dropna()
+        d = d[d.index >= start]
+        if len(d) < 60:
+            continue
+        dc, dr = d["c"].diff(), d["r"].diff()
+        X = pd.DataFrame(index=d.index)
+        for k in range(lags + 1):
+            X[f"up{k}"] = dr.clip(lower=0).shift(k)
+            X[f"dn{k}"] = dr.clip(upper=0).shift(k)
+        X["gap"] = (d["c"] - d["r"]).shift(1)
+        X["dc1"] = dc.shift(1)
+        Z = pd.concat([dc.rename("dc"), X], axis=1).dropna()
+        y = Z.pop("dc")
+        res = sm.OLS(y, sm.add_constant(Z)).fit(cov_type="HAC", cov_kwds={"maxlags": 6})
+        names = list(res.params.index)
+        r = np.zeros(len(names))
+        for k in range(lags + 1):
+            r[names.index(f"up{k}")], r[names.index(f"dn{k}")] = 1.0, -1.0
+        test = res.t_test(r)
+        up = [f"up{k}" for k in range(lags + 1)]
+        dn = [f"dn{k}" for k in range(lags + 1)]
+        rows.append(
+            {
+                "bank": bank,
+                "months": int(res.nobs),
+                "pass_up": float(res.params[up].sum()),
+                "pass_down": float(res.params[dn].sum()),
+                "diff": float(np.asarray(test.effect).ravel()[0]),
+                "diff_p_value": float(np.asarray(test.pvalue).ravel()[0]),
+                "gap_closed_per_month": float(-res.params["gap"]),
+                "gap_se": float(res.bse["gap"]),
             }
         )
     return pd.DataFrame(rows)

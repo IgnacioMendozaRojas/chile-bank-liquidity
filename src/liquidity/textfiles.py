@@ -16,6 +16,8 @@ import zipfile
 
 import requests
 
+from . import accounts
+
 PAGE = "https://www.cmfchile.cl/portal/estadisticas/626/w4-propertyvalue-30250.html"
 BASE = "https://www.cmfchile.cl/portal/estadisticas/626/"
 MONTHS = {
@@ -61,7 +63,10 @@ def statement(zip_bytes: bytes, period: str, code: str, schedule: str = "r1") ->
     for line in z.read(name).decode("latin-1").splitlines()[1:]:  # first line: code and name
         parts = [p.strip() for p in line.split("\t")]
         if len(parts) >= 2 and parts[0].isdigit():
-            rows.append({"CodigoCuenta": parts[0], "MonedaTotal": parts[1]})
+            # one amount per currency column (CLP, UF-indexed, foreign...); the total is their sum.
+            # Files in the 2022+ chart carry a single column, the 2008-2021 chart carries four.
+            total = sum(accounts.number(v) for v in parts[1:] if v)
+            rows.append({"CodigoCuenta": parts[0], "MonedaTotal": f"{total:.2f}".replace(".", ",")})
     return rows
 
 

@@ -153,7 +153,7 @@ def excess(balance: pd.Series, trend_from: str = "2012-01", trend_to: str = "201
     """
     s = balance[balance > 0].dropna()
     fit = s[(s.index >= trend_from) & (s.index <= trend_to)]
-    if len(fit) < 36:
+    if len(fit) < 36 or s.index[0] > trend_from:  # a bank that starts later has no pre-2012 base for a trend
         return {}
     t_all = pd.PeriodIndex(s.index, freq="M").astype("int64")
     t_fit = pd.PeriodIndex(fit.index, freq="M").astype("int64")
@@ -161,15 +161,15 @@ def excess(balance: pd.Series, trend_from: str = "2012-01", trend_to: str = "201
     trend = pd.Series(np.exp(intercept + slope * t_all), index=s.index)
     ex = s - trend
     a, b = pandemic_window()
-    win = ex[(ex.index >= a) & (ex.index <= "2022-06")].dropna()
-    if win.empty:
+    pct = (ex / trend)[(ex.index >= a) & (ex.index <= "2022-06")].dropna()
+    if pct.empty:
         return {}
-    peak = win.idxmax()
+    peak = pct.idxmax()  # the month furthest above trend in %, as in the chart and the README
     return {
         "trend_growth_per_year": float(np.exp(12 * slope) - 1),
         "peak_excess_month": peak,
-        "peak_excess_clp_bn": float(win.max()),
-        "peak_excess_pct_of_trend": float(win.max() / trend[peak]),
+        "peak_excess_clp_bn": float(ex[peak]),
+        "peak_excess_pct_of_trend": float(pct[peak]),
         "excess_latest_clp_bn": float(ex.iloc[-1]),
         "excess_latest_pct_of_trend": float(ex.iloc[-1] / trend.iloc[-1]),
         "series": pd.DataFrame({"actual": s, "trend": trend, "excess": ex}),
